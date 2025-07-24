@@ -1,35 +1,56 @@
 import Hamburger from "hamburger-react";
 import clsx from "clsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import s from "./ModalMenu.module.css";
 
 const ModalMenu: React.FC = () => {
   const [isOpen, setOpen] = useState<boolean>(false);
+  const handleBackdropClick = (evt: React.MouseEvent<HTMLDivElement>) => {
+    if (evt.target === evt.currentTarget) {
+      setOpen(false);
+    }
+  };
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("no-scroll");
+    }
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [isOpen]);
 
   return (
     <div>
       <div className={s.burgerWrapper}>
         <Hamburger toggled={isOpen} toggle={setOpen} size={25} />
       </div>
-      {(
+      {
         <div
           className={clsx(s.modalOverlay, isOpen && s.modalOverlayActive)}
-           style={{ pointerEvents: isOpen ? "auto" : "none" }}
-          onClick={() => setOpen(false)}
+          style={{ pointerEvents: isOpen ? "auto" : "none" }}
+          onClick={handleBackdropClick}
         >
-          <div
-            className={s.modalContent}
-            onClick={(evt: React.MouseEvent<HTMLDivElement>) => evt.stopPropagation()}
-          >
+          <div className={s.modalContent}>
             <ul className={s.modalNavList}>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Our works</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+              <li>
+                <a href="#" onClick={() => setOpen(false)}>
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#" onClick={() => setOpen(false)}>
+                  Our works
+                </a>
+              </li>
+              <li>
+                <a href="#" onClick={() => setOpen(false)}>
+                  Contact
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-      )}
-    
+      }
     </div>
   );
 };
