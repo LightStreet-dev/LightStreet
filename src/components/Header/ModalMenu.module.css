@@ -1,0 +1,50 @@
+.burgerWrapper {
+  display: flex;
+  position: relative; 
+  top: 0;
+  right: 0;
+  cursor: pointer;
+ z-index: 111
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+background-color: transparent;
+
+ backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* для Safari */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.modalOverlayActive {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modalContent {
+
+  padding: 20px 30px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  
+
+}
+.modalNavList{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  font-size: 25px;
+}
+
