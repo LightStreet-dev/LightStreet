@@ -1,9 +1,11 @@
-function NavLinks() {
+import s from './NavLinks.module.css'
+
+const  NavLinks:React.FC =() => {
     return(
-        <ul>
-            <li><a href=""></a>About</li>
-            <li><a href=""></a>Our works</li>
-            <li><a href=""></a>Contact</li>
+        <ul className={s.navigation}>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our works</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     )
 }

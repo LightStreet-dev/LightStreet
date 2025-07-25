@@ -1,13 +1,15 @@
 
+import { useMediaQuery } from 'react-responsive'
 import './App.css'
 import './components/Header/Header'
 import Header from './components/Header/Header'
 
-function App() {
- 
+
+const App:React.FC = () => {
+ const isMobile = useMediaQuery({maxWidth:767})
   return (
     <>
-   <Header/>
+   <Header mediaQuery = {isMobile} />
     </>
   )
 }

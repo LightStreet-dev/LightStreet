@@ -2,6 +2,7 @@ import Hamburger from "hamburger-react";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import s from "./ModalMenu.module.css";
+import SocialIcons from "../SocialIcons/SocialIcons";
 
 const ModalMenu: React.FC = () => {
   const [isOpen, setOpen] = useState<boolean>(false);
@@ -49,6 +50,7 @@ const ModalMenu: React.FC = () => {
               </li>
             </ul>
           </div>
+          <SocialIcons isOpen = {isOpen}/>
         </div>
       }
     </div>

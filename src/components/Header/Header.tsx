@@ -1,13 +1,17 @@
 import Logo from "../Logo/Logo";
 import NavLinks from "../NavLins/NavLinks";
+import SocialIcons from "../SocialIcons/SocialIcons";
 import s from "./Header.module.css";
 import ModalMenu from "./ModalMenu";
-
-const Header: React.FC = () => {
+interface HeaderProps {
+  mediaQuery: boolean;
+}
+const Header: React.FC<HeaderProps> = ({ mediaQuery }) => {
   return (
     <header className={s.header}>
       <Logo />
-      <ModalMenu />
+      {mediaQuery ? <ModalMenu /> : <><NavLinks /> <SocialIcons /></>}
+    
     </header>
   );
 };

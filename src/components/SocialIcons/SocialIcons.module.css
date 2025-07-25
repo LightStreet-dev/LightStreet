@@ -1,0 +1,21 @@
+.socIconsList {
+  display: flex;
+  gap: 23px;
+}
+.svg {
+  width: 35px;
+  height: 35px;
+  fill: #dcdcdc;
+  display: block;
+}
+
+.socIconsListModal {
+  margin-bottom: 100px;
+}
+
+.svgModal {
+  width: 45px;
+  height: 45px;
+  fill: currentColor;
+  display: block;
+}
