@@ -1,16 +1,17 @@
 .socIconsList {
   display: flex;
   gap: 23px;
+  align-items: center;
 }
 .svg {
-  width: 35px;
-  height: 35px;
-  fill: #dcdcdc;
+  width: 45px;
+  height: 45px;
+  fill: var(--iconsColor);
   display: block;
 }
 
 .socIconsListModal {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .svgModal {

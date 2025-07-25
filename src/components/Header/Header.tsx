@@ -1,3 +1,4 @@
+import ContactButton from "../ContactButton/ContactButton";
 import Logo from "../Logo/Logo";
 import NavLinks from "../NavLins/NavLinks";
 import SocialIcons from "../SocialIcons/SocialIcons";
@@ -10,8 +11,16 @@ const Header: React.FC<HeaderProps> = ({ mediaQuery }) => {
   return (
     <header className={s.header}>
       <Logo />
-      {mediaQuery ? <ModalMenu /> : <><NavLinks /> <SocialIcons /></>}
-    
+      {mediaQuery ? (
+        <ModalMenu />
+      ) : (
+        <>
+          <NavLinks />
+          <div className={s.socialContactWrapper}>
+            <SocialIcons /> <ContactButton />
+          </div>
+        </>
+      )}
     </header>
   );
 };

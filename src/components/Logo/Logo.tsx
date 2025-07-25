@@ -2,7 +2,7 @@ import s from './Logo.module.css'
 function Logo() {
     return(
         <div>
-            <h2 className={s.logo}>LS</h2>
+            <h2 className={s.logo}>Light Street</h2>
         </div>
     )
 }

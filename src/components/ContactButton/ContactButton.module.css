@@ -1,0 +1,13 @@
+.contactbtn {
+  padding: 16px 38px;
+  border: 1px solid;
+  border-radius: 35px;
+  color: var(--iconsColor);
+  font-size: 14px;
+  font-weight: 700;
+  border-color: var(--mainContentColor);
+}
+
+.modalContactBtn {
+  margin-bottom: 50px;
+}

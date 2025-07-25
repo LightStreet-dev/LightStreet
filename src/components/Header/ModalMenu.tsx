@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { useEffect, useState } from "react";
 import s from "./ModalMenu.module.css";
 import SocialIcons from "../SocialIcons/SocialIcons";
+import ContactButton from "../ContactButton/ContactButton";
 
 const ModalMenu: React.FC = () => {
   const [isOpen, setOpen] = useState<boolean>(false);
@@ -51,6 +52,7 @@ const ModalMenu: React.FC = () => {
             </ul>
           </div>
           <SocialIcons isOpen = {isOpen}/>
+          <ContactButton isOpen = {isOpen} />
         </div>
       }
     </div>

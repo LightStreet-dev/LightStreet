@@ -10,6 +10,7 @@
   --textFontSize: 16px;
   --textLineHeight: 1.2;
   --mainContentColor: rgba(255, 255, 255, 1);
+  --iconsColor: #DCDCDC;
 }
 
 body {
@@ -48,6 +49,17 @@ a{
   text-decoration: none;
   color: inherit;
 }
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
 .no-scroll {
   overflow: hidden;
 }
+
