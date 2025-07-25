@@ -52,7 +52,7 @@ const ModalMenu: React.FC = () => {
             </ul>
           </div>
           <SocialIcons isOpen = {isOpen}/>
-          <ContactButton isOpen = {isOpen} />
+          <ContactButton isOpen = {isOpen} setOpen = {setOpen} />
         </div>
       }
     </div>
