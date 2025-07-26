@@ -6,10 +6,10 @@ import Header from './components/Header/Header'
 
 
 const App:React.FC = () => {
- const isMobile = useMediaQuery({maxWidth:767})
+ const isMobileHeader = useMediaQuery({maxWidth:880})
   return (
     <>
-   <Header mediaQuery = {isMobile} />
+   <Header mediaQuery = {isMobileHeader} />
     </>
   )
 }
