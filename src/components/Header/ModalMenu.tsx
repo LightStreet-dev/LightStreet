@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import s from "./ModalMenu.module.css";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import ContactButton from "../ContactButton/ContactButton";
+import { useTranslation } from "react-i18next";
 
 const ModalMenu: React.FC = () => {
+  const { t } = useTranslation();
   const [isOpen, setOpen] = useState<boolean>(false);
   const handleBackdropClick = (evt: React.MouseEvent<HTMLDivElement>) => {
     if (evt.target === evt.currentTarget) {
@@ -36,23 +38,23 @@ const ModalMenu: React.FC = () => {
             <ul className={s.modalNavList}>
               <li>
                 <a href="#" onClick={() => setOpen(false)}>
-                  About
+                  {t("header.about")}
                 </a>
               </li>
               <li>
                 <a href="#" onClick={() => setOpen(false)}>
-                  Our works
+                  {t("header.ourWorks")}
                 </a>
               </li>
               <li>
                 <a href="#" onClick={() => setOpen(false)}>
-                  Contact
+                  {t("header.contact")}
                 </a>
               </li>
             </ul>
           </div>
-          <SocialIcons isOpen = {isOpen}/>
-          <ContactButton isOpen = {isOpen} setOpen = {setOpen} />
+          <SocialIcons isOpen={isOpen} />
+          <ContactButton isOpen={isOpen} setOpen={setOpen} />
         </div>
       }
     </div>

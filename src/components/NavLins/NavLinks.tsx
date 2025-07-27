@@ -1,11 +1,12 @@
 import s from './NavLinks.module.css'
-
+import { useTranslation } from 'react-i18next'
 const  NavLinks:React.FC =() => {
+      const {t} = useTranslation();
     return(
         <ul className={s.navigation}>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Our works</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">{t("header.about")}</a></li>
+            <li><a href="#">{t("header.ourWorks")}</a></li>
+            <li><a href="#">{t("header.contact")}</a></li>
         </ul>
     )
 }
