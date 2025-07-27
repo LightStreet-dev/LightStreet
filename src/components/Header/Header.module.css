@@ -8,3 +8,13 @@
     display: flex;
     gap: 38px;
 }
+.modalWraper{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.mainHeaderWrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}

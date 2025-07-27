@@ -13,19 +13,30 @@ const Header: React.FC<HeaderProps> = ({ mediaQuery }) => {
   return (
     <header className={s.header}>
       <Logo />
-  <LanguageChanger/>
+
       {mediaQuery ? (
-        <ModalMenu />
+        <div className={s.modalWraper}>
+          <LanguageChanger />
+          <ModalMenu />
+        </div>
       ) : (
         <>
           <NavLinks />
-          
+<div className={s.mainHeaderWrapper}>
           <div className={s.socialContactWrapper}>
-            <SocialIcons />  <ContactButton />
+            <SocialIcons />
           </div>
+            {!mediaQuery && (
+        <>
+          <LanguageChanger /> <ContactButton />
         </>
       )}
-      
+      </div>
+        </>
+        
+      )}
+
+    
     </header>
   );
 };
