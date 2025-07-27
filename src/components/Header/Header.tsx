@@ -22,21 +22,17 @@ const Header: React.FC<HeaderProps> = ({ mediaQuery }) => {
       ) : (
         <>
           <NavLinks />
-<div className={s.mainHeaderWrapper}>
-          <div className={s.socialContactWrapper}>
-            <SocialIcons />
-          </div>
-            {!mediaQuery && (
-        <>
-          <LanguageChanger /> <ContactButton />
-        </>
-      )}
-      </div>
-        </>
-        
-      )}
+          <div className={s.mainHeaderWrapper}>
+            <div className={s.socialContactWrapper}>
+              <SocialIcons />
+            </div>
 
-    
+            <>
+              <LanguageChanger /> <ContactButton />
+            </>
+          </div>
+        </>
+      )}
     </header>
   );
 };
