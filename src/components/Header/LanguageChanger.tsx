@@ -97,12 +97,12 @@ const LanguageChanger: React.FC = () => {
     { value: "ua", label: "UA" },
     { value: "pl", label: "PL" },
   ];
-
+console.log(selectedLanguage)
   return (
     <div className={s.lngSwitcher}>
       <Select<OptionType, false>
         styles={customStyles}
-        value={languageOptions.find((opt) => opt.value === selectedLanguage)}
+        value={languageOptions.find((opt) => opt.value === selectedLanguage) || languageOptions.find((opt) => opt.value === "en")}
         onChange={(opt) => opt && handleLanguageChange(opt)}
         options={languageOptions}
         className={s.select}

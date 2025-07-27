@@ -11,7 +11,11 @@ i18n
     fallbackLng: 'en',
     debug: true,
     interpolation: { escapeValue: false },
-    keySeparator: '.'
+    keySeparator: '.',
+    detection: {
+      order: ['querystring', 'localStorage', 'cookie', 'navigator', 'htmlTag'],
+      caches: ['localStorage', 'cookie'],
+    },
   });
 
 export default i18n;
