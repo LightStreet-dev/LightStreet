@@ -89,12 +89,16 @@ const LanguageChanger: React.FC = () => {
     selectedOption: OptionProps<OptionType, false>["data"]
   ) => {
     setSelectedLanguage(selectedOption.value);
+    if(i18n.language){
+      console.log(i18n.language)
+       i18n.changeLanguage(i18n.language);
+    }
     i18n.changeLanguage(selectedOption.value);
   };
 
   const languageOptions: OptionType[] = [
     { value: "en", label: "EN" },
-    { value: "ua", label: "UA" },
+    { value: "uk", label: "UA" },
     { value: "pl", label: "PL" },
   ];
 console.log(selectedLanguage)
@@ -102,7 +106,7 @@ console.log(selectedLanguage)
     <div className={s.lngSwitcher}>
       <Select<OptionType, false>
         styles={customStyles}
-        value={languageOptions.find((opt) => opt.value === selectedLanguage) || languageOptions.find((opt) => opt.value === "en")}
+        value={languageOptions.find((opt) => opt.value === selectedLanguage) || languageOptions.find((opt) => opt.value === i18n.language)}
         onChange={(opt) => opt && handleLanguageChange(opt)}
         options={languageOptions}
         className={s.select}

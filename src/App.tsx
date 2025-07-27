@@ -9,7 +9,7 @@ const App:React.FC = () => {
  const isMobileHeader = useMediaQuery({maxWidth:880})
   return (
     <>
-   <Header mediaQuery = {isMobileHeader} />
+   <Header mobMediaQuery = {isMobileHeader} />
     </>
   )
 }

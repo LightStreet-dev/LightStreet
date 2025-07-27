@@ -7,14 +7,14 @@ import LanguageChanger from "./LanguageChanger";
 
 import ModalMenu from "./ModalMenu";
 interface HeaderProps {
-  mediaQuery: boolean;
+  mobMediaQuery: boolean;
 }
-const Header: React.FC<HeaderProps> = ({ mediaQuery }) => {
+const Header: React.FC<HeaderProps> = ({ mobMediaQuery }) => {
   return (
     <header className={s.header}>
       <Logo />
 
-      {mediaQuery ? (
+      {mobMediaQuery ? (
         <div className={s.modalWraper}>
           <LanguageChanger />
           <ModalMenu />
