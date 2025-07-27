@@ -7,28 +7,29 @@
   font-weight: 700;
   border-color: var(--mainContentColor);
   position: relative;
-  transition: color 0.3s;
+  transition: color 0.5s;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 40px;
+    border: 2px solid var(--mainContentColor);
+    animation: pulseBorder 7s infinite;
+    opacity: 1;
+  }
+  &:hover::before{
+    animation: none;
+    opacity: 0;
+  }
+  &:hover{
+  animation: rotateButton 0.6s ease-in-out;
+    color: var(--mainContentColor);
+  }
+  
 }
-.contactbtn::before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  border-radius: 40px;
-  border: 2px solid var(--mainContentColor);
-
-  pointer-events: none;
-  animation: none;
-  animation: pulseBorder 7s infinite;
-  opacity: 1;
-}
-
-/* .contactbtn:hover::before {
-  animation: pulseBorder 1.2s infinite;
-  opacity: 1;
-} */
 
 @keyframes pulseBorder {
   0% {
@@ -43,6 +44,12 @@
     transform: scale(1.2);
     opacity: 0;
   }
+}
+@keyframes rotateButton {
+  0%   { transform: rotate(0deg); }
+  30%  { transform: rotate(5deg); }
+  60%  { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .modalContactBtn {
