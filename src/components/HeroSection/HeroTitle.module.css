@@ -1,0 +1,41 @@
+.heroTitle {
+  font-weight: 700;
+  font-size: 50px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.heroTitleContent2 {
+  margin-left: 85px;
+}
+.heroTitleContent3 {
+  margin-left: 45px;
+  margin-bottom: 5px;
+}
+
+.heroText {
+  font-size: 14px;
+  max-width: 250px;
+  text-align: start;
+  margin-left: 45px;
+  margin-bottom: 20px;
+}
+
+.heroBatton {
+  display: flex;
+  margin-left: 45px;
+  padding: 16px 38px;
+  border: 1px solid;
+  border-radius: 35px;
+  background-color: var(--iconsColor);
+  color:  #0B0D14;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 100%
+  
+;
+}
