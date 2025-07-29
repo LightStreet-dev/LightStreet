@@ -66,3 +66,6 @@ button {
 .loader{
  margin: auto;
 }
+.hidden{
+  display: none;
+}

@@ -1,0 +1,9 @@
+.reviewsContainer {
+  display: flex;
+  gap: 0px;
+  transition: gap 0.5s ease;
+
+  &:hover {
+    gap: 25px;
+  }
+}

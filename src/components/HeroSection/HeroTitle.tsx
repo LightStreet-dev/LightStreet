@@ -1,8 +1,8 @@
 import s from "./HeroTitle.module.css";
 
-const HeroTitle = () => {
+const HeroTitle:React.FC = () => {
   return (
-    <div>
+    <div className={s.heroTitleContainer}>
       <h1 className={s.heroTitle}>
         <span className={s.heroTitleContent1}>Complete</span>{" "}
         <span className={s.heroTitleContent2}>Design</span>{" "}

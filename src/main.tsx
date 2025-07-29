@@ -5,7 +5,7 @@ import { Suspense } from 'react'
 import './index.css'
 import 'modern-normalize'
 import App from './App.tsx'
-import './i18n';
+import './i18n.js';
 import { PacmanLoader } from 'react-spinners'
 
 

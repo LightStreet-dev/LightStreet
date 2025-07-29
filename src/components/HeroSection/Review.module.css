@@ -1,0 +1,20 @@
+.reviewWraper {
+  display: flex;
+  gap: 5px;
+  margin-left: -20px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+.reviewImg {
+  width: 77px;
+  height: 77px;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+  &:hover {
+    filter: grayscale(20%);
+  }
+}
