@@ -17,6 +17,7 @@
   border: 5px solid;
   filter: grayscale(100%);
   transition: filter 0.5s ease;
+  margin-bottom: 5px;
   &:hover {
     filter: grayscale(20%);
   }

@@ -4,7 +4,8 @@ import Review from "./Review.tsx";
 import { useState } from "react";
 
 const ReviewsContainer: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(() => Math.floor(Math.random() * reviews.length));
+
   const activeReview = activeIndex !== null ? reviews[activeIndex] : null;
   return (
     <>
