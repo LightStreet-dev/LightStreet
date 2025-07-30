@@ -14,12 +14,12 @@ const reviews:Review[] = [
   {
     id: 2,
     text: "Great experience working with the developer! Clear communication, clean code, and delivered on time. Will definitely hire again.",
-    photo: "/public/img/reviews/ja.jpg",
+    photo: "/img/reviews/ja.jpg",
   },
   {
     id: 3,
     text: "Profesjonalne podejście i szybka realizacja projektu. Strona wygląda świetnie i działa bez zarzutu. Polecam z całego serca!",
-     photo: "/public/img/reviews/andryshka.jpg",
+     photo: "/img/reviews/andryshka.jpg",
   },
 ];
 export default reviews
