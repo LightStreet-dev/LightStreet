@@ -16,6 +16,7 @@ i18n
     detection: {
       order: ['querystring', 'localStorage', 'cookie', 'navigator', 'htmlTag'],
       caches: ['localStorage', 'cookie'],
+      lookupQuerystring: 'lng',
       lookupFromPathIndex: 0, 
     },
   });
