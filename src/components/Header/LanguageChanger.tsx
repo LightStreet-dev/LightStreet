@@ -88,12 +88,16 @@ const LanguageChanger: React.FC = () => {
   setSelectedLanguage(i18n.language);
 }, [i18n.language]);
 
-  const handleLanguageChange = (
-    selectedOption: OptionProps<OptionType, false>["data"]
-  ) => {
-    setSelectedLanguage(selectedOption.value);
-       i18n.changeLanguage(selectedOption.value);
-  };
+const handleLanguageChange = (
+  selectedOption: OptionProps<OptionType, false>["data"]
+) => {
+  setSelectedLanguage(selectedOption.value);
+  i18n.changeLanguage(selectedOption.value);
+
+  const url = new URL(window.location.href);
+  url.searchParams.set("lng", selectedOption.value);
+  window.history.replaceState({}, '', url.toString());
+};
 
   const languageOptions: OptionType[] = [
     { value: "en", label: "EN" },
