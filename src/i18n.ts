@@ -12,9 +12,11 @@ i18n
     debug: true,
     interpolation: { escapeValue: false },
     keySeparator: '.',
+    load: 'languageOnly',
     detection: {
       order: ['querystring', 'localStorage', 'cookie', 'navigator', 'htmlTag'],
       caches: ['localStorage', 'cookie'],
+      lookupFromPathIndex: 0, 
     },
   });
 
