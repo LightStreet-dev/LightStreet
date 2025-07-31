@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import type { StylesConfig, OptionProps } from "react-select";
 import Select from "react-select";
 import { useTranslation } from "react-i18next";
@@ -84,16 +84,15 @@ const LanguageChanger: React.FC = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<string>(
     i18n.language
   );
+  useEffect(() => {
+  setSelectedLanguage(i18n.language);
+}, [i18n.language]);
 
   const handleLanguageChange = (
     selectedOption: OptionProps<OptionType, false>["data"]
   ) => {
     setSelectedLanguage(selectedOption.value);
-    if(i18n.language){
-      console.log(i18n.language)
-       i18n.changeLanguage(i18n.language);
-    }
-    i18n.changeLanguage(selectedOption.value);
+       i18n.changeLanguage(selectedOption.value);
   };
 
   const languageOptions: OptionType[] = [
