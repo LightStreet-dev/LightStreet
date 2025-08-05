@@ -9,8 +9,15 @@ declare module "i18next" {
           about: string;
           ourWorks: string;
           contact: string;
+          contactButton: string;
         };
-        contactButton: string;
+        hero: {
+          heroTitle1: string;
+          heroTitle2: string;
+          heroTitle3: string;
+          heroText: string;
+          heroBtn: string;
+        };
       };
     };
   }

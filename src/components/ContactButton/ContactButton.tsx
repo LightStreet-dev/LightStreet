@@ -10,7 +10,7 @@ const ContactButton:React.FC<contactButton> = ({isOpen, setOpen}) => {
       const {t} = useTranslation();
   return (
     <div>
-        <button className={clsx(s.contactbtn, isOpen && s.modalContactBtn )} onClick={() => setOpen?.(false)}>{t("contactButton")}</button>
+        <button className={clsx(s.contactbtn, isOpen && s.modalContactBtn )} onClick={() => setOpen?.(false)}>{t("header.contactButton")}</button>
     </div>
   )
 }

@@ -1,21 +1,21 @@
 import s from "./HeroTitle.module.css";
-
+import { useTranslation } from 'react-i18next'
 const HeroTitle:React.FC = () => {
-  return (
+  const {t} = useTranslation();
+    return (
     <div className={s.heroTitleContainer}>
       <h1 className={s.heroTitle}>
-        <span className={s.heroTitleContent1}>Complete</span>
-        <span className={s.heroTitleContent2}>Design</span>
-        <span className={s.heroTitleContent3}>Solutions</span>
+        <span className={s.heroTitleContent1}>{t("hero.heroTitle1")}</span>
+        <span className={s.heroTitleContent2}>{t("hero.heroTitle2")}</span>
+        <span className={s.heroTitleContent3}>{t("hero.heroTitle3")}</span>
       </h1>
 
       <p className={s.heroText}>
-        From idea to launch — tailored UI/UX, visual identity, and web assets
-        for your product.
+        {t("hero.heroText")}
       </p>
 
         <button className={s.heroBatton} type="button">
-          START NOW
+          {t("hero.heroBtn")}
         </button>
     
     </div>

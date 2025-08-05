@@ -2,7 +2,14 @@
   "header": {
     "about": "O nas",
     "ourWorks": "Nasze realizacje",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "contactButton": "Konsultacja"
   },
-  "contactButton": "Konsultacja"
+  "hero": {
+    "heroTitle1": "Kompleksowe",
+    "heroTitle2": "Rozwiązania",
+    "heroTitle3": "Projektowe",
+    "heroText": "Od pomysłu po wdrożenie — dopasowany UI/UX, identyfikacja wizualna i materiały webowe dla Twojego produktu.",
+    "heroBtn": "ZACZNIJ TERAZ"
+  }
 }

@@ -2,7 +2,14 @@
   "header": {
     "about": "About",
     "ourWorks": "Our works",
-    "contact": "Contact"
+    "contact": "Contact",
+    "contactButton": "Consultation"
   },
-  "contactButton": "Consultation"
+  "hero": {
+    "heroTitle1": "Complete",
+    "heroTitle2": "Design",
+    "heroTitle3": "Solutions",
+    "heroText": "From idea to launch — tailored UI/UX, visual identity, and web assets for your product.",
+    "heroBtn": "START NOW"
+  }
 }
