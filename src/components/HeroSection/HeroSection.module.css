@@ -1,6 +1,6 @@
 .herroContainer{
     display: flex;
-    padding-top: 83px;
+    padding-top: 50px;
     flex-direction: column;
     align-items: start;
     
@@ -8,6 +8,7 @@
 
 @media (min-width: 768px) {
   .herroContainer{
+     padding-top: 83px;
        flex-direction: row;
        justify-content: space-between;
   }
