@@ -1,8 +1,14 @@
+.rewiewsWrapper{
+  display: flex;
+  flex-direction: column;
+
+}
 .reviewsContainer {
   display: flex;
   gap: 0px;
   max-width: 320px;
   transition: gap 0.5s ease;
+
 position: relative;
   &:hover {
     gap: 25px;

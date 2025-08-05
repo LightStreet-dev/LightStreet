@@ -8,7 +8,7 @@ const ReviewsContainer: React.FC = () => {
 
   const activeReview = activeIndex !== null ? reviews[activeIndex] : null;
   return (
-    <>
+    <div className={s.rewiewsWrapper}>
       <div className={s.reviewsContainer}>
         {reviews.map((review, index) => {
           return (
@@ -27,7 +27,7 @@ const ReviewsContainer: React.FC = () => {
           {activeReview.text}
         </p>
       )}
-    </>
+    </div>
   );
 };
 

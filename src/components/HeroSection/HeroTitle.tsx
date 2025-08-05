@@ -4,9 +4,9 @@ const HeroTitle:React.FC = () => {
   return (
     <div className={s.heroTitleContainer}>
       <h1 className={s.heroTitle}>
-        <span className={s.heroTitleContent1}>Complete</span>{" "}
-        <span className={s.heroTitleContent2}>Design</span>{" "}
-        <span className={s.heroTitleContent3}>Solutions</span>{" "}
+        <span className={s.heroTitleContent1}>Complete</span>
+        <span className={s.heroTitleContent2}>Design</span>
+        <span className={s.heroTitleContent3}>Solutions</span>
       </h1>
 
       <p className={s.heroText}>
