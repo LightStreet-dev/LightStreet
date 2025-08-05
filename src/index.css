@@ -6,6 +6,7 @@
   -moz-osx-font-smoothing: grayscale;
   --mainBackground: linear-gradient(246.04deg, #00242e 3.77%, #006fba 99.15%);
   --mainFontFamily: Inter, sans-serif;
+  --secondFontFamily: Konkhmer Sleokchher;
   --mainFontHeight: 400;
   --textFontSize: 16px;
   --textLineHeight: 1.2;
@@ -69,3 +70,4 @@ button {
 .hidden{
   display: none;
 }
+
