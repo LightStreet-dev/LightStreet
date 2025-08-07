@@ -1,15 +1,14 @@
 .rewiewsWrapper {
   display: flex;
   flex-direction: column;
-width: 320px;
+width: 300px;
+position: relative;
 
 }
 .wrapWithText{
-  display: flex;
-gap:10px;
+display: inline-flex;
   align-items: center;
-    
-}
+    }
 .reviewsContainer {
   display: flex;
   gap: 0px;
@@ -24,22 +23,25 @@ justify-content: flex-start;
 }
 .reviewsText {
   display: flex;
-  margin-left: auto;
+ text-align: start;
   font-family: var(--secondFontFamily);
   font-size: 23px;
   line-height: 20px;
-  text-align: left;
-transition: transform 0.5s ease, font-size 0.5s ease;
+  position: absolute;
+  right: 40px;
+
+
+transition:  font-size 0.5s ease, right 0.5s ease;
   transform-origin: left top; /* Додай для кращого контролю точки обертання */
   
 }
 
  .reviewsContainer:hover + .reviewsText {
-  transform: rotate(-90deg) translateX(-40px);
   font-size: 16px;
+    right: 0;
 }
 .reviewText {
   text-align: start;
-  max-width: 320px;
+  max-width: 100%;
 
 }

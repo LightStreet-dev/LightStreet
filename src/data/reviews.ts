@@ -8,7 +8,7 @@ export interface Review {
 const reviews:Review[] = [
   {
     id: 1,
-    text: "Замовила розробку сайту — результат перевершив усі очікування! Швидко, якісно та з урахуванням усіх побажань. Рекомендую!",
+    text: "Каріна, UI/UX, Web дизайнерка, яка не просто малює, а вирішує задачі. Орієнтована на результат: зручність, логіка, візуальна чистота. Не боїться складних проєктів, робить не просто шаблонні макети, а те що продає.",
     photo: "/img/reviews/karina.jpg",
   },
   {
@@ -21,5 +21,7 @@ const reviews:Review[] = [
     text: "Profesjonalne podejście i szybka realizacja projektu. Strona wygląda świetnie i działa bez zarzutu. Polecam z całego serca!",
      photo: "/img/reviews/andryshka.jpg",
   },
+  
+    
 ];
 export default reviews

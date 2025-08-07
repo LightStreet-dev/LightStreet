@@ -25,7 +25,7 @@ const ReviewsContainer: React.FC = () => {
         })}
         
       </div>
-      <p className={clsx(s.reviewsText, activeIndex && s.reviewsTextActive)}>Our <br />reviews</p>
+      <p className={clsx(s.reviewsText, activeIndex && s.reviewsTextActive)}>Our <br/> Team</p>
       </div>
       {activeReview && (
         <p className={s.reviewText}>
