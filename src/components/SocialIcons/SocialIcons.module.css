@@ -8,6 +8,10 @@
   height: 45px;
   fill: var(--iconsColor);
   display: block;
+  transition: fill 0.5s ease;
+  &:hover {
+    fill: var(--mainContentColor);
+  }
 }
 
 .socIconsListModal {
@@ -19,4 +23,5 @@
   height: 45px;
   fill: currentColor;
   display: block;
+  transition: fill 0.5s ease;
 }

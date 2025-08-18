@@ -5,10 +5,15 @@ import s from "./ModalMenu.module.css";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import ContactButton from "../ContactButton/ContactButton";
 import { useTranslation } from "react-i18next";
+interface modalProps {
+  toggleForm: ()=> void
+}
 
-const ModalMenu: React.FC = () => {
+const ModalMenu: React.FC<modalProps> = ({toggleForm}) => {
   const { t } = useTranslation();
   const [isOpen, setOpen] = useState<boolean>(false);
+
+  
   const handleBackdropClick = (evt: React.MouseEvent<HTMLDivElement>) => {
     if (evt.target === evt.currentTarget) {
       setOpen(false);
@@ -54,7 +59,7 @@ const ModalMenu: React.FC = () => {
             </ul>
           </div>
           <SocialIcons isOpen={isOpen} />
-          <ContactButton isOpen={isOpen} setOpen={setOpen} />
+          <ContactButton isOpen={isOpen} setOpen={setOpen} toggleForm={toggleForm}  />
         </div>
       }
     </div>
