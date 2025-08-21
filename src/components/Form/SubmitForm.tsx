@@ -1,4 +1,5 @@
 
+import clsx from "clsx";
 import s from "./SubmitForm.module.css";
 import { Field, Form, Formik } from "formik";
 type FormValue = {
@@ -12,8 +13,9 @@ type FormValue = {
 };
 interface sabmitFormProps {
   openForm: boolean
+  setOpenForm: (open: boolean) => void
 }
-const SubmitForm: React.FC<sabmitFormProps> = ({openForm}) => {
+const SubmitForm: React.FC<sabmitFormProps> = ({openForm, setOpenForm}) => {
   console.log(openForm)
   const initialValues: FormValue = {
     name: "",
@@ -30,27 +32,39 @@ const SubmitForm: React.FC<sabmitFormProps> = ({openForm}) => {
   ) => {
     console.log(values);
     actions.resetForm();
+    setOpenForm(false)
   };
+  const handelCloseForm = (evt: React.MouseEvent<HTMLDivElement>) =>{
+    if(evt.target===evt.currentTarget){
+      setOpenForm(false)
+    }
+  }
 
   return (
-    <div>
+    <div
+      className={clsx(s.modalFormOverlay, openForm && s.modalFormOverlayActive)}
+      onClick={handelCloseForm}
+    >
+      <div className={s.formWrapper}>
+        <p className={s.closeFormBtn} onClick={handelCloseForm}>X</p>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         {({ values }) => (
           <Form className={s.form}>
-            <Field placeholder='name' name="name" />
-            <Field placeholder='company' name="company" />
-            <Field placeholder='telephone' name="telephone" />
-            <Field placeholder='email' name="email" />
-            <Field placeholder='text' as='textarea' name='text'/>
+            <Field className={s.fieldStyle} placeholder='name' name="name" />
+            <Field className={s.fieldStyle} placeholder='company' name="company" />
+            <Field className={s.fieldStyle} placeholder='telephone' name="telephone" />
+            <Field className={s.fieldStyle} placeholder='email' name="email" />
+            <Field className={s.fieldStyle} placeholder='text' as='textarea' name='text'/>
             <label>
               <Field type='checkbox' name='agree'/>
               I agree
               </label>
             
-            <button disabled={!values.agree} type="submit">Send</button>
+            <button className={s.submitBtn} disabled={!values.agree} type="submit">Send</button>
           </Form>
         )}
       </Formik>
+      </div>
     </div>
   );
 };

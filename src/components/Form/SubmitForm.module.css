@@ -1,4 +1,76 @@
 .form{
     display: flex;
     flex-direction: column;
+    gap:10px
+}
+
+.modalFormOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+background:  linear-gradient(
+    246.04deg,
+    rgba(0, 36, 46, 0.6) 3.77%,
+    rgba(0, 111, 186, 0.6) 99.15%
+  );;
+ backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* для Safari */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.modalFormOverlayActive {
+ opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.formWrapper{
+ max-width: 400px;
+  width: 100%;
+  padding: 32px;
+  background-color: #FFFFFF;
+  border-radius: 5%;
+  position: relative;
+}
+
+.modalContent {
+
+  padding: 20px 30px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  margin:auto 0;
+}
+.fieldStyle
+{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.closeFormBtn{
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right:25px;
+}
+.submitBtn{
+  width: 100%;
+  padding: 10px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

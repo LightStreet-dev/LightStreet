@@ -23,7 +23,7 @@ const App:React.FC = () => {
     <>
    <Header mobMediaQuery = {isMobileHeader} toggleForm = {toggleOpenForm}/>
    <HeroSection />
-   <SubmitForm openForm = {openForm}/>
+   <SubmitForm openForm = {openForm} setOpenForm = {setOpenForm}/>
     </>
   )
 }
