@@ -1,7 +1,10 @@
 
 import clsx from "clsx";
+import { useId } from "react";
 import s from "./SubmitForm.module.css";
+import { MdClose } from "react-icons/md";
 import { Field, Form, Formik } from "formik";
+
 type FormValue = {
   name: string;
   company:string;
@@ -15,8 +18,9 @@ interface sabmitFormProps {
   openForm: boolean
   setOpenForm: (open: boolean) => void
 }
+
 const SubmitForm: React.FC<sabmitFormProps> = ({openForm, setOpenForm}) => {
-  console.log(openForm)
+const id = useId()
   const initialValues: FormValue = {
     name: "",
     company:"",
@@ -40,24 +44,43 @@ const SubmitForm: React.FC<sabmitFormProps> = ({openForm, setOpenForm}) => {
     }
   }
 
+
   return (
+    
     <div
       className={clsx(s.modalFormOverlay, openForm && s.modalFormOverlayActive)}
       onClick={handelCloseForm}
     >
       <div className={s.formWrapper}>
-        <p className={s.closeFormBtn} onClick={handelCloseForm}>X</p>
+        <MdClose size={24} className={s.closeFormBtn} onClick={()=> setOpenForm(false)}/>
+          <h2 className={s.formHeader}>Contact us</h2>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         {({ values }) => (
           <Form className={s.form}>
-            <Field className={s.fieldStyle} placeholder='name' name="name" />
-            <Field className={s.fieldStyle} placeholder='company' name="company" />
-            <Field className={s.fieldStyle} placeholder='telephone' name="telephone" />
-            <Field className={s.fieldStyle} placeholder='email' name="email" />
-            <Field className={s.fieldStyle} placeholder='text' as='textarea' name='text'/>
-            <label>
+            <div className={s.fieldWrapper}>
+            <Field className={s.fieldStyle} id={id} placeholder=' '  name="name" />
+            <label className={s.labelForm} htmlFor={id}>Name</label>
+            </div>
+            <div className={s.fieldWrapper}>
+            <Field className={s.fieldStyle} placeholder=' ' name="company" />
+            <label className={s.labelForm} htmlFor={id}>Company</label>
+            </div>
+           <div className={s.fieldWrapper}>
+            <Field className={s.fieldStyle} placeholder=' ' name="phone" />
+            <label className={s.labelForm} htmlFor={id}>Phone</label>
+            </div>
+            <div className={s.fieldWrapper}>
+            <Field className={s.fieldStyle} placeholder=' ' name="email" />
+            <label className={s.labelForm} htmlFor={id}>Email</label>
+            </div>
+             <div className={s.fieldWrapper}>
+            <Field className={s.fieldStyle} placeholder=' ' as='textarea' name='text' id={id}/> 
+            <label className={s.labelFormTextArea} htmlFor={id}>Text</label>
+            </div>
+            <label className={s.checkbox}>
               <Field type='checkbox' name='agree'/>
-              I agree
+              
+              <span className={s.checkboxText}>I agree all rules </span>
               </label>
             
             <button className={s.submitBtn} disabled={!values.agree} type="submit">Send</button>
