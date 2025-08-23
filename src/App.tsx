@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive'
 import './App.css'
 import Header from './components/HeaderSection/Header/Header'
 import HeroSection from './components/HeroSection/HeroComponent/HeroComponent'
-import SubmitForm from './components/Form/SubmitForm'
+import SubmitForm from './components/ContactForm/SubmitForm/SubmitForm'
 import { useState } from 'react'
 
 
