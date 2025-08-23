@@ -2,8 +2,8 @@ import Hamburger from "hamburger-react";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import s from "./ModalMenu.module.css";
-import SocialIcons from "../SocialIcons/SocialIcons";
-import ContactButton from "../ContactButton/ContactButton";
+import SocialIcons from "../../SocialIcons/SocialIcons";
+import ContactButton from "../../ContactButton/ContactButton";
 import { useTranslation } from "react-i18next";
 interface modalProps {
   toggleForm: ()=> void

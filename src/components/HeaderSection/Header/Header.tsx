@@ -1,11 +1,11 @@
-import ContactButton from "../ContactButton/ContactButton";
-import Logo from "../Logo/Logo";
+import ContactButton from "../../ContactButton/ContactButton";
+import Logo from "../../Logo/Logo";
 import NavLinks from "../NavLins/NavLinks";
-import SocialIcons from "../SocialIcons/SocialIcons";
+import SocialIcons from "../../SocialIcons/SocialIcons";
 import s from "./Header.module.css";
-import LanguageChanger from "./LanguageChanger";
+import LanguageChanger from "../LanguageChanger/LanguageChanger";
 
-import ModalMenu from "./ModalMenu";
+import ModalMenu from "../ModalMenu/ModalMenu";
 interface HeaderProps {
   mobMediaQuery: boolean;
   toggleForm: ()=> void;

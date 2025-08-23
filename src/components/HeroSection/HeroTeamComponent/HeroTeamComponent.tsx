@@ -1,5 +1,5 @@
-import s from "./Review.module.css";
-import type { Review as ReviewType } from "../../data/reviews";
+import s from "./HeroTeamComponent.module.css";
+import type { Review as ReviewType } from "../../../data/reviews";
 import clsx from "clsx";
 
 interface ReviewProps {
@@ -9,7 +9,7 @@ interface ReviewProps {
   setActiveIndex: React.Dispatch<React.SetStateAction<number | null>>;
 }
 
-const Review: React.FC<ReviewProps> = ({
+const HeroTeamComponent: React.FC<ReviewProps> = ({
   review,
   index,
   activeIndex,
@@ -27,4 +27,4 @@ const isActive = activeIndex === index
   );
 };
 
-export default Review;
+export default HeroTeamComponent;

@@ -1,9 +1,8 @@
 
 import { useMediaQuery } from 'react-responsive'
 import './App.css'
-import './components/HeaderSection/Header'
-import Header from './components/HeaderSection/Header'
-import HeroSection from './components/HeroSection/HeroSection'
+import Header from './components/HeaderSection/Header/Header'
+import HeroSection from './components/HeroSection/HeroComponent/HeroComponent'
 import SubmitForm from './components/Form/SubmitForm'
 import { useState } from 'react'
 

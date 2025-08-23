@@ -1,10 +1,10 @@
-import s from "./ReviewsContainer.module.css";
-import reviews from "../../data/reviews.ts";
-import Review from "./Review.tsx";
+import s from "./HeroTemList.module.css";
+import reviews from "../../../data/reviews.ts";
+import Review from "../HeroTeamComponent/HeroTeamComponent.tsx";
 import { useState } from "react";
 import clsx from "clsx";
 
-const ReviewsContainer: React.FC = () => {
+const HeroTemList: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(() => Math.floor(Math.random() * reviews.length));
 
   const activeReview = activeIndex !== null ? reviews[activeIndex] : null;
@@ -36,4 +36,4 @@ const ReviewsContainer: React.FC = () => {
   );
 };
 
-export default ReviewsContainer;
+export default HeroTemList;
