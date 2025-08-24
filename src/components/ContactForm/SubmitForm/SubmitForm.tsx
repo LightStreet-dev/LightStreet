@@ -5,7 +5,7 @@ import s from "./SubmitForm.module.css";
 import { MdClose } from "react-icons/md";
 import { Field, Form, Formik } from "formik";
 import InputComponent from "../InputComponent/InputComponent";
-
+import { useTranslation } from "react-i18next";
 type FormValue = {
   Name: string;
   Company: string;
@@ -22,7 +22,7 @@ interface SubmitFormProps {
 
 const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
   const formRef = useRef<HTMLFormElement>(null);
-
+const { t } = useTranslation();
   const initialValues: FormValue = {
     Name: "",
     Company: "",
@@ -32,29 +32,17 @@ const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
     agree: false,
   };
 
-  const detectUserLang = () => {
-    const userLang = navigator.language
-    if (userLang.startsWith("uk")) return "uk";
-    if (userLang.startsWith("pl")) return "pl";
-    return "en"; // дефолт
-  };
 
   const sendEmail = async (
     values: FormValue,
     actions: import("formik").FormikHelpers<FormValue>
   ) => {
     if (!formRef.current) return;
-
-    const lang = detectUserLang();
-
-    const confirmationMessages: Record<string, string> = {
-      en: "Thank you! We received your request and will contact you soon.",
-      uk: "Дякуємо! Ми отримали вашу заявку та незабаром зв'яжемося з вами.",
-      pl: "Dziękujemy! Otrzymaliśmy Twoje zgłoszenie i wkrótce się skontaktujemy.",
-    };
-
-    const confirmationText = confirmationMessages[lang];
-
+   const confirmMail = t("formReply.reply"); 
+   const mailTitle =  t("formReply.title");
+   const mailVelcome =  t("formReply.velcome");
+   const mailSignOne =  t("formReply.signatureOne");
+    const mailSignTwo =  t("formReply.signatureTwo");
     try {
       // 1️⃣ Надіслати лист адміністратору
       await emailjs.sendForm(
@@ -71,7 +59,11 @@ const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
         {
           name: values.Name,
           email: values.Email,
-          confirmation: confirmationText,
+          confirmation: confirmMail,
+          title:mailTitle,
+          velcome:mailVelcome,
+          signatureOne: mailSignOne,
+           signatureTwo: mailSignTwo,
         },
         "WfwuYGLBQ1Q_uC7jX"
       );

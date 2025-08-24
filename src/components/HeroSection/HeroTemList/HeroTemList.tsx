@@ -1,18 +1,11 @@
 import s from "./HeroTemList.module.css";
-import reviews from "../../../data/reviews.ts";
-
-// Define the type for a review
-interface ReviewType {
-  id: string;
-  text: string;
-  // Add other fields as necessary
-}
+import reviews from "../../../data/reviews";
 import Review from "../HeroTeamComponent/HeroTeamComponent.tsx";
 import { useState } from "react";
 import clsx from "clsx";
 
 const HeroTemList: React.FC = () => {
-        {reviews.map((review: ReviewType, index: number) => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(() => Math.floor(Math.random() * reviews.length));
 
   const activeReview = activeIndex !== null ? reviews[activeIndex] : null;
   return (

@@ -11,5 +11,12 @@
     "heroTitle3": "Projektowe",
     "heroText": "Od pomysłu po wdrożenie — dopasowany UI/UX, identyfikacja wizualna i materiały webowe dla Twojego produktu.",
     "heroBtn": "ZACZNIJ TERAZ"
+  },
+  "formReply":{
+     "reply": "Dziękujemy! Otrzymaliśmy Twoje zgłoszenie i wkrótce się ",
+      "title": "Otrzymaliśmy Twoją wiadomość.",
+     "velcome": "Hej",
+     "signatureOne": "Z poważaniem ",
+     "signatureTwo":"Zespół Light Street"
   }
 }

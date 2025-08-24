@@ -18,6 +18,13 @@ declare module "i18next" {
           heroText: string;
           heroBtn: string;
         };
+        formReply: {
+          reply: string;
+          title: string;
+          velcome: string;
+          signatureOne: string;
+          signatureTwo: string;
+        };
       };
     };
   }

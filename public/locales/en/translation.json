@@ -11,5 +11,15 @@
     "heroTitle3": "Solutions",
     "heroText": "From idea to launch — tailored UI/UX, visual identity, and web assets for your product.",
     "heroBtn": "START NOW"
-  }
+  },
+  "formReply":{
+     "reply": "Thank you! We received your request and will contact you soon.",
+     "title": "We’ve received your message",
+     "velcome":"Hi",
+     "signatureOne":"Best regards",
+     "signatureTwo":" The Light Street Team"
+    }
+
+  
+
 }
