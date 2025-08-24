@@ -1,12 +1,11 @@
 import clsx from "clsx";
-
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import s from "./SubmitForm.module.css";
 import { MdClose } from "react-icons/md";
 import { Field, Form, Formik } from "formik";
 import InputComponent from "../InputComponent/InputComponent";
-import { useEffect } from "react";
-// Хак для autofill на iPhone/Chrome
- 
+
 type FormValue = {
   Name: string;
   Company: string;
@@ -15,26 +14,15 @@ type FormValue = {
   Text: string;
   agree: boolean;
 };
-interface sabmitFormProps {
+
+interface SubmitFormProps {
   openForm: boolean;
   setOpenForm: (open: boolean) => void;
 }
 
-const SubmitForm: React.FC<sabmitFormProps> = ({ openForm, setOpenForm }) => {
-   useEffect(() => {
-    const fields = formRef.current.querySelectorAll(".fieldStyle");
+const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
+  const formRef = useRef<HTMLFormElement>(null);
 
-    fields.forEach((field) => {
-      setTimeout(() => {
-        if (field.matches(":-webkit-autofill") || field.value) {
-          const val = field.value;
-          field.value = "";
-          field.value = val;
-          field.classList.add("filled-autofill");
-        }
-      }, 100);
-    });
-  }, []);
   const initialValues: FormValue = {
     Name: "",
     Company: "",
@@ -43,15 +31,31 @@ const SubmitForm: React.FC<sabmitFormProps> = ({ openForm, setOpenForm }) => {
     Text: "",
     agree: false,
   };
-  const handleSubmit = (
+
+  const sendEmail = (
     values: FormValue,
     actions: import("formik").FormikHelpers<FormValue>
   ) => {
-    console.log(values);
-    actions.resetForm();
-    setOpenForm(false);
+    if (!formRef.current) return;
+
+    emailjs.sendForm(
+      'service_b9158j4',
+      'template_3o02fkr',
+      formRef.current,
+      'WfwuYGLBQ1Q_uC7jX'
+    )
+    .then(() => {
+      console.log('SUCCESS!');
+      console.log(values);
+      actions.resetForm();
+      setOpenForm(false);
+    })
+    .catch((error) => {
+      console.log('FAILED...', error.text || error);
+    });
   };
-  const handelCloseForm = (evt: React.MouseEvent<HTMLDivElement>) => {
+
+  const handleCloseForm = (evt: React.MouseEvent<HTMLDivElement>) => {
     if (evt.target === evt.currentTarget) {
       setOpenForm(false);
     }
@@ -60,7 +64,7 @@ const SubmitForm: React.FC<sabmitFormProps> = ({ openForm, setOpenForm }) => {
   return (
     <div
       className={clsx(s.modalFormOverlay, openForm && s.modalFormOverlayActive)}
-      onClick={handelCloseForm}
+      onClick={handleCloseForm}
     >
       <div className={s.formWrapper}>
         <MdClose
@@ -69,14 +73,15 @@ const SubmitForm: React.FC<sabmitFormProps> = ({ openForm, setOpenForm }) => {
           onClick={() => setOpenForm(false)}
         />
         <h2 className={s.formHeader}>Contact us</h2>
-        <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+        <Formik initialValues={initialValues} onSubmit={sendEmail}>
           {({ values }) => (
-            <Form className={s.form}>
+            <Form ref={formRef} className={s.form}>
               <InputComponent name="Name" as="input" type="text" />
               <InputComponent name="Company" as="input" type="text" />
               <InputComponent name="Phone" as="input" type="number" />
               <InputComponent name="Email" as="input" type="text" />
               <InputComponent name="Text" as="textarea" type="text" />
+
               <label className={s.checkbox}>
                 <Field type="checkbox" name="agree" />
                 <span className={s.checkboxText}>I agree all rules </span>
