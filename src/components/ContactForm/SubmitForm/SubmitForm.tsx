@@ -6,20 +6,7 @@ import { Field, Form, Formik } from "formik";
 import InputComponent from "../InputComponent/InputComponent";
 import { useEffect } from "react";
 // Хак для autofill на iPhone/Chrome
-  useEffect(() => {
-    const fields = formRef.current.querySelectorAll(".fieldStyle");
-
-    fields.forEach((field) => {
-      setTimeout(() => {
-        if (field.matches(":-webkit-autofill") || field.value) {
-          const val = field.value;
-          field.value = "";
-          field.value = val;
-          field.classList.add("filled-autofill");
-        }
-      }, 100);
-    });
-  }, []);
+ 
 type FormValue = {
   Name: string;
   Company: string;
@@ -34,7 +21,20 @@ interface sabmitFormProps {
 }
 
 const SubmitForm: React.FC<sabmitFormProps> = ({ openForm, setOpenForm }) => {
-  
+   useEffect(() => {
+    const fields = formRef.current.querySelectorAll(".fieldStyle");
+
+    fields.forEach((field) => {
+      setTimeout(() => {
+        if (field.matches(":-webkit-autofill") || field.value) {
+          const val = field.value;
+          field.value = "";
+          field.value = val;
+          field.classList.add("filled-autofill");
+        }
+      }, 100);
+    });
+  }, []);
   const initialValues: FormValue = {
     Name: "",
     Company: "",
