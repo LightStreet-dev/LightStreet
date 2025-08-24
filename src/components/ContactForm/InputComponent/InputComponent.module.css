@@ -1,41 +1,37 @@
-.fieldWrapper{
+.fieldWrapper {
   position: relative;
 }
-.fieldStyle
-{
-font-size: var(--textFontSize);
+.fieldStyle {
+  font-size: var(--formFontSize);
   background: transparent;
   width: 100%;
   padding: 10px 5px;
-  height: 40px;      /* робимо textarea такою ж високою, як input */
-  resize: none;       /* забороняємо зміну розміру для textarea */
+  height: 40px; /* робимо textarea такою ж високою, як input */
+  resize: none; /* забороняємо зміну розміру для textarea */
   border: none;
   border-bottom: 1px solid #bfb2b2;
-    box-sizing: border-box;
-    outline: none;
+  box-sizing: border-box;
+  outline: none;
   box-shadow: none;
-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.fieldStyle:focus + .labelForm{
-    top: -7px;
-    font-size: 10px;
-    color: #0073e6;
+.fieldStyle:focus + .labelForm {
+  top: -7px;
+  font-size: 10px;
+  color: #0073e6;
   outline: none;
   box-shadow: none;
   border-color: transparent;
-  
-  
 }
 
-.fieldStyle:not(:placeholder-shown) + .labelForm{
-    top: -7px;
-    font-size: 10px;
-    color: black;
+.fieldStyle:not(:placeholder-shown) + .labelForm {
+  top: -7px;
+  font-size: 10px;
+  color: black;
   outline: none;
-  
 }
-.labelForm{
+.labelForm {
   position: absolute;
   top: 50%;
   left: 0;
@@ -45,16 +41,22 @@ transition: all 0.3s ease;
   background-color: inherit;
   transition: all 0.3s ease;
 }
-.labelFormTextArea{
+.labelFormTextArea {
   position: absolute;
   top: 50%;
   left: 0;
-    padding: 0 5px;
+  padding: 0 5px;
   font-size: 12px;
   color: black;
-  }
+}
 
- .fieldStyle[type=number] {
+  
+
+
+textarea.fieldStyle:focus{
+  height: 80px;
+}
+.fieldStyle[type="number"] {
   /* Спочатку стандартна властивість */
   appearance: none;
 
@@ -62,10 +64,10 @@ transition: all 0.3s ease;
   -webkit-appearance: none; /* Chrome, Safari, Edge */
   -moz-appearance: textfield; /* Firefox */
 }
-.fieldStyle[type=number]::-webkit-inner-spin-button,
-.fieldStyle[type=number]::-webkit-outer-spin-button {
-  appearance: none;           /* Стандарт */
-  -webkit-appearance: none;   /* Вендорний префікс */
+.fieldStyle[type="number"]::-webkit-inner-spin-button,
+.fieldStyle[type="number"]::-webkit-outer-spin-button {
+  appearance: none; /* Стандарт */
+  -webkit-appearance: none; /* Вендорний префікс */
   margin: 0;
 }
 .fieldStyle:-webkit-autofill,
@@ -77,3 +79,20 @@ transition: all 0.3s ease;
   transition: background-color 5000s ease-in-out 0s; /* хак для вимикання фонового кольору */
 }
 
+textarea::-webkit-scrollbar {
+  width: 4px; /* товщина скролбара */
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1; /* колір треку */
+  border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #888; /* колір бігунка */
+  border-radius: 4px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #555; /* колір бігунка при наведенні */
+}
