@@ -82,7 +82,7 @@ textarea.fieldStyle:not(:placeholder-shown) {
   -webkit-text-fill-color: inherit !important; /* колір тексту з поля */
   background-clip: content-box !important; /* запобігає накладанню жовтого/білого */
   background: transparent !important; /* додатково робимо фон прозорим */
-  transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s !important;
 }
 
 
