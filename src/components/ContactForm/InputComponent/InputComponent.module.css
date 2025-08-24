@@ -5,8 +5,8 @@
   font-size: var(--formFontSize);
   background: transparent;
   width: 100%;
-  padding: 10px 5px;
-  height: 40px; /* робимо textarea такою ж високою, як input */
+  padding: 5px 5px;
+  height: 35px; /* робимо textarea такою ж високою, як input */
   resize: none; /* забороняємо зміну розміру для textarea */
   border: none;
   border-bottom: 1px solid #bfb2b2;
@@ -17,7 +17,7 @@
 }
 
 .fieldStyle:focus + .labelForm {
-  top: -7px;
+  top: -13px;
   font-size: 10px;
   color: #0073e6;
   outline: none;
@@ -26,9 +26,9 @@
 }
 
 .fieldStyle:not(:placeholder-shown) + .labelForm {
-  top: -7px;
+  top: -13px;
   font-size: 10px;
-  color: black;
+  color: rgb(110, 108, 108);
   outline: none;
 }
 .labelForm {
@@ -37,7 +37,7 @@
   left: 0;
   padding: 0 5px;
   font-size: 12px;
-  color: black;
+   color: rgb(110, 108, 108);
   background-color: inherit;
   transition: all 0.3s ease;
 }
@@ -54,7 +54,11 @@
 
 
 textarea.fieldStyle:focus{
-  height: 80px;
+  height: 85px;
+  
+}
+textarea.fieldStyle:not(:placeholder-shown) {
+  height: 85px;
 }
 .fieldStyle[type="number"] {
   /* Спочатку стандартна властивість */

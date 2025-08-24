@@ -58,7 +58,7 @@ const SubmitForm: React.FC<sabmitFormProps> = ({ openForm, setOpenForm }) => {
           {({ values }) => (
             <Form className={s.form}>
               <InputComponent name="Name" as="input" type="text" />
-              <InputComponent name="Compamy" as="input" type="text" />
+              <InputComponent name="Company" as="input" type="text" />
               <InputComponent name="Phone" as="input" type="number" />
               <InputComponent name="Email" as="input" type="text" />
               <InputComponent name="Text" as="textarea" type="text" />
