@@ -1,92 +1,102 @@
-/* Контейнер для поля */
 .fieldWrapper {
   position: relative;
 }
-
-/* Загальний стиль для input і textarea */
 .fieldStyle {
   font-size: var(--formFontSize);
   background: transparent;
   width: 100%;
   padding: 5px 5px;
-  box-sizing: border-box;
+  height: 35px; /* робимо textarea такою ж високою, як input */
+  resize: none; /* забороняємо зміну розміру для textarea */
   border: none;
   border-bottom: 1px solid #bfb2b2;
+  box-sizing: border-box;
   outline: none;
   box-shadow: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-/* Label над полем */
+.fieldStyle:focus + .labelForm {
+  top: -13px;
+  font-size: 10px;
+  color: #0073e6;
+  outline: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.fieldStyle:not(:placeholder-shown) + .labelForm {
+  top: -13px;
+  font-size: 10px;
+  color: rgb(110, 108, 108);
+  outline: none;
+}
 .labelForm {
   position: absolute;
   top: 50%;
   left: 0;
   padding: 0 5px;
   font-size: 12px;
-  color: rgb(110, 108, 108);
+   color: rgb(110, 108, 108);
   background-color: inherit;
-  pointer-events: none;
   transition: all 0.3s ease;
 }
-
-/* Плаваюча label при фокусі або заповненому полі */
-.fieldStyle:focus + .labelForm,
-.fieldStyle:not(:placeholder-shown) + .labelForm {
-  top: -13px;
-  font-size: 10px;
-  color: #0073e6;
+.labelFormTextArea {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 0 5px;
+  font-size: 12px;
+  color: black;
 }
 
-/* Плавне розкриття textarea */
-textarea.fieldStyle {
-  max-height: 35px; /* початкова висота */
-  resize: none;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
+  
 
-/* При фокусі або заповненому полі */
-textarea.fieldStyle:focus,
+
+textarea.fieldStyle:focus{
+  height: 85px;
+  
+}
 textarea.fieldStyle:not(:placeholder-shown) {
-  max-height: 85px;
+  height: 85px;
 }
-
-/* Для числових полів */
 .fieldStyle[type="number"] {
-  -webkit-appearance: none;
-  -moz-appearance: textfield;
+  /* Спочатку стандартна властивість */
   appearance: none;
-}
 
+  /* Вендорні префікси для старих браузерів */
+  -webkit-appearance: none; /* Chrome, Safari, Edge */
+  -moz-appearance: textfield; /* Firefox */
+}
 .fieldStyle[type="number"]::-webkit-inner-spin-button,
 .fieldStyle[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+  appearance: none; /* Стандарт */
+  -webkit-appearance: none; /* Вендорний префікс */
   margin: 0;
 }
-
-/* Autofill хак для Safari */
 .fieldStyle:-webkit-autofill,
 .fieldStyle:-webkit-autofill:hover,
 .fieldStyle:-webkit-autofill:focus,
 .fieldStyle:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
-  -webkit-text-fill-color: #000 !important;
-  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #000 !important; /* колір тексту */
+  transition: background-color 5000s ease-in-out 0s; /* хак для вимикання фонового кольору */
 }
 
-/* Scrollbar для textarea */
 textarea::-webkit-scrollbar {
-  width: 4px;
+  width: 4px; /* товщина скролбара */
 }
+
 textarea::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f1f1f1; /* колір треку */
   border-radius: 4px;
 }
+
 textarea::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #888; /* колір бігунка */
   border-radius: 4px;
 }
+
 textarea::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #555; /* колір бігунка при наведенні */
 }
