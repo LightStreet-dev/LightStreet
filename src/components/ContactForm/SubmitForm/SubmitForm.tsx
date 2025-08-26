@@ -71,8 +71,12 @@ const { t } = useTranslation();
       console.log("SUCCESS! Emails sent.");
       actions.resetForm();
       setOpenForm(false);
-    } catch (error: any) {
-      console.log("FAILED...", error.text || error);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.log("FAILED...", error.message);
+      } else {
+        console.log("FAILED...", error);
+      }
     }
   };
 
@@ -91,7 +95,7 @@ const { t } = useTranslation();
         <MdClose
           size={24}
           className={s.closeFormBtn}
-          onClick={() => setOpenForm(false)}
+          onMouseDown={() => setOpenForm(false)}
         />
         <h2 className={s.formHeader}>Contact us</h2>
         <Formik initialValues={initialValues} onSubmit={sendEmail}>
