@@ -1,21 +1,22 @@
 import s from "./HeroTemList.module.css";
-import reviews from "../../../data/reviews";
-import Review from "../HeroTeamComponent/HeroTeamComponent.tsx";
+import teamInfo from "../../../data/teamData.ts";
+
 import { useState } from "react";
 import clsx from "clsx";
+import HeroTeamComponent from "../HeroTeamComponent/HeroTeamComponent.tsx";
 
 const HeroTemList: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(() => Math.floor(Math.random() * reviews.length));
+  const [activeIndex, setActiveIndex] = useState<number | null>(() => Math.floor(Math.random() * teamInfo.length));
 
-  const activeReview = activeIndex !== null ? reviews[activeIndex] : null;
+  const activeReview = activeIndex !== null ? teamInfo[activeIndex] : null;
   return (
     <div className={s.rewiewsWrapper}>
       <div className={s.wrapWithText}>
       <div className={s.reviewsContainer}>
-        {reviews.map((review, index) => {
+        {teamInfo.map((review, index) => {
           return (
-            <Review
-              review={review}
+            <HeroTeamComponent
+              teamText={review}
               key={review.id}
               index={index}
               activeIndex={activeIndex}

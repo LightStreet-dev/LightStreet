@@ -1,11 +1,11 @@
 
 
-export interface Review {
+export interface teamText {
   id: number;
   text: string;
   photo: string;
 }
-const reviews:Review[] = [
+const teamInfo:teamText[] = [
   {
     id: 1,
     text: "Каріна, UI/UX, Web дизайнерка, яка не просто малює, а вирішує задачі. Орієнтована на результат: зручність, логіка, візуальна чистота. Не боїться складних проєктів, робить не просто шаблонні макети, а те що продає.",
@@ -24,4 +24,4 @@ const reviews:Review[] = [
   
     
 ];
-export default reviews
+export default teamInfo

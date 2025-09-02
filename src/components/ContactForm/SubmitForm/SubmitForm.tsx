@@ -44,7 +44,7 @@ const { t } = useTranslation();
    const mailSignOne =  t("formReply.signatureOne");
     const mailSignTwo =  t("formReply.signatureTwo");
     try {
-      // 1️⃣ Надіслати лист адміністратору
+      //  Надіслати лист адміністратору
       await emailjs.sendForm(
         "service_b9158j4",
         "template_3o02fkr",
@@ -52,7 +52,7 @@ const { t } = useTranslation();
         "WfwuYGLBQ1Q_uC7jX"
       );
 
-      // 2️⃣ Надіслати підтвердження користувачу
+      // Надіслати підтвердження користувачу
       await emailjs.send(
         "service_b9158j4",
         "template_5or214p", // шаблон для користувача

@@ -1,28 +1,28 @@
 import s from "./HeroTeamComponent.module.css";
-import type { Review as ReviewType } from "../../../data/reviews";
+import type { teamText as teamType } from "../../../data/teamData";
 import clsx from "clsx";
 
-interface ReviewProps {
-  review: ReviewType;
+interface teamProps {
+  teamText: teamType;
   index: number | null;
   activeIndex: number | null;
   setActiveIndex: React.Dispatch<React.SetStateAction<number | null>>;
 }
 
-const HeroTeamComponent: React.FC<ReviewProps> = ({
-  review,
+const HeroTeamComponent: React.FC<teamProps> = ({
+  teamText: teamInfo,
   index,
   activeIndex,
   setActiveIndex,
 }) => {
-  const { photo } = review;
+  const { photo } = teamInfo;
 const isActive = activeIndex === index
   const handleClickRewiev = () => {
     setActiveIndex(index);
   };
   return (
-    <div className={s.reviewWraper} onClick={handleClickRewiev}>
-      <img className={clsx(s.reviewImg, isActive && s.activeImg)} src={photo} alt="Review" />
+    <div className={s.teamWraper} onClick={handleClickRewiev}>
+      <img className={clsx(s.teamImg, isActive && s.activeImg)} src={photo} alt="Review" />
     </div>
   );
 };
