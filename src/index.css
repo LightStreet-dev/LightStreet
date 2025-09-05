@@ -1,5 +1,6 @@
 :root {
   height: 100%;
+  width: 100%;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,12 +17,17 @@
 }
 
 body {
+  
   background: var(--mainBackground);
   font-family: var(--mainFontFamily);
   font-weight: var(--mainFontHeight);
   line-height: var(--textLineHeight);
   letter-spacing: normal;
   color: var(--mainContentColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
 /* ------Reset css----------*/

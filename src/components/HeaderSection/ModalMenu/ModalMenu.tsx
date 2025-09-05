@@ -31,7 +31,7 @@ const ModalMenu: React.FC<modalProps> = ({toggleForm}) => {
   return (
     <div>
       <div className={s.burgerWrapper}>
-        <Hamburger toggled={isOpen} toggle={setOpen} size={25} />
+        <Hamburger toggled={isOpen} toggle={setOpen} size={35} />
       </div>
       {
         <div

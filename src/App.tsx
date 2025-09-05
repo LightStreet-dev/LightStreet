@@ -20,8 +20,12 @@ const App:React.FC = () => {
    
   return (
     <>
+    <div className="headerHerroWrapper">
+      <div className="container">
    <Header mobMediaQuery = {isMobileHeader} toggleForm = {toggleOpenForm}/>
    <HeroSection />
+   </div>
+   </div>
    <SubmitForm openForm = {openForm} setOpenForm = {setOpenForm}/>
     </>
   )

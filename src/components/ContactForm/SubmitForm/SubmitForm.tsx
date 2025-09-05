@@ -52,7 +52,7 @@ const { t } = useTranslation();
         "WfwuYGLBQ1Q_uC7jX"
       );
 
-      // Надіслати підтвердження користувачу
+      // 0Надіслати підтвердження користувачу
       await emailjs.send(
         "service_b9158j4",
         "template_5or214p", // шаблон для користувача
