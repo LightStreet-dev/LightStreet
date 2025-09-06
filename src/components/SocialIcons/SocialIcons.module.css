@@ -1,14 +1,15 @@
 .socIconsList {
   display: flex;
-  gap: 23px;
+  gap: 8px;
   align-items: center;
 }
 .svg {
-  width: 45px;
-  height: 45px;
+  width: 24px;
+  height: 24px;
   fill: var(--iconsColor);
   display: block;
   transition: fill 0.5s ease;
+  color: #1E1E1E;
   &:hover {
     fill: var(--mainContentColor);
   }
@@ -16,7 +17,8 @@
 
 .socIconsListModal {
   margin-bottom: 50px;
-}
+
+  }
 
 .svgModal {
   width: 45px;

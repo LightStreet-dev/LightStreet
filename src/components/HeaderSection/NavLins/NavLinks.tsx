@@ -4,7 +4,7 @@ const  NavLinks:React.FC =() => {
       const {t} = useTranslation();
     return(
         <ul className={s.navigation}>
-            <li><a href="#">{t("header.about")}</a></li>
+            <li><a className={s.navItem} href="#">{t("header.about")}</a></li>
             <li><a href="#">{t("header.ourWorks")}</a></li>
             <li><a href="#">{t("header.contact")}</a></li>
         </ul>

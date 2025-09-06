@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 const App:React.FC = () => {
   const [openForm, setOpenForm] = useState<boolean>(false)
-  const isMobileHeader = useMediaQuery({maxWidth:1049})
+  const isMobileHeader = useMediaQuery({maxWidth:767})
 
   const toggleOpenForm = () => {
     setOpenForm(prev => !prev)

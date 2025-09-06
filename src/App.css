@@ -11,7 +11,7 @@
 }
 .headerHerroWrapper{
 
-  background-image: url('../public/img/background/imgbackground.jpg');
+  background-image: url('/img/background/imgbackground.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
