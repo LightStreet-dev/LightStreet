@@ -3,14 +3,14 @@
     "about": "O nas",
     "ourWorks": "Realizacje",
     "contact": "Kontakt",
-    "contactButton": "skontaktuj sie"
+    "contactButton": " Konsultacja"
   },
   "hero": {
     "heroTitle1": "Strony",
     "heroTitle2": "internetowe",
     "heroTitle3": "pod klucz",
-    "heroText": "Od pomysłu po wdrożenie — dopasowany UI/UX, identyfikacja wizualna i materiały webowe dla Twojego produktu.",
-    "heroBtn": "ZACZNIJ TERAZ"
+    "heroText": "Od pomysłu po wdrożenie — Tworzymy dopasowany UI/UX, identyfikacja wizualna i materiały webowe dla Twojego produktu.",
+    "heroBtn": "Poznaj ofertę"
   },
   "formReply":{
      "reply": "Dziękujemy! Otrzymaliśmy Twoje zgłoszenie i wkrótce się odezwemy",

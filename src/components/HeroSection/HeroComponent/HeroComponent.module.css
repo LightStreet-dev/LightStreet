@@ -1,10 +1,18 @@
 
 .herroContainer{
     display: flex;
-    padding-top: 50px;
+    padding: 71px 0 0;;
     flex-direction: column;
     align-items: start;
 }
+.titleWrap{
+  display: flex;
+  flex-direction: column;
+gap: 85px;
+  width: 100%;
+}
+
+
 
 @media (min-width: 768px) {
   .herroContainer{

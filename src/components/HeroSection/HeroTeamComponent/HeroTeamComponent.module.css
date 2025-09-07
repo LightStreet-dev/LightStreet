@@ -21,14 +21,14 @@
   &:hover {
     filter: grayscale(20%);
   }
-  &:active {
-    filter: grayscale(20%);
-  }
-  &:focus {
-    filter: grayscale(20%);
-  }
+ 
 }
-
+ .teamImg:active {
+    filter: grayscale(20%);
+  }
+  .teamImg:focus {
+    filter: grayscale(20%);
+  }
 .activeImg{
   filter: grayscale(20%);
 }

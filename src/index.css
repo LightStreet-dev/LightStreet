@@ -12,8 +12,9 @@
   --textFontSize: 16px;
   --formFontSize: 14px;
   --textLineHeight: 1.2;
-  --mainContentColor: rgba(255, 255, 255, 1);
+  --mainContentColor: #F5F5F5;
   --iconsColor: #DCDCDC;
+  --buttonColor: #FBFCFF;
 }
 
 body {

@@ -13,9 +13,7 @@ const HeroTitle: React.FC = () => {
 
       <p className={s.heroText}>{t("hero.heroText")}</p>
 
-      <button className={s.heroBatton} type="button">
-        {t("hero.heroBtn")}
-      </button>
+      
     </div>
   );
 };
