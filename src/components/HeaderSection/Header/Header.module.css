@@ -1,21 +1,33 @@
-.header{
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(226, 226, 226, 1)
+.header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1px;
+    background-color:  rgba(226, 226, 226, 0.5);
+;
+  }
 }
-.socialContactWrapper{
-    display: flex;
-    gap: 38px;
+.socialContactWrapper {
+  display: flex;
+  gap: 38px;
 }
-.modalWraper{
-    display: flex;
-    align-items: center;
-    gap:5px;
+.modalWraper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
-.mainHeaderWrapper{
-    display: flex;
-    align-items: center;
-    gap: 10px
+.mainHeaderWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

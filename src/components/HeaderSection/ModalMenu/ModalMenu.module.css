@@ -36,7 +36,7 @@ background:  linear-gradient(
 }
 
 .modalContent {
-
+display: flex;
   padding: 20px 30px;
   border-radius: 8px;
   max-width: 90%;

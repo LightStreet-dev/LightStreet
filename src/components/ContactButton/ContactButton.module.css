@@ -1,5 +1,5 @@
 .contactbtn {
-  padding: 16px 38px;
+  padding: 11px 38px;
   border: 1px solid;
   border-radius: 35px;
   color: var(--iconsColor);
@@ -60,4 +60,5 @@
 
 .modalContactBtn {
   margin-bottom: 50px;
+  width: 96vw;
 }
