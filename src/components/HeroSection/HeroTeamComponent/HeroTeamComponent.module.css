@@ -29,7 +29,7 @@
   .teamImg:focus {
     filter: grayscale(20%);
   }
+
 .activeImg{
   filter: grayscale(20%);
 }
-

@@ -1,5 +1,4 @@
 .heroTitle {
-  width: 100%;
   font-weight: 600;
   font-size: 45px;
   line-height: 100%;
@@ -24,7 +23,27 @@
     margin-left: 20px;
   }
   .heroTitleContent3 {
-    margin-left: 95px;
-    width: 100%;
+    margin-left: clamp(85px, 5vw, 96px);
+
   }
+}
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 64px;
+    align-items: center;
+    max-width: 375px;
+
+  }
+  .heroTitleContent2 {
+    margin-left: 0;
+  }
+  .heroTitleContent3 {
+    margin-left: 0px;
+
+  }
+  .heroText {
+  font-size: 16px;
+  max-width: 335px;
+  text-align: start;
+}
 }
