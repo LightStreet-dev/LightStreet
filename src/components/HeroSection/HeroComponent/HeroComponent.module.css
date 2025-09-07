@@ -22,5 +22,14 @@ gap: 85px;
   }
   
 }
-
-
+@media (min-width: 1024px) {
+  .herroContainer{
+     padding-top: 97px;
+}
+.titleWrap{
+  display: flex;
+  flex-direction: column;
+gap: 115px;
+ 
+}
+}

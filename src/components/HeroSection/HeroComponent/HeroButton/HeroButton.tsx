@@ -1,7 +1,9 @@
-import { t } from "i18next"
+
 import s from "./HeroButton.module.css"
+import { useTranslation } from "react-i18next";
 
 const HeroButton = () => {
+    const {t} = useTranslation();
   return (
     <div>
          <button className={s.heroBatton} type="button">

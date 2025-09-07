@@ -7,6 +7,7 @@ import { useMediaQuery } from "react-responsive";
 import HeroButton from "./HeroButton/HeroButton";
 const HeroComponent: React.FC = () => {
   const showTeam = useMediaQuery({ minWidth: 768 });
+  
   return (
     <div className={s.herroContainer}>
       <div className={s.titleWrap}>
