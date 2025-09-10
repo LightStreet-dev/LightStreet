@@ -15,6 +15,30 @@
   text-align: start;
 }
 
+.heroTitleContent1,
+.heroTitleContent3 {
+  position: relative; /* щоб ::after позиціювався відносно слова */
+  display: inline-block;
+  z-index: 1; /* основний текст зверху */
+}
+
+.heroTitleContent1::after,
+.heroTitleContent3::after {
+  content: attr(data-first-letter);
+  position: absolute;
+  top: -7.5%;
+  left: 1%;
+font-size: 110%;
+  color: transparent;
+  -webkit-text-stroke: 0.5px rgba(152, 219, 255, 0.5); /* тонкий контур */
+  z-index: -1; /* позаду всього слова */
+  pointer-events: none;
+}
+
+
+
+
+
 @media (min-width: 375px) {
   .heroTitle {
     font-size: 48px;
