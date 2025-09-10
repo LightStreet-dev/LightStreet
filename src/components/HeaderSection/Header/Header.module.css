@@ -3,7 +3,9 @@
   position: relative;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
+width: 100%;
+  backdrop-filter: blur(10px);          /* сам блюр */
+  -webkit-backdrop-filter: blur(10px);  /* для Safari */
 
   
 

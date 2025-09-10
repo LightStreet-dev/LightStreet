@@ -5,16 +5,23 @@ import HeroTemList from "../HeroTemList/HeroTemList";
 import { useMediaQuery } from "react-responsive";
 
 import HeroButton from "./HeroButton/HeroButton";
+import HeroFeatures from "./HeroFeatures/HeroFeatures";
+
+
 const HeroComponent: React.FC = () => {
   const showTeam = useMediaQuery({ minWidth: 768 });
-  
+
   return (
-    <div className={s.herroContainer}>
-      <div className={s.titleWrap}>
+    <div>
+      <div className={s.herroContainer}>
         <HeroTitle />
-        <HeroButton />
+        {showTeam && <HeroTemList />}
       </div>
-      {showTeam && <HeroTemList />}
+      <div className={s.heroWraper}>
+      <HeroButton />
+      {showTeam &&  <HeroFeatures/>}
+    
+      </div>
     </div>
   );
 };

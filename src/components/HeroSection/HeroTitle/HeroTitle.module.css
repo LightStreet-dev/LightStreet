@@ -39,7 +39,7 @@ font-size: 110%;
 
 
 
-@media (min-width: 380px) {
+@media (min-width: 3px) {
   .heroTitle {
     font-size: 48px;
   }
