@@ -39,7 +39,7 @@ font-size: 110%;
 
 
 
-@media (min-width: 375px) {
+@media (min-width: 380px) {
   .heroTitle {
     font-size: 48px;
   }
@@ -47,7 +47,7 @@ font-size: 110%;
     margin-left: 20px;
   }
   .heroTitleContent3 {
-    margin-left: clamp(85px, 5vw, 96px);
+    margin-left: clamp(85px, 10vw, 96px);
 
   }
 }
