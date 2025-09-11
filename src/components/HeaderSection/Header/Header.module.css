@@ -59,7 +59,12 @@
 @media (min-width: 375px) {
  
   .headerWrapper{
-  padding: 0 2rem;
+  padding: 0 16px;
+}}
+@media (min-width: 375px) {
+ 
+  .headerWrapper{
+  padding: 0 40px;
 }
 }
 @media (min-width: 1024px) {
