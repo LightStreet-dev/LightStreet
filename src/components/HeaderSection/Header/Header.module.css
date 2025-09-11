@@ -64,6 +64,11 @@
 @media (min-width: 375px) {
  
   .headerWrapper{
+  padding: 0 16px;
+}}
+@media (min-width: 768px) {
+ 
+  .headerWrapper{
   padding: 0 40px;
 }
 }
