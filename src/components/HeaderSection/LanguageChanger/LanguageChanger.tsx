@@ -50,8 +50,7 @@ const customStyles: StylesConfig<OptionType, false> = {
   control: (provided) => ({
     ...provided,
     backgroundColor: "transparent",
-    backdropFilter: "blur(8px)",
-    WebkitBackdropFilter: "blur(8px)",
+    
    
     border: "none",
     minHeight: "30px",

@@ -12,7 +12,7 @@ const HeroComponent: React.FC = () => {
   const showTeam = useMediaQuery({ minWidth: 768 });
 
   return (
-    <div>
+    <div className="container">
       <div className={s.herroContainer}>
         <HeroTitle />
         {showTeam && <HeroTemList />}

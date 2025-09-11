@@ -13,6 +13,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ mobMediaQuery, toggleForm }) => {
   return (
     <header className={s.header}>
+   <div className={s.headerWrapper} >
       <Logo />
 
       {mobMediaQuery ? (
@@ -34,6 +35,7 @@ const Header: React.FC<HeaderProps> = ({ mobMediaQuery, toggleForm }) => {
           </div>
         </>
       )}
+      </div>
     </header>
   );
 };

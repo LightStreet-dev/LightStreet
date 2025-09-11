@@ -21,6 +21,7 @@
   border: 2px solid var(--mainContentColor);
   animation: pulseBorder 7s infinite;
   opacity: 1;
+  z-index: -1;
 }
 
 .contactbtn:hover::before {
