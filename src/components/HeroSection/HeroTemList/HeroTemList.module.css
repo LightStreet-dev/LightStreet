@@ -20,7 +20,7 @@ justify-content: flex-start;
  
 }
 .reviewsContainer:hover {
-  gap: 15px;
+  gap: 25px;
 }
 .reviewsText {
   display: flex;

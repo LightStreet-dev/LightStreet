@@ -18,11 +18,12 @@
   filter: grayscale(100%);
   transition: filter 0.5s ease;
   margin-bottom: 5px;
-  &:hover {
-    filter: grayscale(20%);
-  }
+ 
  
 }
+.teamImg:hover {
+    filter: grayscale(20%);
+  }
  .teamImg:active {
     filter: grayscale(20%);
   }
