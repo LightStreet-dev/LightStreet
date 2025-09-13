@@ -20,7 +20,7 @@
 }
 
 body {
-  
+  overflow-x: hidden; 
   background: var(--mainBackground);
   font-family: var(--mainFontFamily);
   font-weight: var(--mainFontHeight);

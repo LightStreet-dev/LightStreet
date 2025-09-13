@@ -7,6 +7,7 @@ import { useMediaQuery } from "react-responsive";
 import HeroButton from "./HeroButton/HeroButton";
 import HeroFeatures from "./HeroFeatures/HeroFeatures";
 
+
 const HeroComponent: React.FC = () => {
   const showTeam = useMediaQuery({ minWidth: 768 });
 
@@ -17,8 +18,9 @@ const HeroComponent: React.FC = () => {
         {showTeam && <HeroTemList />}
       </div>
       <div className={s.heroWraper}>
-        <HeroButton />
-        {showTeam && <HeroFeatures />}
+      <HeroButton />
+      {showTeam &&  <HeroFeatures/>}
+    
       </div>
     </div>
   );
