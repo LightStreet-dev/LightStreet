@@ -22,6 +22,9 @@
 
 
 @media (min-width: 768px) {
+  .headerHerroWrapper{
+     width: 100vw;
+  }
 .container {
 padding: 0 40px;
   }
