@@ -26,7 +26,5 @@
   color: var(--secondContentColor);
   transition: 0.3s;
 }
-.oferButton:focus{
-  outline: none;
-}
+
 

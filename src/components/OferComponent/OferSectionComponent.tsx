@@ -1,7 +1,7 @@
 import ContactButton from "../ContactButton/ContactButton";
-import s from "./OferComponent.module.css";
+import s from "./OferSectionComponent.module.css";
 
-const OferComponent: React.FC = () => {
+const OferSectionComponent: React.FC = () => {
   return (
     <div className={`container ${s.oferContainer}`}>
       <div>
@@ -23,4 +23,4 @@ const OferComponent: React.FC = () => {
   );
 };
 
-export default OferComponent;
+export default OferSectionComponent;
