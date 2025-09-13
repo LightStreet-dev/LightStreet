@@ -5,6 +5,7 @@ const HeroTitle: React.FC = () => {
   const { t } = useTranslation();
 
   const word1 = t("hero.heroTitle1");
+  const word2 = t("hero.heroTitle2");
   const word3 = t("hero.heroTitle3");
 
   return (
@@ -16,7 +17,10 @@ const HeroTitle: React.FC = () => {
         </span>
 
         {/* Друге слово */}
-        <span className={s.heroTitleContent2}>{t("hero.heroTitle2")}</span>
+      
+        <span className={s.heroTitleContent2} data-first-letter={word2.charAt(0)}>
+          {word2}
+        </span>
 
         {/* Третє слово з першою літерою на фоні */}
         <span className={s.heroTitleContent3} data-first-letter={word3.charAt(0)}>
