@@ -14,5 +14,19 @@
   color: var(--secondContentColor);
   font-size: 16px;
   text-align: start;
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
+
+.oferButton{
+  color: var(--secondContentColor);
+  border: 1px solid var(--secondContentColor);
+}
+.oferButton:hover{
+
+  color: var(--secondContentColor);
+  transition: 0.3s;
+}
+.oferButton:focus{
+  outline: none;
+}
+

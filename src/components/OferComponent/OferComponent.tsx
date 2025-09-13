@@ -16,7 +16,7 @@ const OferComponent: React.FC = () => {
         </p>
       </div>
       <div>
-        <ContactButton toggleForm={() => console.log('Form toggled')} />
+        <ContactButton className={s.oferButton}  toggleForm={() => console.log('Form toggled')} />
       </div>
 
     </div>
