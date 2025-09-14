@@ -25,6 +25,29 @@ declare module "i18next" {
           signatureOne: string;
           signatureTwo: string;
         };
+        ofers:{
+          landingPage:{
+            title:string;
+            features:string[];
+            price:string
+            timeTitle:string;
+            time:string;
+          },
+           site:{
+            title:string;
+            features:string[];
+            price:string
+            timeTitle:string;
+            time:string;
+          },
+           store:{
+            title:string;
+            features:string[];
+            price:string
+            timeTitle:string;
+            time:string;
+          }
+        }
       };
     };
   }

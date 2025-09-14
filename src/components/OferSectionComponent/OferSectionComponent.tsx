@@ -1,5 +1,6 @@
 import ContactButton from "../ContactButton/ContactButton";
 import s from "./OferSectionComponent.module.css";
+import OfersListComponent from "./OfersListComponent/OfersListComponent";
 
 const OferSectionComponent: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const OferSectionComponent: React.FC = () => {
       <div>
         <ContactButton className={s.oferButton}  toggleForm={() => console.log('Form toggled')} />
       </div>
-
+<OfersListComponent/>
     </div>
   );
 };

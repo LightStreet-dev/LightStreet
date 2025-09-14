@@ -1,0 +1,19 @@
+.test{
+    color: steelblue;
+};
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+};
+
+.oferSwiperWrapper{
+  overflow: hidden;
+}
+.oferSwiper {
+  width: 100%;
+  max-width: 360px; /* щоб не розлазилось на дуже великих екранах */
+}
+

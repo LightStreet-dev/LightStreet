@@ -5,7 +5,7 @@ import HeroSection from "./components/HeroSection/HeroComponent/HeroComponent";
 import SubmitForm from "./components/ContactForm/SubmitForm/SubmitForm";
 import { useState } from "react";
 import AboutUsComponent from "./components/AboutUsComponent/AboutUsComponent";
-import OferSectionComponent from "./components/OferComponent/OferSectionComponent";
+import OferSectionComponent from "./components/OferSectionComponent/OferSectionComponent";
 
 const App: React.FC = () => {
   const [openForm, setOpenForm] = useState<boolean>(false);

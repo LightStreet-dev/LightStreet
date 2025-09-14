@@ -12,11 +12,46 @@
     "heroText": "Od pomysłu po wdrożenie — Tworzymy dopasowany UI/UX, identyfikacja wizualna i materiały webowe dla Twojego produktu.",
     "heroBtn": "Poznaj ofertę"
   },
-  "formReply":{
-     "reply": "Dziękujemy! Otrzymaliśmy Twoje zgłoszenie i wkrótce się odezwemy",
-      "title": "Otrzymaliśmy Twoją wiadomość.",
-     "velcome": "Hej",
-     "signatureOne": "Z poważaniem ",
-     "signatureTwo":"Zespół Light Street"
+  "formReply": {
+    "reply": "Dziękujemy! Otrzymaliśmy Twoje zgłoszenie i wkrótce się odezwemy",
+    "title": "Otrzymaliśmy Twoją wiadomość.",
+    "velcome": "Hej",
+    "signatureOne": "Z poważaniem ",
+    "signatureTwo": "Zespół Light Street"
+  },
+  "ofers": {
+    "landingPage": {
+      "title": "Landing page",
+      "features": [
+        "Pojedyncza, specjalnie zaprojektowana strona internetowa",
+        "Skupia uwagę użytkownika",
+        "Konwertuje czyli prowadzi do działania - zapis, zakup lub kontakt"
+      ],
+      "price": "Cena: od 3500 zł",
+      "timeTitle": "Czas realizacji:",
+      "time": "7-10 dni roboczych"
+    },
+    "site": {
+      "title": "Strona internetowa",
+      "features": [
+        "Wielostronicowa - 3–8 podstron",
+        "Może zawierać formularze, mapki, zdjęcia, sekcje z opiniami, integrację z social mediami",
+        "Podstawowe SEO i przygotowanie do dalszego pozycjonowania"
+      ],
+      "price": "Cena: od 9 000 zł",
+      "timeTitle": "Czas realizacji:",
+      "time": " 1-3 mies."
+    },
+    "store": {
+      "title": "Sklep internetowy",
+      "features": [
+        "Katalog produktów z opisami, zdjęciami i cenami",
+        "Zamówienia online i obsługa wysyłki",
+        "Integracja z systemami płatności", "Marketing i rozwój"
+      ],
+      "price": "Cena: od 40 000 zł",
+      "timeTitle": "Czas realizacji:",
+      "time": "6-8 mies."
+    }
   }
 }
