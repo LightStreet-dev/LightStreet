@@ -13,6 +13,7 @@ const OfersListComponent = () => {
 
   return (
     <div className={s.oferSwiperWrapper}>
+      
       <Swiper
         modules={[Navigation, Pagination]}
         className={s.oferSwiper}   // можна додати стилі для ширини/висоти
@@ -21,6 +22,7 @@ const OfersListComponent = () => {
         breakpoints={{
           0: {
             slidesPerView: 1,
+            spaceBetween: 15,
            
           },
           640: {
