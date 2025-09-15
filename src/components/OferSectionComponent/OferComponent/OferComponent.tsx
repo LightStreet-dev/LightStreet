@@ -15,15 +15,15 @@ const OferComponent: React.FC<oferProps> = ({
 }) => {
   return (
     <div className="">
-      <h2  className={s.test}>{title}</h2>
-      <ul>
+      <h2  className={s.oferTitle}>{title}</h2>
+      <ul className={s.featuresList}>
         {features.map((value, idx) => (
-          <li  className={s.test}key={idx}>{value}</li>
+          <li  className={s.featurIteam}key={idx}>{value}</li>
         ))}
       </ul>
-      <p className={s.test}>{price}</p>
-      <p className={s.test}>{timeTitle}</p>
-      <p className={s.test}>{time}</p>;
+      <p className={s.oferPrice}>{price}</p>
+      <p className={s.oferTermin}>{timeTitle}</p>
+      <p className={s.oferTermin}>{time}</p>
     </div>
   );
 };

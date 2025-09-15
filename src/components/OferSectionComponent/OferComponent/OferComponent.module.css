@@ -1,3 +1,68 @@
-.test{
-    color: seagreen;
+.oferTitle {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+line-height: 32px;
+
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  gap: 26px;
+  margin-bottom: 94px;
+}
+
+.featurIteam {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: var(--textFontSize);
+  leading-trim: CAP_HEIGHT;
+  line-height: 24px;
+  position: relative;
+}
+
+.featurIteam::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: var(--mainContentColor);
+    border-radius: 50%;
+  left: -15px;
+  top: 10px;
+
+}
+
+.oferPrice {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.oferPrice::after {
+  content: "";
+
+  display: flex;
+  display: block;
+  width: 160px;
+  text-align: center;
+  height: 1px;
+border: 0.5px solid rgba(251, 252, 255, 0.4);
+  margin: 20px auto 0 auto;
+}
+.oferTermin{
+    font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
 }

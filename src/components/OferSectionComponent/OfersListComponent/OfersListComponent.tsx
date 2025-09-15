@@ -38,8 +38,8 @@ const OfersListComponent = () => {
         }}
       >
         {Object.entries(ofers).map(([key, value]) => (
-          <SwiperSlide key={key}>
-            <OferComponent page={value} />
+          <SwiperSlide  key={key}>
+            <div className={s.oferSlide}><OferComponent page={value} /></div>
           </SwiperSlide>
         ))}
       </Swiper>

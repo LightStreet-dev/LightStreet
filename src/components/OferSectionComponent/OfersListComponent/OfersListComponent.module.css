@@ -1,6 +1,4 @@
-.test{
-    color: steelblue;
-};
+
 .list{
     display: flex;
     flex-wrap: wrap;
@@ -13,7 +11,19 @@
   overflow: hidden;
 }
 .oferSwiper {
+  display: flex;
   width: 100%;
-  max-width: 360px; /* щоб не розлазилось на дуже великих екранах */
+  max-width: 310px;
+  overflow: hidden; /* щоб не розлазилось на дуже великих екранах */
 }
 
+.oferSlide{
+      max-width: 310px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(6, 148, 255, 1) 0%, rgba(3, 81, 141, 1) 100%);
+    box-shadow: 
+        inset 0px 30.19px 30.19px rgba(7, 157, 255, 1),
+        inset 0px -30.19px 30.19px rgba(3, 71, 124, 1);
+    border-radius: 30px;
+    padding: 38px 35px;
+}
