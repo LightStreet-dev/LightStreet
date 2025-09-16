@@ -32,16 +32,20 @@ position: relative;
 }
 
 @media (min-width: 768px) {
-
+.oferSwiperWrapper{
+position: relative;
+   overflow: visible;  
+}
   .oferSwiper {
-
+ overflow: visible;  
     max-width: 750px;
 
   }
   .oferSlide{
       max-width: 310px;
-    width: 100%;
+    width: auto;
     padding: 50px 40px;
+
 }
 }
 
