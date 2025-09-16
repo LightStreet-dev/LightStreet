@@ -19,24 +19,23 @@ const OfersListComponent = () => {
         className={s.oferSwiper}   // можна додати стилі для ширини/висоти
         pagination={{ clickable: true }}
         navigation
+        centeredSlides={false}   // важливо
+  slidesPerView="auto"     // дозволяє робити ширину слайда через CSS
         breakpoints={{
           0: {
             slidesPerView: 1,
             spaceBetween: 15,
            
           },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 15,
+          768: {
+            slidesPerView: 2.2,
+           spaceBetween: 23,
           },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 30,
           },
-          1440: {
-            slidesPerView: 4,
-            spaceBetween: 25,
-          },
+         
         }}
       >
         {Object.entries(ofers).map(([key, value]) => (

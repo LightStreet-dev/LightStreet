@@ -14,7 +14,7 @@ const OferComponent: React.FC<oferProps> = ({
   page: { title, features, price, timeTitle, time },
 }) => {
   return (
-    <div className="">
+    <div className={s.slideWraper}>
       <h2  className={s.oferTitle}>{title}</h2>
       <ul className={s.featuresList}>
         {features.map((value, idx) => (
