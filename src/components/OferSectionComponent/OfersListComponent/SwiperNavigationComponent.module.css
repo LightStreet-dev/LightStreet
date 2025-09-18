@@ -20,8 +20,14 @@
   transition: background-color 0.3s ease;
 }
 
+.swiperBtnDisabled {
+   opacity: 0.5;
+fill: rgb(29, 60, 236);
+  transition: opacity 0.3s ease;
+}
+
 .arrowSvg {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+
   fill: rgb(29, 60, 236);
 }
