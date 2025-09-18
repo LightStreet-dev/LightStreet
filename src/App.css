@@ -22,6 +22,10 @@
 }
 
 
+.swiper-pagination-bullet-active {
+  background-color: #007aff!important;
+}
+
 @media (min-width: 768px) {
   .headerHerroWrapper{
      width: 100vw;
