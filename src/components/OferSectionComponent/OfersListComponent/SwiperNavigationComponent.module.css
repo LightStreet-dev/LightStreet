@@ -1,0 +1,27 @@
+.swiperNavBtn {
+  display: flex;
+  gap: 100px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.swiperBtn {
+  background-color: transparent;
+  border: none;
+  color: rgb(29, 60, 236);
+
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.arrowSvg {
+  width: 20px;
+  height: 20px;
+  fill: rgb(29, 60, 236);
+}

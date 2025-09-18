@@ -6,6 +6,7 @@ const OferSectionComponent: React.FC = () => {
   return (
     <div className={`container ${s.oferContainer}`}>
       <div>
+      <div>
         <h2 className={s.oferTitle}>Oferta</h2>
         <p className={s.oferText}>
           Koszt stworzenia strony internetowej zależy od wielu czynników - m.in.
@@ -18,6 +19,7 @@ const OferSectionComponent: React.FC = () => {
       </div>
       <div>
         <ContactButton className={s.oferButton}  toggleForm={() => console.log('Form toggled')} />
+      </div>
       </div>
 <OfersListComponent/>
     </div>

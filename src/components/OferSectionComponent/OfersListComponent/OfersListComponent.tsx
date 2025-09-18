@@ -6,6 +6,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import SwiperNavigationComponent from "./SwiperNavigationComponent";
 
 const OfersListComponent = () => {
   const { t } = useTranslation();
@@ -17,8 +18,7 @@ const OfersListComponent = () => {
       <Swiper
         modules={[Navigation, Pagination]}
         className={s.oferSwiper}   // можна додати стилі для ширини/висоти
-        pagination={{ clickable: true }}
-        navigation
+        // pagination={{ clickable: true }}
         centeredSlides={false}   // важливо
   slidesPerView="auto"     // дозволяє робити ширину слайда через CSS
         breakpoints={{
@@ -43,6 +43,9 @@ const OfersListComponent = () => {
             <div className={s.oferSlide}><OferComponent page={value} /></div>
           </SwiperSlide>
         ))}
+        <div>
+        <SwiperNavigationComponent/>
+        </div>
       </Swiper>
     </div>
   );
