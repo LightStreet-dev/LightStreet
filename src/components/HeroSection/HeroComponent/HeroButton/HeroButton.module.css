@@ -20,3 +20,14 @@
     width: 220px; 
     margin: 0;
   }}
+
+  @media (min-width: 1024px){
+    .heroBatton {
+   width: 100%;
+    max-width: 220px;
+    padding: 21px 50px;
+    overflow: hidden;
+    margin-bottom: 0;
+  
+    }
+  }

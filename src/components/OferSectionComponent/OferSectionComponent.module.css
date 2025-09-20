@@ -15,19 +15,69 @@
   font-size: 16px;
   text-align: start;
   margin-bottom: 30px;
-
+}
+.oferBtnWrap {
+  margin-bottom: 30px;
 }
 
-.oferButton{
+.oferButton {
   color: var(--secondContentColor);
   border: 1px solid var(--secondContentColor);
   width: 100%;
   overflow: hidden;
+  margin-bottom: 0;
 }
-.oferButton:hover{
-
+.oferButton:hover {
   color: var(--secondContentColor);
   transition: 0.3s;
 }
+.oferButton:active {
+  color: var(--secondContentColor);
+  border: 1px solid var(--secondContentColor);
+}
+.oferButton:focus {
+  color: var(--secondContentColor);
+  border: 1px solid var(--secondContentColor);
+}
 
+@media (min-width: 768px) {
+  .oferBtnWrap {
+    display: flex;
+    align-items: start;
+  }
+  .oferButton {
+    width: 220px;
+  }
+}
+@media (min-width: 1024px) {
+  .oferContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+  }
+  .oferTitle {
+    font-size: 96px;
+    margin-bottom: 62px;
+  }
+  .oferText {
+    color: var(--secondContentColor);
+    font-size: 20px;
+    text-align: start;
+    margin-bottom: 50px;
+    max-width: 452px;
+  }
+  .oferBtnWrap {
+    margin-bottom: 30px;
+  }
 
+  .oferButton {
+    color: var(--secondContentColor);
+    border: 1px solid var(--secondContentColor);
+    width: 100%;
+    max-width: 220px;
+    padding: 21px 55px;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+}

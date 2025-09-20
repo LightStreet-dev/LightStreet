@@ -32,6 +32,8 @@
 }
 .swiper-pagination{
   display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 100px;
 left: 50% !important;
 transform: translate(-50%) !important;

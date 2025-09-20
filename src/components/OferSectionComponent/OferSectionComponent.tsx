@@ -17,7 +17,7 @@ const OferSectionComponent: React.FC = () => {
           dopasowaną do budżetu i celów biznesowych.
         </p>
       </div>
-      <div>
+      <div className={s.oferBtnWrap}>
         <ContactButton className={s.oferButton}  toggleForm={() => console.log('Form toggled')} />
       </div>
       </div>

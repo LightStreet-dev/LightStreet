@@ -32,8 +32,8 @@ const OfersListComponent = () => {
            spaceBetween: 23,
           },
           1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+            slidesPerView: 2.2,
+      spaceBetween: 30,
           },
          
         }}
