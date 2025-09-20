@@ -4,7 +4,8 @@
   display: flex;
   width: 100%;
   max-width: 310px;
-  overflow: hidden; /* щоб не розлазилось на дуже великих екранах */
+  height: 600px;
+  
 }
 
 .oferSlide {
@@ -58,15 +59,24 @@
   .oferSwiperWrapper {
     position: relative;
     overflow: visible;
-    height: 900px;
+    height: 100%;
   }
   .oferSwiper {
     overflow: visible;
     max-width: 730px;
+     position: relative;
+    overflow: visible
+
   }
   .navWrapper {
     margin-left: auto;
+ height: 20px;
     margin-right: 70px;
+    position: absolute;
+   right: 0;
+   top: 80%;
+   z-index: 100;
+    width: auto;
   }
 
   
