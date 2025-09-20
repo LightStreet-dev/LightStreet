@@ -1,15 +1,6 @@
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
 
-.oferSwiperWrapper {
-  position: relative;
-}
 .oferSwiper {
+  position: relative;
   display: flex;
   width: 100%;
   max-width: 310px;
@@ -29,29 +20,82 @@
   border-radius: 30px;
   padding: 38px 35px;
 }
+.navWrapper {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  width: 200px;
+}
 
-.swiper-pagination{
-  width: 300px !important;
+.customPagination {
+  display: flex;
+  justify-content: center;
+  flex: 1; /* займає простір між кнопками */
+  gap: 8px;
+}
+
+.customPagination :global(.swiper-pagination-bullet) {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 1px solid #0066ff;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.3s ease;
+  transform: scale(0.8);
+}
+
+.customPagination :global(.swiper-pagination-bullet-active) {
+  background: #0066ff;
+  transform: scale(1);
 }
 
 @media (min-width: 768px) {
   .oferSwiperWrapper {
     position: relative;
     overflow: visible;
+    height: 900px;
   }
   .oferSwiper {
     overflow: visible;
-    max-width: 750px;
+    max-width: 730px;
   }
+  .navWrapper {
+    margin-left: auto;
+    margin-right: 70px;
+  }
+
+  
+
   .oferSlide {
-    max-width: 310px;
+    max-width: 348px;
     width: auto;
     padding: 50px 40px;
+    z-index: 50;
+    position: relative;
+    max-height: 450px; /* стандартна висота */
+    transform: scale(0.9); /* початковий масштаб для неактивних слайдів */
+    transition: transform 0.5s ease, max-height 0.5s ease, z-index 0.5s ease;
+  }
+
+  .oferSlideActive {
+    top: 0;
+    left: 0;
+    max-height: 900px; /* висота активного слайду */
+    width: 100%;
+    z-index: 50; /* активний поверх інших */
+    transform: scale(1); /* повний масштаб */
+    transition: transform 0.5s ease, max-height 0.5s ease, z-index 0.5s ease;
   }
 }
 @media (min-width: 1024px) {
-.oferSwiper {
-    overflow: hidden;
-    max-width: 650px;
-  }
+  
+
+  
+
+  
 }

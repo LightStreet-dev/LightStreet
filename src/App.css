@@ -21,7 +21,7 @@
 
 }
 /*=================== SWIPER Pagination custom ==================*/
-.swiper-pagination-bullet{
+/* .swiper-pagination-bullet{
   background-color: transparent !important;
   border: 1px solid rgba(10, 108, 181, 1) !important;
   width: 20px !important;
@@ -37,7 +37,7 @@
   max-width: 100px;
 left: 50% !important;
 transform: translate(-50%) !important;
-}
+} */
 /*=======================================================*/
 
 
@@ -53,4 +53,10 @@ padding: 0 40px;
   .container {
     max-width: 1280px;
   }
-}
+
+  .swiper-pagination{
+ left:auto !important;
+ right: 55px;
+ position: static;
+ 
+}}

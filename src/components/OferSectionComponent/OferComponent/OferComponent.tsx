@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import s from "./OferComponent.module.css"
 interface Page {
   title: string;
@@ -9,9 +10,11 @@ interface Page {
 
 interface oferProps {
   page: Page;
+  isActive: boolean
+  size: boolean
 }
 const OferComponent: React.FC<oferProps> = ({
-  page: { title, features, price, timeTitle, time },
+  page: { title, features, price, timeTitle, time },isActive, size
 }) => {
   return (
     <div className={s.slideWraper}>
@@ -21,9 +24,11 @@ const OferComponent: React.FC<oferProps> = ({
           <li  className={s.featurIteam}key={idx}>{value}</li>
         ))}
       </ul>
+      <div className={clsx(s.priceInfo, isActive && size &&  s.priceInfoActive )}>
       <p className={s.oferPrice}>{price}</p>
       <p className={s.oferTermin}>{timeTitle}</p>
       <p className={s.oferTermin}>{time}</p>
+      </div>
     </div>
   );
 };

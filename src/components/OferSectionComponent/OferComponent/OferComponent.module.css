@@ -1,5 +1,5 @@
 .slideWraper{
-  min-height: 560px;
+
   height: 100%;
 }
 
@@ -70,4 +70,13 @@ border: 0.5px solid rgba(251, 252, 255, 0.4);
   font-size: 20px;
   line-height: 23px;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .priceInfo{
+  display: none;
+
+}
+.priceInfoActive{
+  display: block;}
 }

@@ -55,6 +55,7 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 60px;
+    min-height: 900px;
   }
   .oferTitle {
     font-size: 96px;
