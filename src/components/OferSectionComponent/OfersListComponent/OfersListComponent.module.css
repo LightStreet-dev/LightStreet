@@ -1,11 +1,10 @@
 
 .oferSwiper {
-  position: relative;
+position: relative;
   display: flex;
   width: 100%;
   max-width: 310px;
-  height: 600px;
-  
+
 }
 
 .oferSlide {
@@ -23,13 +22,14 @@
 }
 .navWrapper {
   display: flex;
+  position: relative;
   margin-right: auto;
   margin-left: auto;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
   margin-top: 20px;
-  width: 200px;
+
 }
 
 .customPagination {
@@ -62,6 +62,7 @@
     height: 100%;
   }
   .oferSwiper {
+    height: 600px;
     overflow: visible;
     max-width: 730px;
      position: relative;
