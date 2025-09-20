@@ -20,11 +20,24 @@
   flex-direction: column;
 
 }
-
-
-.swiper-pagination-bullet-active {
-  background-color: #007aff!important;
+/*=================== SWIPER Pagination custom ==================*/
+.swiper-pagination-bullet{
+  background-color: transparent !important;
+  border: 1px solid rgba(10, 108, 181, 1) !important;
+  width: 20px !important;
+  height: 20px !important;
 }
+.swiper-pagination-bullet-active {
+  background-color: rgba(10, 108, 181, 1) !important;
+}
+.swiper-pagination{
+  display: flex;
+  max-width: 100px;
+left: 50% !important;
+transform: translate(-50%) !important;
+}
+/*=======================================================*/
+
 
 @media (min-width: 768px) {
   .headerHerroWrapper{

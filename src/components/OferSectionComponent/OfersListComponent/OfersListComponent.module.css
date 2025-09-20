@@ -1,15 +1,13 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
 
-.list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-};
-
-.oferSwiperWrapper{
-position: relative;
-  
+.oferSwiperWrapper {
+  position: relative;
 }
 .oferSwiper {
   display: flex;
@@ -18,46 +16,47 @@ position: relative;
   overflow: hidden; /* щоб не розлазилось на дуже великих екранах */
 }
 
-.oferSlide{
-      max-width: 310px;
-    width: 100%;
-    background: linear-gradient(180deg, rgba(6, 148, 255, 1) 0%, rgba(3, 81, 141, 1) 100%);
-    box-shadow: 
-        inset 0px 30.19px 30.19px rgba(7, 157, 255, 1),
-        inset 0px -30.19px 30.19px rgba(3, 71, 124, 1)
-      0px 61.47px 122.93px rgba(1, 24, 42, 0.52);  
-    border-radius: 30px;
-   
-    padding: 38px 35px;
+.oferSlide {
+  max-width: 310px;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 148, 255, 1) 0%,
+    rgba(3, 81, 141, 1) 100%
+  );
+  box-shadow: inset 0px 30.19px 30.19px rgba(7, 157, 255, 1),
+    inset 0px -30.19px 30.19px rgba(3, 71, 124, 1) 0px 61.47px 122.93px rgba(1, 24, 42, 0.52);
+  border-radius: 30px;
+  padding: 38px 35px;
 }
 
+.swiper-pagination{
+  width: 300px !important;
+}
 
 @media (min-width: 768px) {
-.oferSwiperWrapper{
-position: relative;
-   overflow: visible;  
-}
-  .oferSwiper {
- overflow: visible;  
-    max-width: 750px;
-
+  .oferSwiperWrapper {
+    position: relative;
+    overflow: visible;
   }
-  .oferSlide{
-      max-width: 310px;
+  .oferSwiper {
+    overflow: visible;
+    max-width: 750px;
+  }
+  .oferSlide {
+    max-width: 310px;
     width: auto;
     padding: 50px 40px;
-
-}
+  }
 }
 
 @media (min-width: 1024px) {
   .oferSwiper {
-
     max-width: 1000px;
-
   }
-  .oferSlide{
-      max-width: 310px;
+  .oferSlide {
+    max-width: 310px;
     width: 100%;
     padding: 60px 50px;
-}}
+  }
+}

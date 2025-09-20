@@ -18,7 +18,7 @@ const OfersListComponent = () => {
       <Swiper
         modules={[Navigation, Pagination]}
         className={s.oferSwiper}   // можна додати стилі для ширини/висоти
-        // pagination={{ clickable: true }}
+        pagination={{ clickable: true }}
         centeredSlides={false}   // важливо
   slidesPerView="auto"     // дозволяє робити ширину слайда через CSS
         breakpoints={{
