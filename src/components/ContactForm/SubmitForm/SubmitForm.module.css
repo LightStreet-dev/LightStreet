@@ -1,6 +1,10 @@
-body:has(.modalFormOverlayActive) {
-  overflow: hidden;
+html:has(.modalFormOverlayActive) {
+ overflow: hidden; /* забороняє будь-яку прокрутку */
+  overscroll-behavior: none; /* блокує “підтікання” на мобільних */
+  touch-action: none; /* блокує прокрутку на тачскрінах */
+  
 }
+
 
 .form{
     display: flex;
@@ -16,7 +20,7 @@ body:has(.modalFormOverlayActive) {
   left: 0;
   width: 100vw;
   height: 100dvh;
-  padding: 0 15px;
+ overflow: clip;
 background:  linear-gradient(
     246.04deg,
     rgba(0, 36, 46, 0.6) 3.77%,
@@ -38,6 +42,7 @@ background:  linear-gradient(
  opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  
 }
 .formWrapper{
  max-width: 400px;
