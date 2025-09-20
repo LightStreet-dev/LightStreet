@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import s from "./OfersListComponent.module.css";
 import OferComponent from "../OferComponent/OferComponent";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import {Keyboard, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -10,6 +10,7 @@ import SwiperNavigationComponent from "./SwiperNavigationComponent";
 import { useMediaQuery } from "react-responsive";
 import clsx from "clsx";
 import { useRef } from "react";
+
 
 const OfersListComponent = () => {
   const { t } = useTranslation();
@@ -22,23 +23,27 @@ const OfersListComponent = () => {
   return (
     <div className={s.oferSwiperWrapper}>
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Keyboard, Navigation, Pagination]}
         className={s.oferSwiper}
         pagination={{
           el: paginationRef.current,
           clickable: true,
         }}
-        onBeforeInit={(swiper) => {
-          // важливо: тут ми "прив’язуємо" pagination до рефа
-          // бо на момент першого рендеру paginationRef.current ще null
-          if (typeof swiper.params.pagination !== "boolean") {
-            swiper.params.pagination.el = paginationRef.current;
-          }
-        }}
+       onBeforeInit={(swiper) => {
+  // важливо: тут ми "прив’язуємо" pagination до рефа
+  // бо на момент першого рендеру paginationRef.current ще null
+  if (swiper.params.pagination && typeof swiper.params.pagination !== "boolean") {
+    swiper.params.pagination.el = paginationRef.current;
+  }
+}}
+
         centeredSlides={false}
         slidesPerView="auto"
         initialSlide={0}
         loop={true}
+        keyboard={{
+          enabled: true,
+        }}
         breakpoints={{
           0: {
             slidesPerView: 1,
@@ -55,7 +60,7 @@ const OfersListComponent = () => {
         }}
       >
         {Object.entries(ofers).map(([key, value]) => (
-          <SwiperSlide key={key}>
+          <SwiperSlide key={key} >
             {({ isActive }) => (
               <div
                 className={clsx(

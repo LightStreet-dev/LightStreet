@@ -1,9 +1,14 @@
+body:has(.modalFormOverlayActive) {
+  overflow: hidden;
+}
+
 .form{
     display: flex;
     flex-direction: column;
     gap:15px;
  
 }
+
 
 .modalFormOverlay {
   position: fixed;

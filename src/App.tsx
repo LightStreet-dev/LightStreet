@@ -22,7 +22,7 @@ const App: React.FC = () => {
         <HeroSection />
       </div>
       <AboutUsComponent/>
-      <OferSectionComponent/>
+      <OferSectionComponent toggleForm={toggleOpenForm}/>
       <SubmitForm openForm={openForm} setOpenForm={setOpenForm} />
     </>
   );

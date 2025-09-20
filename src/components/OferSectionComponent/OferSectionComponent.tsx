@@ -2,7 +2,11 @@ import ContactButton from "../ContactButton/ContactButton";
 import s from "./OferSectionComponent.module.css";
 import OfersListComponent from "./OfersListComponent/OfersListComponent";
 
-const OferSectionComponent: React.FC = () => {
+
+interface modalProps {
+  toggleForm: ()=> void
+}
+const OferSectionComponent: React.FC<modalProps> = ({toggleForm}) => {
   return (
     <div className={`container ${s.oferContainer}`}>
       <div>
@@ -18,7 +22,7 @@ const OferSectionComponent: React.FC = () => {
         </p>
       </div>
       <div className={s.oferBtnWrap}>
-        <ContactButton className={s.oferButton}  toggleForm={() => console.log('Form toggled')} />
+        <ContactButton className={s.oferButton}  toggleForm={toggleForm} />
       </div>
       </div>
 <OfersListComponent/>
