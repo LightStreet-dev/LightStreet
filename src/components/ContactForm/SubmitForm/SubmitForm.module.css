@@ -47,10 +47,10 @@ background:  linear-gradient(
   
 }
 .formWrapper{
- max-width: 400px;
+ max-width: 90vw;
   width: 100%;
-  padding: 50px;
-  
+  padding: 20px;
+
   background-color: #cedadb;
   border-radius: 5%;
   position: relative;
@@ -85,7 +85,7 @@ background:  linear-gradient(
   
   gap: 10px;
   margin: 10px 0;
-  font-size: 14px;
+
 }
 .checkboxText{
   align-items: center;
@@ -101,4 +101,15 @@ background:  linear-gradient(
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+.formWrapper{
+ max-width: 400px;
+  width: 100%;
+  padding: 50px;
+  
+  
+}
+  
 }
