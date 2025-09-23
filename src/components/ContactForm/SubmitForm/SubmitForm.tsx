@@ -45,28 +45,28 @@ const { t } = useTranslation();
     const mailSignTwo =  t("formReply.signatureTwo");
     try {
       //  Надіслати лист адміністратору
-      await emailjs.sendForm(
-        "service_b9158j4",
-        "template_3o02fkr",
-        formRef.current,
-        "WfwuYGLBQ1Q_uC7jX"
-      );
-
-      // 0Надіслати підтвердження користувачу
-      await emailjs.send(
-        "service_b9158j4",
-        "template_5or214p", // шаблон для користувача
-        {
-          name: values.Name,
-          email: values.Email,
-          confirmation: confirmMail,
-          title:mailTitle,
-          velcome:mailVelcome,
-          signatureOne: mailSignOne,
-           signatureTwo: mailSignTwo,
-        },
-        "WfwuYGLBQ1Q_uC7jX"
-      );
+     await Promise.all([
+  emailjs.sendForm(
+    "service_b9158j4",
+    "template_3o02fkr",
+    formRef.current,
+    "WfwuYGLBQ1Q_uC7jX"
+  ),
+  emailjs.send(
+    "service_b9158j4",
+    "template_5or214p",
+    {
+      name: values.Name,
+      email: values.Email,
+      confirmation: confirmMail,
+      title: mailTitle,
+      velcome: mailVelcome,
+      signatureOne: mailSignOne,
+      signatureTwo: mailSignTwo,
+    },
+    "WfwuYGLBQ1Q_uC7jX"
+  )
+]);
 
       console.log("SUCCESS! Emails sent.");
       actions.resetForm();
@@ -78,6 +78,10 @@ const { t } = useTranslation();
         console.log("FAILED...", error);
       }
     }
+    finally {
+  actions.setSubmitting(false);
+   setOpenForm(false);
+}
   };
 
   const handleCloseForm = (evt: React.MouseEvent<HTMLDivElement>) => {
