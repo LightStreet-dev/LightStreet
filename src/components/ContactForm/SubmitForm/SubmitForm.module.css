@@ -50,10 +50,11 @@ background:  linear-gradient(
  max-width: 90vw;
   width: 100%;
   padding: 20px;
-
+margin: 0 auto;
   background-color: #cedadb;
   border-radius: 5%;
   position: relative;
+  box-sizing: border-box;
 }
 
 .formHeader{
