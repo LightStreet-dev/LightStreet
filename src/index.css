@@ -72,6 +72,12 @@ button {
   cursor: pointer;
   outline: none;
 }
+
+input,
+textarea,
+select {
+  font-size: 16px;
+}
 .no-scroll {
   overflow: hidden;
 }
