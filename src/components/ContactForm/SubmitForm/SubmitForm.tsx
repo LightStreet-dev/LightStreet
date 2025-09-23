@@ -68,9 +68,8 @@ const { t } = useTranslation();
   )
 ]);
 
-      console.log("SUCCESS! Emails sent.");
-      actions.resetForm();
-      setOpenForm(false);
+  console.log("SUCCESS! Emails sent.");
+ 
     } catch (error: unknown) {
       if (error instanceof Error) {
         console.log("FAILED...", error.message);
@@ -81,6 +80,7 @@ const { t } = useTranslation();
     finally {
   actions.setSubmitting(false);
    setOpenForm(false);
+      actions.resetForm();
 }
   };
 
@@ -103,7 +103,7 @@ const { t } = useTranslation();
         />
         <h2 className={s.formHeader}>Contact us</h2>
         <Formik initialValues={initialValues} onSubmit={sendEmail}>
-          {({ values }) => (
+          {({ values, isSubmitting  }) => (
             <Form ref={formRef} className={s.form}>
               <InputComponent name="Name" as="input" type="text" />
               <InputComponent name="Company" as="input" type="text" />
@@ -118,10 +118,10 @@ const { t } = useTranslation();
 
               <button
                 className={s.submitBtn}
-                disabled={!values.agree}
+                disabled={!values.agree || isSubmitting}
                 type="submit"
               >
-                Send
+                {isSubmitting ? "Sending..." : "Send"}
               </button>
             </Form>
           )}
