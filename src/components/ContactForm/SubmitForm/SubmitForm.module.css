@@ -4,7 +4,9 @@ html:has(.modalFormOverlayActive) {
   touch-action: none; /* блокує прокрутку на тачскрінах */
   
 }
-
+html {
+  -webkit-text-size-adjust: 100%; /* відключає автоматичне масштабування */
+}
 
 .form{
     display: flex;
