@@ -6,6 +6,7 @@ import SubmitForm from "./components/ContactForm/SubmitForm/SubmitForm";
 import { useState } from "react";
 import AboutUsComponent from "./components/AboutUsComponent/AboutUsComponent";
 import OferSectionComponent from "./components/OferSectionComponent/OferSectionComponent";
+import AditionalServices from "./AditionalServices/AditionalServices";
 
 const App: React.FC = () => {
   const [openForm, setOpenForm] = useState<boolean>(false);
@@ -23,6 +24,7 @@ const App: React.FC = () => {
       </div>
       <AboutUsComponent/>
       <OferSectionComponent toggleForm={toggleOpenForm}/>
+      <AditionalServices/>
       <SubmitForm openForm={openForm} setOpenForm={setOpenForm} />
     </>
   );

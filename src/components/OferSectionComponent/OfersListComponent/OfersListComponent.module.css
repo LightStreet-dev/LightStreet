@@ -100,9 +100,11 @@ position: relative;
     max-height: 900px; /* висота активного слайду */
     width: 100%;
     z-index: 50; /* активний поверх інших */
-    transform: scale(1); /* повний масштаб */
+    transform: scale(1); 
+    margin-bottom: 0px;
       transition: transform 0.5s ease, max-height 0.4s ease;
   }
+
 }
 @media (min-width: 1024px) {
   .customPagination :global(.swiper-pagination-bullet) {
