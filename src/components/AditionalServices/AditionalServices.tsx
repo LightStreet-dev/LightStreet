@@ -8,6 +8,10 @@ const AditionalServices: React.FC = () => {
   const addittional = t("additionalServises", { returnObjects: true });
   const [openIdx, setOpenIdx] = useState<number | null>(null);
   const handleToggle = (index: number) => {
+    if(index === undefined || index === null){
+      setOpenIdx(null);
+    return;
+    }
     setOpenIdx(openIdx === index ? null : index);
   };
   return (

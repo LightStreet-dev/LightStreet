@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import s from "./OfersListComponent.module.css";
 import OferComponent from "../OferComponent/OferComponent";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {Keyboard, Navigation, Pagination } from "swiper/modules";
+import {Keyboard, Navigation, Pagination, Autoplay  } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -23,7 +23,7 @@ const OfersListComponent = () => {
   return (
     <div className={s.oferSwiperWrapper}>
       <Swiper
-        modules={[Keyboard, Navigation, Pagination]}
+        modules={[Keyboard, Navigation, Pagination, Autoplay]}
         className={s.oferSwiper}
         pagination={{
           el: paginationRef.current,
@@ -41,6 +41,10 @@ const OfersListComponent = () => {
         slidesPerView="auto"
         initialSlide={0}
         loop={true}
+        autoplay={{
+        delay: 8000,        // час затримки між слайдами (мс)
+        disableOnInteraction: false, // не зупиняти після взаємодії
+      }}
         keyboard={{
           enabled: true,
         }}
@@ -56,6 +60,7 @@ const OfersListComponent = () => {
           1024: {
             slidesPerView: 2,
             spaceBetween: 30,
+            
           },
         }}
       >
