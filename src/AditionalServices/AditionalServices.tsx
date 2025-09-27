@@ -1,11 +1,15 @@
 import { useTranslation } from "react-i18next";
 import s from "./AditionalServices.module.css";
 import ASComponent from "./ASComponent";
+import { useState } from "react";
 
 const AditionalServices: React.FC = () => {
   const { t } = useTranslation();
   const addittional = t("additionalServises", { returnObjects: true });
-  console.log(addittional)
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
+  const handleToggle = (index: number) => {
+    setOpenIdx(openIdx === index ? null : index);
+  };
   return (
     <div className={s.AditionalServicesContainer}>
       <div className={s.AStitleWrapper}>
@@ -13,7 +17,12 @@ const AditionalServices: React.FC = () => {
       </div>
       <div className={s.ASlist}>
         {Object.entries(addittional).map(([key, value], idx) => (
-          <ASComponent key={key + idx} asInfo ={value}/>
+          <ASComponent
+            key={key + idx}
+            asInfo={value}
+            isOpen={openIdx === idx}
+            onClick={() => handleToggle(idx)}
+          />
         ))}
       </div>
     </div>

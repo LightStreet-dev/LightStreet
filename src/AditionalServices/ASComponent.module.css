@@ -14,15 +14,16 @@
 
 .AScontainer {
   width: 310px;
-  height: 200px;
+  height: 100%;
   border-radius: 24px;
   background-color: #060f18;
   padding: 24px 48px;
 overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: start;
   gap: 16px;
+  align-items: start;
+justify-content: space-between;
 }
 .AStitle {
   font-weight: 800;
@@ -30,6 +31,29 @@ overflow: hidden;
   line-height: 24px;
 }
 
+
+.arrowIcon{
+  width: 24px;
+  height: 24px;
+    transition: transform 0.3s ease;
+ 
+}
 .AStext {
-display: none;
+text-align: start;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.show {
+    display: blok;
+  max-height: 300px; /* або більше, під текст */
+  opacity: 1;
+}
+
+
+
+.rotate {
+  transform: rotate(180deg);
 }
