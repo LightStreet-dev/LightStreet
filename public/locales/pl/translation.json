@@ -56,12 +56,12 @@
   },
   "additionalServises": {
     "Optimisation": {
-      "svg": "/svg/symbol-defs.svg#code",
+      "svg": "\\svg\\symbol-defs.svg#code",
       "serviceName": "Optymalizacja",
       "info": "Istniejącej strony internetowej klienta w celu zwiększenia jej szybkości i wydajności oraz rozbudowa o nowe funkcjonalności dopasowane do potrzeb biznesowych."
     },
     "Redesign": {
-      "svg": "/svg/symbol-defs.svg#stick",
+      "svg": "\\svg\\symbol-defs.svg#stick",
       "serviceName": "Przeprojektowanie",
       "info": "Istniejącej strony internetowej klienta zgodnie z nowoczesnymi standardami designu, użyteczności i SEO. Aktualizujemy wygląd witryny, poprawiamy nawigację, dostosowujemy ją do urządzeń mobilnych i wdrażamy rozwiązania zwiększające konwersję."
     },

@@ -12,12 +12,15 @@ const ASComponent: React.FC<AsInfo> = ({
   return (
     <div className={s.AScontainer}>
       <div className={s.iconWrapper}>
-              <svg className={s.asIcon}>
+        <svg className={s.asIcon}>
           <use href={svg}></use>
         </svg>
       </div>
       <h2 className={s.AStitle}>{serviceName}</h2>
       <p className={s.AStext}>{info}</p>
+        <svg className={s.asIcon}>
+          <use href="/svg/symbol-defs.svg#chevron-arrows"></use>
+        </svg>
     </div>
   );
 };
