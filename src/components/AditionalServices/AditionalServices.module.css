@@ -1,0 +1,30 @@
+.AStitle {
+  color: var(--secondContentColor);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.ASlist {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .AStitle {
+    text-align: start;
+      font-size: 48px;
+  }
+  .ASlist {
+      margin-top: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+      gap: 30px;
+  }
+}
+
+@media (min-width: 1024px) {}

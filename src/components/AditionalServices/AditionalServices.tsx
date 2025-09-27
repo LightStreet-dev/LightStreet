@@ -11,7 +11,7 @@ const AditionalServices: React.FC = () => {
     setOpenIdx(openIdx === index ? null : index);
   };
   return (
-    <div className={s.AditionalServicesContainer}>
+    <div className="container">
       <div className={s.AStitleWrapper}>
         <h2 className={s.AStitle}>Dodatkowe usługi</h2>
       </div>
