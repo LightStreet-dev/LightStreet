@@ -17,7 +17,7 @@ const ASComponent: React.FC<AsInfo> = ({
         </svg>
       </div>
       <h2 className={s.AStitle}>{serviceName}</h2>
-      {/* <p className={s.AStext}>{info}</p> */}
+      <p className={s.AStext}>{info}</p>
     </div>
   );
 };
