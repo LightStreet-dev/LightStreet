@@ -53,5 +53,37 @@
       "timeTitle": "Czas realizacji:",
       "time": "6-8 mies."
     }
+  },
+  "additionalServises": {
+    "Optimisation": {
+      "svg": "/svg/symbol-defs.svg#code",
+      "serviceName": "Optymalizacja",
+      "info": "Istniejącej strony internetowej klienta w celu zwiększenia jej szybkości i wydajności oraz rozbudowa o nowe funkcjonalności dopasowane do potrzeb biznesowych."
+    },
+    "Redesign": {
+      "svg": "/svg/symbol-defs.svg#stick",
+      "serviceName": "Przeprojektowanie",
+      "info": "Istniejącej strony internetowej klienta zgodnie z nowoczesnymi standardami designu, użyteczności i SEO. Aktualizujemy wygląd witryny, poprawiamy nawigację, dostosowujemy ją do urządzeń mobilnych i wdrażamy rozwiązania zwiększające konwersję."
+    },
+    "Copywriting": {
+      "svg": "\\svg\\symbol-defs.svg#pen",
+      "serviceName": "Copywriting",
+      "info": "Kluczowy element każdej strony internetowej. Dobrze przygotowane i przemyślane treści zwiększają konwersję, budują zaufanie do firmy, produktu lub usługi oraz wspierają pozycjonowanie w Google i innych wyszukiwarkach."
+    },
+    "Content": {
+      "svg": "\\svg\\symbol-defs.svg#diament",
+      "serviceName": "Kontent",
+      "info": "Czyli zdjęcia, grafiki, filmy i multimedia, które budują wizerunek marki. Spójne i wartościowe treści przyciągają uwagę użytkowników, zwiększają zaangażowanie, poprawiają widoczność w Google i wspierają sprzedaż produktów oraz usług."
+    },
+    "SEO": {
+      "svg": "\\svg\\symbol-defs.svg#zoom",
+      "serviceName": "SEO optymalizacja",
+      "info": "To proces dostosowania strony internetowej do wymagań wyszukiwarek, aby osiągała wyższe pozycje w Google. Obejmuje analizę słów kluczowych, poprawę struktury strony, optymalizację treści, szybkości ładowania oraz linkowania wewnętrznego. Dzięki skutecznej optymalizacji SEO Twoja strona staje się lepiej widoczna, przyciąga więcej użytkowników i zwiększa szanse na konwersję."
+    },
+    "Support": {
+      "svg": "\\svg\\symbol-defs.svg#bliskavka",
+      "serviceName": "Wsparcie techniczne",
+      "info": "Strony internetowej to gwarancja jej sprawnego i bezpiecznego działania. Obejmuje bieżące aktualizacje, monitorowanie wydajności, ochronę przed awariami i cyberzagrożeniami oraz szybkie reagowanie na problemy techniczne. Dzięki temu Twoja strona działa stabilnie, jest zawsze dostępna dla użytkowników i wspiera realizację celów biznesowych."
+    }
   }
 }

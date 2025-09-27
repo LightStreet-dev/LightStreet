@@ -1,3 +1,19 @@
-.AditionalServicesContainer{
-    background-color: lightseagreen;
+
+
+.AStitle{
+    color: var(--secondContentColor);
+    font-family: Inter;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 40px;
+line-height: 48px;
+
+}
+
+.ASlist{
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+    align-items: center;
 }

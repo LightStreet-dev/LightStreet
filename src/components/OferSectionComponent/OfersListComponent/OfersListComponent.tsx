@@ -59,8 +59,8 @@ const OfersListComponent = () => {
           },
         }}
       >
-        {Object.entries(ofers).map(([key, value]) => (
-          <SwiperSlide key={key} >
+        {Object.entries(ofers).map(([key, value], idx) => (
+          <SwiperSlide key={key+idx} >
             {({ isActive }) => (
               <div
                 className={clsx(
