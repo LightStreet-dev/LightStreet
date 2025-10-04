@@ -1,0 +1,8 @@
+.portfolioTitle{
+    color: var(--secondContentColor);
+}
+.portfolioSwiper{
+
+    display: flex;
+    justify-content: center;
+}

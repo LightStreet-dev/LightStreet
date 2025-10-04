@@ -80,6 +80,23 @@ declare module "i18next" {
             info: string;
           };
         };
+        portfolio: {
+          pageNanowo: {
+            name: string;
+            image: string;
+            transcription: string;
+          };
+          pageBrig: {
+            name: string;
+            image: string;
+            transcription: string;
+          };
+          pageLS: {
+            name: string;
+            image: string;
+            transcription: string;
+          };
+        };
       };
     };
   }

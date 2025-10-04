@@ -1,0 +1,78 @@
+.portfolioSwiperWrapper{
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+}
+.portfSwiper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.portfSlide{
+    display: flex;
+    color: red;
+   justify-content: center;
+  
+}
+
+
+.navWrapper {
+  display: flex;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  max-width: 200px;
+
+}
+
+.customPagination {
+  display: flex;
+  justify-content: center;
+  flex: 1; /* займає простір між кнопками */
+  gap: 8px;
+}
+
+.customPagination :global(.swiper-pagination-bullet) {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 1px solid #0066ff;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.3s ease;
+  transform: scale(0.8);
+}
+
+.customPagination :global(.swiper-pagination-bullet-active) {
+  background: #0066ff;
+  transform: scale(1);
+}
+
+@media (min-width: 768px) {
+ 
+ 
+
+}
+@media (min-width: 1024px) {
+  .customPagination :global(.swiper-pagination-bullet) {
+  width: 20px;
+  height: 20px;
+  }
+  
+.navWrapper {
+    margin-left: auto;
+
+    margin-right: 62px;
+}
+}
+
+
+
+
+
+
