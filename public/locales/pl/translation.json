@@ -98,9 +98,20 @@
       "transcription": ""
     },
     "pageLS":{
+      "name":"Light Street",
+      "image":"\\img\\portfolio\\lightstreet.jpg",
+      "transcription": ""
+    },
+    "Sl4":{
+      "name":"Brige Nation",
+      "image":"\\img\\portfolio\\brige.jpg",
+      "transcription": ""
+    },
+    "sl5":{
       "name":"Brige Nation",
       "image":"\\img\\portfolio\\brige.jpg",
       "transcription": ""
     }
+  
   }
 }

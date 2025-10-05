@@ -1,56 +1,85 @@
 import s from "./PortfolioSwiper.module.css";
 import { useTranslation } from "react-i18next";
-// import { useMediaQuery } from "react-responsive";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard, Navigation, Pagination, Autoplay } from "swiper/modules";
+import {
+  Keyboard,
+  Navigation,
+  Pagination,
+  Autoplay,
+  EffectCoverflow,
+} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import 'swiper/css/effect-coverflow';
 import SwiperNavigationComponent from "../OferSectionComponent/OfersListComponent/SwiperNavigationComponent";
-
+import PortfolioCard from "./PortfolioCard";
 
 const PortfolioSwiper = () => {
   const { t } = useTranslation();
-  // const PCsize: boolean = useMediaQuery({ minWidth: 768 });
   const paginationRef = useRef<HTMLDivElement | null>(null);
-  const portfolio = t("portfolio", { returnObjects: true });
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  return <div className={s.portfolioSwiperWrapper}>
-     <Swiper
-     modules={[Keyboard, Navigation, Pagination, Autoplay]}
-          className={s.portfSwiper}
-      spaceBetween={5}
-          centeredSlides={true}
-      slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-      pagination={{
-          el: paginationRef.current,
+  const portfolio = t("portfolio", { returnObjects: true });
+  const portfolioEntries = Object.entries(portfolio);
+
+  return (
+    <div className={s.portfolioSwiperWrapper}>
+      <Swiper
+        modules={[Keyboard, Navigation, Pagination, Autoplay, EffectCoverflow]}
+        className={s.portfSwiper}
+        slidesPerView={1} // дефолтно на десктопі
+        centeredSlides={true}
+        spaceBetween={30}
+        initialSlide={0}
+        loop={true}
+        effect="coverflow"
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 1,
+          depth: 150,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        keyboard={{ enabled: true }}
+        breakpoints={{
+          0: { slidesPerView: 1, spaceBetween: 15, centeredSlides: true },
+          768: { slidesPerView: 3, spaceBetween: 23,centeredSlides: true },
+          1024: { slidesPerView: 3, spaceBetween: 60, centeredSlides: true },
+        }}
+        pagination={{
+          el: paginationRef.current ?? undefined,
           clickable: true,
         }}
-       onBeforeInit={(swiper) => {
-  // важливо: тут ми "прив’язуємо" pagination до рефа
-  // бо на момент першого рендеру paginationRef.current ще null
-  if (swiper.params.pagination && typeof swiper.params.pagination !== "boolean") {
-    swiper.params.pagination.el = paginationRef.current;
-  }
-}}
-    >
-      {Object.entries(portfolio).map(([key, value], idx) => (
-        
-          <SwiperSlide key={key+idx} ></SwiperSlide>))}
-      
-      
-<div className={s.navWrapper}>
-  <SwiperNavigationComponent type="prev" />
+        onBeforeInit={(swiper) => {
+          if (swiper.params.pagination && typeof swiper.params.pagination !== "boolean") {
+            swiper.params.pagination.el = paginationRef.current;
+          }
+        }}
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+      >
+        {portfolioEntries.map(([key, value], idx) => {
+          const realActiveIndex = activeIndex % portfolioEntries.length;
+          const isActive = realActiveIndex === idx;
 
-  <div ref={paginationRef} className={s.customPagination}></div>
+          return (
+            <SwiperSlide className={s.portfSlide} key={key + idx}>
+              <div className={s.portfIteam}>
+                <PortfolioCard portfolio={value} isActive={isActive} />
+              </div>
+            </SwiperSlide>
+          );
+        })}
 
-  <SwiperNavigationComponent type="next" />
-</div>
-    </Swiper>
-  </div>;
+        <div className={s.navWrapper}>
+          <SwiperNavigationComponent type="prev" />
+          <div ref={paginationRef} className={s.customPagination}></div>
+          <SwiperNavigationComponent type="next" />
+        </div>
+      </Swiper>
+    </div>
+  );
 };
 
 export default PortfolioSwiper;

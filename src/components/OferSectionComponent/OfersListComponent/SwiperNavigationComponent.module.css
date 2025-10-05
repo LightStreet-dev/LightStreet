@@ -34,8 +34,14 @@ fill: rgb(29, 60, 236);
 
 @media (min-width: 1024px) {
   .swiperNavBtn{
+
     margin-top: 50px;
 margin-right: 55px;
   justify-content:right;  }
+  .arrowSvg {
+  width: 15px;
+
+  fill: rgb(29, 60, 236);
+}
     
 }

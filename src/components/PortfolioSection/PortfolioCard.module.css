@@ -1,0 +1,31 @@
+.portfImg{
+  object-fit: cover;
+  
+}
+
+.portfolioLink{
+  display: flex;
+    filter: grayscale(100%);
+
+    height: auto;
+}
+.portfolioLinkActive{
+    filter: none;
+    transition: filter 0.5s ease;
+    width: 100%;
+height: auto;
+}
+
+@media (min-width: 768px){
+
+}
+
+
+
+@media (min-width: 1024px) {
+  .portfolioLink{
+   max-width: 350px;
+   width: 100%;
+    height: auto;
+  }
+}

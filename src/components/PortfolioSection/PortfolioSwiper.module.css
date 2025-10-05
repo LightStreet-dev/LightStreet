@@ -1,40 +1,48 @@
 .portfolioSwiperWrapper{
-    max-width: 350px;
-    display: flex;
-    justify-content: center;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
 }
-.portfSwiper{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.portfSwiper {
+  width: 100%;
+  max-width: 350px; /* або потрібне значення */
+  overflow: hidden;
 }
 
-.portfSlide{
-    display: flex;
-    color: red;
-   justify-content: center;
-  
+.portfSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+  width: 100%;       /* займає всю ширину контейнера */
+    /* можеш поставити будь-яке */
 }
 
+.portfIteam img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
 .navWrapper {
   display: flex;
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 16px;
-  margin-top: 20px;
-  max-width: 200px;
-
+  margin: 20px auto 0 auto;
+  max-width: 400px;
 }
 
 .customPagination {
   display: flex;
   justify-content: center;
-  flex: 1; /* займає простір між кнопками */
+  flex: 1;
   gap: 8px;
+  max-width: 100%;
 }
 
 .customPagination :global(.swiper-pagination-bullet) {
@@ -52,27 +60,39 @@
   background: #0066ff;
   transform: scale(1);
 }
-
 @media (min-width: 768px) {
- 
- 
-
+  .portfSwiper {
+    max-width: 700px;
+    width: 100%;
+  }
+  .portfSlide {
+  width: 400px;
+}
 }
 @media (min-width: 1024px) {
-  .customPagination :global(.swiper-pagination-bullet) {
-  width: 20px;
-  height: 20px;
+  .navWrapper {
+    max-width: 500px;
+
+    z-index: 100;
+    width: auto;
   }
-  
-.navWrapper {
-    margin-left: auto;
-
-    margin-right: 62px;
+  .customPagination {
+    margin: 0;
+    width: 100%;
+    max-width: 300px;
+  }
+  .customPagination :global(.swiper-pagination-bullet) {
+    width: 20px;
+    height: 20px;
+  }
+  .portfSwiper {
+   width: 100%;
+  max-width: 1200px; /* щоб Swiper не вилітав за межі контейнера */
+  margin: 0 auto; /* прибрати ліміт */
+  }
+  .portfSlide {
+ flex-shrink: 0;
+  width: auto;       /* ❌ не 100% */
+  max-width: none;   /* знімаємо обмеження */
+};
 }
-}
-
-
-
-
-
-

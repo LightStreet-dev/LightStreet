@@ -1,8 +1,20 @@
-.portfolioTitle{
-    color: var(--secondContentColor);
+.portfolioTitle {
+  color: var(--secondContentColor);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: start;
+  margin-top: 50px;
 }
-.portfolioSwiper{
+.portfolioSwiper {
+  display: flex;
+  justify-content: center;
+}
 
-    display: flex;
-    justify-content: center;
+@media (min-width: 768px) {
+.portfolioTitle {
+    font-size: 48px;
+    text-align: center;
+}
+
 }
