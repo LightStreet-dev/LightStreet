@@ -19,6 +19,7 @@ const PortfolioCard: React.FC<Portfolio> = ({
         <a href="">
           <img className={s.portfImg} src={image} alt="img" />
         </a>
+        <p>{name}</p>
         <p>{transcription}</p>
       </div>
     </div>
