@@ -1,33 +1,47 @@
-.portfolioSwiperWrapper{
-  display: flex;
+/* ===========================
+   Portfolio Swiper Styles
+   =========================== */
 
+/* Масштабування активного слайду */
+:global(.swiper-slide-active) .portfIteam {
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
+}
+
+/* Трохи зменшимо сусідні */
+:global(.swiper-slide) .portfIteam {
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+/* Контейнер усього свайпера */
+.portfolioSwiperWrapper {
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   margin-top: 40px;
 }
+
+/* Основний контейнер Swiper */
 .portfSwiper {
   width: 100%;
-  max-width: 350px; /* або потрібне значення */
-  overflow: hidden;
+  max-width: 350px; /* або 900px, якщо потрібно менше */
+  overflow: visible; /* щоб бокові слайди не обрізались */
 }
 
+/* Слайд */
 .portfSlide {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 320px;   /* ширина кожного слайду */
+  height: 200px;  /* висота */
   overflow: hidden;
-  border-radius: 8px;
-  width: 100%;       /* займає всю ширину контейнера */
-    /* можеш поставити будь-яке */
+  border-radius: 12px;
 }
 
-.portfIteam img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
+/* Навігація під слайдером */
 .navWrapper {
   display: flex;
   justify-content: space-between;
@@ -37,6 +51,7 @@
   max-width: 400px;
 }
 
+/* Пагінація (крапки) */
 .customPagination {
   display: flex;
   justify-content: center;
@@ -60,39 +75,50 @@
   background: #0066ff;
   transform: scale(1);
 }
+
+/* ===========================
+   Адаптив
+   =========================== */
+
+/* Планшети */
 @media (min-width: 768px) {
   .portfSwiper {
-    max-width: 700px;
-    width: 100%;
+    width: 700px;
   }
+
   .portfSlide {
-  width: 400px;
+width: auto;
+    height: 220px;
+  }
 }
-}
+
+/* Десктоп */
 @media (min-width: 1024px) {
+  .portfSwiper {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .portfSlide {
+width: auto;
+    height: 350px;
+  }
+
   .navWrapper {
     max-width: 500px;
-
     z-index: 100;
     width: auto;
   }
+
   .customPagination {
     margin: 0;
     width: 100%;
     max-width: 300px;
   }
+
   .customPagination :global(.swiper-pagination-bullet) {
     width: 20px;
     height: 20px;
   }
-  .portfSwiper {
-   width: 100%;
-  max-width: 1200px; /* щоб Swiper не вилітав за межі контейнера */
-  margin: 0 auto; /* прибрати ліміт */
-  }
-  .portfSlide {
- flex-shrink: 0;
-  width: auto;       /* ❌ не 100% */
-  max-width: none;   /* знімаємо обмеження */
-};
 }

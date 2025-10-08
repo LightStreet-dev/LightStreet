@@ -7,7 +7,7 @@ import {
   Navigation,
   Pagination,
   Autoplay,
-  EffectCoverflow,
+
 } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -27,26 +27,26 @@ const PortfolioSwiper = () => {
   return (
     <div className={s.portfolioSwiperWrapper}>
       <Swiper
-        modules={[Keyboard, Navigation, Pagination, Autoplay, EffectCoverflow]}
+        modules={[Keyboard, Navigation, Pagination, Autoplay]}
         className={s.portfSwiper}
-        slidesPerView={1} // дефолтно на десктопі
+        slidesPerView={"auto"}
         centeredSlides={true}
         spaceBetween={30}
-        initialSlide={0}
+        initialSlide={2}
         loop={true}
         effect="coverflow"
         coverflowEffect={{
-          rotate: 50,
-          stretch: 1,
-          depth: 150,
-          modifier: 1,
-          slideShadows: true,
+          rotate: 0,
+          stretch: -40,
+          depth: 250,
+          modifier: 1.5,
+          slideShadows: false,
         }}
         keyboard={{ enabled: true }}
         breakpoints={{
-          0: { slidesPerView: 1, spaceBetween: 15, centeredSlides: true },
-          768: { slidesPerView: 3, spaceBetween: 23,centeredSlides: true },
-          1024: { slidesPerView: 3, spaceBetween: 60, centeredSlides: true },
+          0: { slidesPerView: 'auto', spaceBetween: 15, centeredSlides: true },
+          768: {slidesPerView: 'auto', spaceBetween: 23,centeredSlides: true },
+          1024: { slidesPerView: 'auto', spaceBetween: 30, centeredSlides: true },
         }}
         pagination={{
           el: paginationRef.current ?? undefined,

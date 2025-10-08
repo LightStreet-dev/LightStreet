@@ -15,12 +15,12 @@ const PortfolioCard: React.FC<Portfolio> = ({
 }) => {
   return (
     <div>
-      <div className={clsx(s.portfolioLink, isActive && s.portfolioLinkActive)}>
-        <a href="">
+      <div >
+        <a className={clsx(s.portfolioLink, isActive && s.portfolioLinkActive)} href="">
           <img className={s.portfImg} src={image} alt="img" />
         </a>
-        <p>{name}</p>
-        <p>{transcription}</p>
+        {/* <p>{name}</p>
+        <p>{transcription}</p> */}
       </div>
     </div>
   );

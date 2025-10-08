@@ -1,22 +1,38 @@
-.portfImg{
-  object-fit: cover;
-  
-}
 
-.portfolioLink{
+.portfImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+.portfolioLink {
   display: flex;
-    filter: grayscale(100%);
-
-    height: auto;
+  filter: grayscale(100%);
+  justify-content: center;
+  align-items: center;
+  height: auto;
 }
-.portfolioLinkActive{
-    filter: none;
-    transition: filter 0.5s ease;
-    width: 100%;
-height: auto;
+.portfolioLinkActive {
+  filter: none;
+  transition: filter 0.5s ease;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+    border-radius: 8px;
 }
 
 @media (min-width: 768px){
+
+  .portfolioLink{
+   max-width:500px;
+   width: 100%;
+    height: auto;
+  }
 
 }
 
@@ -24,7 +40,7 @@ height: auto;
 
 @media (min-width: 1024px) {
   .portfolioLink{
-   max-width: 350px;
+   max-width: 500px;
    width: 100%;
     height: auto;
   }
