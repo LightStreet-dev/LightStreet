@@ -84,6 +84,7 @@
 @media (min-width: 768px) {
   .portfSwiper {
     width: 700px;
+    overflow: visible;
   }
 
   .portfSlide {
