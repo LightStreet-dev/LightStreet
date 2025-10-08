@@ -10,7 +10,7 @@ interface Portfolio {
   isActive: boolean;
 }
 const PortfolioCard: React.FC<Portfolio> = ({
-  portfolio: { name, image, transcription },
+  portfolio: {  image, },
   isActive,
 }) => {
   return (
