@@ -111,7 +111,11 @@
       "name":"Brige Nation",
       "image":"\\img\\portfolio\\brige.jpg",
       "transcription": ""
+    },
+  "pageLS2":{
+      "name":"Light Street",
+      "image":"\\img\\portfolio\\lightstreet.jpg",
+      "transcription": ""
     }
-  
   }
 }
