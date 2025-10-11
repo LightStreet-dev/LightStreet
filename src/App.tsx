@@ -7,7 +7,8 @@ import { useState } from "react";
 import AboutUsComponent from "./components/AboutUsComponent/AboutUsComponent";
 import OferSectionComponent from "./components/OferSectionComponent/OferSectionComponent";
 import AditionalServices from "./components/AditionalServices/AditionalServices";
-import PortfolioSection from "./components/PortfolioSection/PortfolioSection";
+import BenefitsComponent from "./components/BenefitsSection/BenefitsComponent/BenefitsComponent";
+// import PortfolioSection from "./components/PortfolioSection/PortfolioSection";
 
 const App: React.FC = () => {
   const [openForm, setOpenForm] = useState<boolean>(false);
@@ -26,7 +27,8 @@ const App: React.FC = () => {
       <AboutUsComponent/>
       <OferSectionComponent toggleForm={toggleOpenForm}/>
       <AditionalServices/>
-      <PortfolioSection/>
+      {/* <PortfolioSection/> */}
+      <BenefitsComponent/>
       <SubmitForm openForm={openForm} setOpenForm={setOpenForm} />
     </>
   );

@@ -1,0 +1,35 @@
+
+.benefitsTitle{
+ font-weight: 600;
+font-size: 40px;
+line-height: 50px;
+color: var(--secondContentColor);
+text-align: start;
+}
+
+.benefitsList{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: end;
+}
+
+.benefitItem{
+display: flex;
+flex-direction: column;
+max-width: 260px;
+}
+
+.benefitItemTitle{
+color: var(--secondContentColor);
+font-weight: 600;
+font-size: 24px;
+text-align: start;
+}
+
+.benefitText{
+    color: var(--secondContentColor);
+    text-align: start;
+    font-size: var(--textFontSize);
+}
