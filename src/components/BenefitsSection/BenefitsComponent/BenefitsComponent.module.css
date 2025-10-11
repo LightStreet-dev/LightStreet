@@ -33,6 +33,7 @@
 
 .benefitTextWrapper {
   max-width: 260px;
+  z-index: 5;
 }
 .benefitItemTitle {
   color: var(--secondContentColor);
