@@ -7,7 +7,7 @@ const BenefitsComponent = () => {
         <h2 className={s.benefitsTitle}>Dlaczego warto pracować z nami?</h2>
         <ul className={s.benefitsList}>
           <li className={s.benefitItem}>
-            <svg className={s.benefitIcon}>
+            <svg className={s.benefitIcon} width="150" height="150">
               <use href="svg\symbol-defs.svg#benefitOne"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
@@ -22,7 +22,7 @@ const BenefitsComponent = () => {
             </div>
           </li>
           <li className={s.benefitItem}>
-            <svg className={s.benefitIcon}>
+            <svg className={s.benefitIcon} width="150" height="150">
               <use href="svg\symbol-defs.svg#BenefitTwo"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
@@ -35,7 +35,7 @@ const BenefitsComponent = () => {
             </div>
           </li>
           <li className={s.benefitItem}>
-            <svg className={s.benefitIcon}>
+            <svg className={s.benefitIcon} width="150" height="150">
               <use href="svg\symbol-defs.svg#BenefitTree"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
@@ -47,7 +47,7 @@ const BenefitsComponent = () => {
             </div>
           </li>
           <li className={s.benefitItem}>
-            <svg className={s.benefitIcon}>
+            <svg className={s.benefitIcon} width="150" height="150">
               <use href="svg\symbol-defs.svg#BenefitFour"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
