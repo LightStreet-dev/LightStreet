@@ -7,8 +7,10 @@
   margin-top: 50px;
 }
 .portfolioSwiper {
+
   display: flex;
   justify-content: center;
+
 }
 
 @media (min-width: 768px) {

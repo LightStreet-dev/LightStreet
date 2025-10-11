@@ -8,7 +8,7 @@ const PortfolioSection: React.FC = () => {
         <h2 className={s.portfolioTitle}>Portfolio</h2>
       </div>
       <div className={s.portfolioSwiper}>
-        <PortfolioSwiper />
+        <PortfolioSwiper  />
       </div>
     </div>
   );
