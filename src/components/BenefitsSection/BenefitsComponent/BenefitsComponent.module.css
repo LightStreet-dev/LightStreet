@@ -53,10 +53,36 @@
 
 @media (min-width: 768px) {
   .benefitsList {
+    position: relative;
     max-width: 769px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 2rem; /* відстань між блоками */
+     row-gap: 50px;
   }
+
+  .benefitsList::before,
+.benefitsList::after {
+  content: "";
+  position: absolute;
+  background-color: #B1CFEB;
+}
+
+.benefitsList::before {
+  /* Вертикальна лінія по центру */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+}
+
+.benefitsList::after {
+  /* Горизонтальна лінія по центру */
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  transform: translateY(-50%);
+}
 }
