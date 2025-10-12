@@ -9,7 +9,6 @@
   flex-direction: column;
   margin: 0 auto;
   padding: 0 16px;
-  
 }
 .headerHerroWrapper {
   background-image: url("/img/background/imgbackground.jpg");
@@ -19,7 +18,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-
 }
 /*=================== SWIPER Pagination custom ==================*/
 /* .swiper-pagination-bullet{
@@ -41,23 +39,29 @@ transform: translate(-50%) !important;
 } */
 /*=======================================================*/
 
-
 @media (min-width: 768px) {
-  .headerHerroWrapper{
-     width: 100vw;
+  .headerHerroWrapper {
+    width: 100vw;
   }
-.container {
-padding: 0 40px;
+  .container {
+    padding: 0 18px;
   }
 }
+
+@media (min-width: 900px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
 @media (min-width: 1024px) {
   .container {
     max-width: 1280px;
   }
 
-  .swiper-pagination{
- left:auto !important;
- right: 55px;
- position: static;
- 
-}}
+  .swiper-pagination {
+    left: auto !important;
+    right: 55px;
+    position: static;
+  }
+}
