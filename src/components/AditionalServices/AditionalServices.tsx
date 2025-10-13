@@ -16,6 +16,7 @@ const AditionalServices: React.FC = () => {
   };
   return (
     <div className="container">
+      <div className={s.asWrapper}>
       <div className={s.AStitleWrapper}>
         <h2 className={s.AStitle}>Dodatkowe usługi</h2>
       </div>
@@ -28,6 +29,7 @@ const AditionalServices: React.FC = () => {
             onClick={() => handleToggle(idx)}
           />
         ))}
+      </div>
       </div>
     </div>
   );

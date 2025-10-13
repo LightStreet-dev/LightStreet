@@ -41,6 +41,10 @@
 }
 
 @media (min-width: 768px) {
+  .oferContainer {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
   .oferBtnWrap {
     display: flex;
     align-items: start;

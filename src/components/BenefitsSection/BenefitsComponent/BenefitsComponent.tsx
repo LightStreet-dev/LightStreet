@@ -3,7 +3,7 @@ import s from "./BenefitsComponent.module.css";
 const BenefitsComponent = () => {
   return (
     <div className="container">
-      <div>
+      <div className={s.benefitsWrapper}>
         <h2 className={s.benefitsTitle}>Dlaczego warto pracować z nami?</h2>
         <ul className={s.benefitsList}>
           <li className={s.benefitItem}>

@@ -1,3 +1,8 @@
+.asWrapper{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .AStitle {
   color: var(--secondContentColor);
   font-weight: 600;
@@ -15,6 +20,10 @@
 }
 
 @media (min-width: 768px) {
+  .asWrapper{
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
   .AStitle {
     text-align: start;
       font-size: 48px;
@@ -26,6 +35,14 @@
     justify-content: space-between;
       gap: 30px;
   }
+}
+
+@media (min-width: 1024px) {
+  .asWrapper{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+ 
 }
 
 @media (min-width: 1224px) {
