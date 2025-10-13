@@ -1,6 +1,6 @@
-import { Field, Form, Formik } from "formik";
-import { useRef } from "react";
-import { useTranslation } from "react-i18next";
+import {  Form, Formik } from "formik";
+// import { useRef } from "react";
+// import { useTranslation } from "react-i18next";
 import InputComponent from "../ContactForm/InputComponent/InputComponent";
 
 type FormValue = {
@@ -9,8 +9,8 @@ type FormValue = {
 };
 
 const ShortFormComponent:React.FC = () => {
-     const formRef = useRef<HTMLFormElement>(null);
-    const { t } = useTranslation();
+    //  const formRef = useRef<HTMLFormElement>(null);
+    // const { t } = useTranslation();
 const initialValues: FormValue ={
      Name: "",
      Phone: "",
