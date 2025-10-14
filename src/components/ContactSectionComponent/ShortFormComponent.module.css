@@ -1,0 +1,75 @@
+.inputWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+.inputStyle {
+  height: auto;
+  position: relative;
+  max-width: 360px;
+  color: var(--textColor, );
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+.labelStyle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color:cadetblue;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  border-radius: 12px;
+  z-index: 2;
+  /* головне */
+  background: rgba(255, 255, 255, 0.001); /* практично прозорий */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(20px);
+
+  transition: all 0.5s ease;
+}
+
+.inputStyle:focus + .labelStyle,
+.inputStyle:not(:placeholder-shown) + .labelStyle {
+  top: 0;
+  left: 50px;
+  font-size: 10px;
+  color: var(--textColor);
+  outline: none;
+  box-shadow: none;
+  z-index: 10;
+  border-color: transparent;
+  
+}
+
+@media (min-width: 768px){
+  .inputWrapper {
+    flex-direction: row;
+    gap: 20px;
+    max-width: 720px;
+  }
+
+  .inputStyle:focus + .labelStyle,
+.inputStyle:not(:placeholder-shown) + .labelStyle {
+  top: 0;
+  left: 40px;
+  font-size: 10px;
+  color: var(--textColor);
+  outline: none;
+  box-shadow: none;
+  z-index: 10;
+  border-color: transparent;
+  
+}
+
+}

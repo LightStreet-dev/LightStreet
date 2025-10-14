@@ -1,4 +1,6 @@
+import s from "./ShortFormComponent.module.css"
 import {  Form, Formik } from "formik";
+
 // import { useRef } from "react";
 // import { useTranslation } from "react-i18next";
 import InputComponent from "../ContactForm/InputComponent/InputComponent";
@@ -26,9 +28,11 @@ const initialValues: FormValue ={
     >
 
 {()=>(
-    <Form>
-<InputComponent name="Name" as="input" type="text" />
-<InputComponent name="Phone" as="input" type="number" />
+    <Form >
+      <div className={s.inputWrapper}>
+<InputComponent labelClassName={s.labelStyle} altDesing={s.inputStyle} name="Name" as="input" type="text" />
+<InputComponent labelClassName={s.labelStyle} altDesing={s.inputStyle} name="Phone" as="input" type="number" />
+</div>
     </Form>
 )
 
