@@ -45,7 +45,7 @@ const { t } = useTranslation();
     const mailSignTwo =  t("formReply.signatureTwo");
     try {
       //  Надіслати лист адміністратору
-     await Promise.all([
+      Promise.all([
   emailjs.sendForm(
     "service_b9158j4",
     "template_3o02fkr",

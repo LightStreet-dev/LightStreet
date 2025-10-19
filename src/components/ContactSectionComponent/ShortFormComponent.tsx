@@ -1,5 +1,5 @@
-import s from "./ShortFormComponent.module.css"
-import {  Form, Formik } from "formik";
+import s from "./ShortFormComponent.module.css";
+import { Form, Formik } from "formik";
 
 // import { useRef } from "react";
 // import { useTranslation } from "react-i18next";
@@ -10,37 +10,52 @@ type FormValue = {
   Phone: string;
 };
 
-const ShortFormComponent:React.FC = () => {
-    //  const formRef = useRef<HTMLFormElement>(null);
-    // const { t } = useTranslation();
-const initialValues: FormValue ={
-     Name: "",
-     Phone: "",
-}
+const ShortFormComponent: React.FC = () => {
+  //  const formRef = useRef<HTMLFormElement>(null);
+  // const { t } = useTranslation();
+  const initialValues: FormValue = {
+    Name: "",
+    Phone: "",
+  };
 
-  return <div>
-
-    <Formik
-    initialValues={initialValues} 
-      onSubmit={(values) => {
-        console.log(values);
-      }}
-    >
-
-{()=>(
-    <Form >
-      <div className={s.inputWrapper}>
-<InputComponent labelClassName={s.labelStyle} altDesing={s.inputStyle} name="Name" as="input" type="text" />
-<InputComponent labelClassName={s.labelStyle} altDesing={s.inputStyle} name="Phone" as="input" type="number" />
-</div>
-    </Form>
-)
-
-
-}
-
-    </Formik>
-  </div>;
+  return (
+    <div>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={(values) => {
+          console.log(values);
+        }}
+      >
+        {({ values, isSubmitting }) => (
+          <Form>
+            <div className={s.inputWrapper}>
+              <InputComponent
+                labelClassName={s.labelStyle}
+                altDesing={s.inputStyle}
+                name="Name"
+                as="input"
+                type="text"
+              />
+              <InputComponent
+                labelClassName={s.labelStyle}
+                altDesing={s.inputStyle}
+                name="Phone"
+                as="input"
+                type="number"
+              />
+              <button
+                className={s.submitBtn}
+                disabled={!values.agree || isSubmitting}
+                type="submit"
+              >
+                {isSubmitting ? "Sending..." : "Send"}
+              </button>
+            </div>
+          </Form>
+        )}
+      </Formik>
+    </div>
+  );
 };
 
 export default ShortFormComponent;

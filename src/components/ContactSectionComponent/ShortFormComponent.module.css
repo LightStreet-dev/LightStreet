@@ -8,11 +8,33 @@
 .inputStyle {
   height: auto;
   position: relative;
+
   max-width: 360px;
-  color: var(--textColor, );
+  color: var(--textColor);
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+.inputStyle:-webkit-autofill,
+.inputStyle:-webkit-autofill:hover,
+.inputStyle:-webkit-autofill:focus {
+  -webkit-text-fill-color: white !important;
+
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+.submitBtn {
+  margin-top: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  position: relative;
+  max-width: 360px;
+  color: var(--secondContentColor);
+  background-color: var(--mainBackground);
+  width: 100%;
+  padding: 10px;
   border-radius: 30px;
   box-sizing: border-box;
 }
@@ -23,7 +45,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 16px;
-  color:cadetblue;
+  color: var(--mainContentColor);
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -49,27 +71,56 @@
   box-shadow: none;
   z-index: 10;
   border-color: transparent;
-  
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .inputWrapper {
+    width: 100%;
+    margin: 0 auto;
     flex-direction: row;
-    gap: 20px;
-    max-width: 720px;
+    justify-content: space-around;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 23px 40px;
   }
 
   .inputStyle:focus + .labelStyle,
-.inputStyle:not(:placeholder-shown) + .labelStyle {
-  top: 0;
-  left: 40px;
-  font-size: 10px;
-  color: var(--textColor);
-  outline: none;
-  box-shadow: none;
-  z-index: 10;
-  border-color: transparent;
+  .inputStyle:not(:placeholder-shown) + .labelStyle {
+    top: 0;
+    left: 40px;
+    font-size: 10px;
+    color: var(--textColor);
+    outline: none;
+    box-shadow: none;
+    z-index: 10;
+    border-color: transparent;
+  }
+  .inputStyle {
   
+  max-width: 210px;
+ 
 }
+  .submitBtn {
+    margin: 0;
+    max-width: 210px;
+    background-color: var(--mainBackground);
+  }
+}
+
+@media (min-width: 768px) {
+.inputWrapper {
+  padding: 40px;
+}
+
+.inputStyle {
+  font-size: 24px;
+  max-width: 350px;
+ 
+}
+  .submitBtn {
+    margin: 0;
+    max-width: 350px;
+    font-size: 24px;
+  }
 
 }
