@@ -25,23 +25,60 @@
 .markText {
   color: #0a6cb5;
 }
-
-.footerSocIcon{
-   width: 34px;
+.footerSocWrap {
+  padding-bottom: 50px;
+}
+.footerSocIcon {
+  width: 34px;
   height: 34px;
- fill: #0A6CB5;
+  fill: #0a6cb5;
   color: var(--iconsColor);
   display: block;
   transition: fill 0.5s ease;
 }
 
-.footerStyleList{
+.footerStyleList {
   gap: 12px;
- 
+}
+.footerInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.righsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ownerInfo {
+  color: var(--footerNavColor);
+  max-width: 143px;
+  font-size: 12px;
+  text-align: start;
+}
+.privatePolice {
+  color: var(--footerNavColor);
+  font-size: 12px;
+  text-align: end;
+  cursor: pointer;
+}
+.rulesInfo {
+  color: var(--secondContentColor);
+  font-size: 12px;
+  text-align: end;
 }
 
 @media (min-width: 420px) {
   .footerText {
-  font-size: 48px;
+    font-size: 48px;
+  }
 }
+
+@media (min-width: 769px) {
+  .footerWrapper {
+    padding: 40px 0;
+  }
+
+  .footerText {
+    font-size: 64px;
+  }
 }

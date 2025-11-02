@@ -15,7 +15,17 @@ const FooterComponent = () => {
           <span className={s.markText}>swoją przewagę</span> <br /> online
         </h2>
         <div className={s.footerSocWrap}>
-          <SocialIcons footerStyle ={s.footerSocIcon} footerStyleList ={s.footerStyleList} />
+          <SocialIcons
+            footerStyle={s.footerSocIcon}
+            footerStyleList={s.footerStyleList}
+          />
+        </div>
+        <div className={s.footerInfo}>
+          <p className={s.ownerInfo}>Use of materials is permitted only with the project owner’s consent.</p>
+         <div className={s.righsWrapper}>
+            <p className={s.rulesInfo}>© 2025 All rights reserved.</p>
+            <a className={s.privatePolice} href="#">link</a>
+         </div>
         </div>
       </div>
     </section>
