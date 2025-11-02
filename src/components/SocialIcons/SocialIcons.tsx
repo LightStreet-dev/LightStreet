@@ -2,27 +2,30 @@ import clsx from "clsx";
 import s from "./SocialIcons.module.css";
 
 interface socialProps {
-  isOpen?: boolean;}
+  isOpen?: boolean;
+  footerStyle?:string;
+  footerStyleList?:string
+}
 
-const SocialIcons: React.FC<socialProps> = ({ isOpen }) => {
+const SocialIcons: React.FC<socialProps> = ({ isOpen, footerStyle, footerStyleList }) => {
   return (
-    <ul className={clsx(s.socIconsList, isOpen && s.socIconsListModal)}>
+    <ul className={clsx(s.socIconsList, isOpen && s.socIconsListModal, footerStyleList)}>
       <li><a href="https://www.instagram.com/dimonchikseagull/" target="blank">
-        <svg className ={clsx(s.svg, isOpen && s.svgModal)} >
+        <svg className ={clsx(s.svg, isOpen && s.svgModal, footerStyle)} >
           <use href="/svg/symbol-defs.svg#icon-insta"></use>
         </svg>
         </a>
       </li>
       <li>
         <a href="https://www.linkedin.com/in/seagull-dmytro/" target="blank">
-        <svg className ={clsx(s.svg, isOpen && s.svgModal)} >
+        <svg className ={clsx(s.svg, isOpen && s.svgModal, footerStyle)} >
           <use href="/svg/symbol-defs.svg#icon-typcn_social-linkedin"></use>
         </svg>
         </a>
       </li>
        <li>
         <a href="#" target="blank">
-        <svg className ={clsx(s.svg, isOpen && s.svgModal)} >
+        <svg className ={clsx(s.svg, isOpen && s.svgModal, footerStyle)} >
           <use href="/svg/symbol-defs.svg#icon-whatsapp"></use>
         </svg>
         </a>

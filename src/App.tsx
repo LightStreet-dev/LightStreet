@@ -9,6 +9,7 @@ import OferSectionComponent from "./components/OferSectionComponent/OferSectionC
 import AditionalServices from "./components/AditionalServices/AditionalServices";
 import BenefitsComponent from "./components/BenefitsSection/BenefitsComponent/BenefitsComponent";
 import ContactSectionComponent from "./components/ContactSectionComponent/ContactSectionComponent";
+import FooterComponent from "./components/FooterComponent/FooterComponent";
 // import PortfolioSection from "./components/PortfolioSection/PortfolioSection";
 
 const App: React.FC = () => {
@@ -32,6 +33,7 @@ const App: React.FC = () => {
       <BenefitsComponent/>
       <ContactSectionComponent/>
       <SubmitForm openForm={openForm} setOpenForm={setOpenForm} />
+      <FooterComponent/>
     </>
   );
 };

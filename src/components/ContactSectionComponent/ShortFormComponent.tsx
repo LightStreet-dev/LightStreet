@@ -26,7 +26,7 @@ const ShortFormComponent: React.FC = () => {
           console.log(values);
         }}
       >
-        {({ values, isSubmitting }) => (
+        {({  isSubmitting }) => (
           <Form>
             <div className={s.inputWrapper}>
               <InputComponent
@@ -45,7 +45,7 @@ const ShortFormComponent: React.FC = () => {
               />
               <button
                 className={s.submitBtn}
-                disabled={!values.agree || isSubmitting}
+                disabled={ isSubmitting}
                 type="submit"
               >
                 {isSubmitting ? "Sending..." : "Send"}

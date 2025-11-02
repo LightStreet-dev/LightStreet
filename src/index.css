@@ -17,6 +17,8 @@
   --iconsColor: #DCDCDC;
   --buttonColor: #FBFCFF;
   --featuresFortFamily: Onest, sans-serif;
+  --footerNavColor: #626068;
+  --footerNavSize: 14px;
 }
 
 body {
@@ -88,4 +90,3 @@ select {
 .hidden{
   display: none;
 }
-

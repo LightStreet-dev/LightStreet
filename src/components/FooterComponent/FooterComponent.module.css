@@ -1,0 +1,47 @@
+.footerWrapper {
+  padding: 30px 0;
+
+  display: flex;
+  flex-direction: column;
+}
+.footerNavWrap {
+  margin-bottom: 50px;
+}
+.footerNav {
+  display: flex;
+  justify-content: start;
+  gap: 16px;
+  font-size: var(--footerNavSize);
+  color: var(--footerNavColor);
+}
+
+.footerText {
+  font-size: 38px;
+  color: #130f20;
+  margin-bottom: 50px;
+  font-weight: 400;
+  letter-spacing: -0.1em;
+}
+.markText {
+  color: #0a6cb5;
+}
+
+.footerSocIcon{
+   width: 34px;
+  height: 34px;
+ fill: #0A6CB5;
+  color: var(--iconsColor);
+  display: block;
+  transition: fill 0.5s ease;
+}
+
+.footerStyleList{
+  gap: 12px;
+ 
+}
+
+@media (min-width: 420px) {
+  .footerText {
+  font-size: 48px;
+}
+}
