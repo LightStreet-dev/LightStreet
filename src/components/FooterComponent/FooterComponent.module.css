@@ -1,3 +1,7 @@
+.footerSection{
+  background-color: #E1EEFC;
+}
+
 .footerWrapper {
   padding: 30px 0;
 
@@ -35,6 +39,13 @@
   color: var(--iconsColor);
   display: block;
   transition: fill 0.5s ease;
+}
+
+.footerSocIcon:hover {
+  
+  fill: #1984d6;
+ 
+  
 }
 
 .footerStyleList {
@@ -77,8 +88,41 @@
   .footerWrapper {
     padding: 40px 0;
   }
+  .footerNavWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
 
   .footerText {
     font-size: 64px;
+  }
+  .ownerInfo {
+
+    max-width: 268px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footerNavWrap {
+    
+    margin-bottom: 100px;
+  }
+  .footerWrapper {
+    padding: 100px 0;
+  }
+  .footerText {
+    font-size: 110px;
+  }
+  .ownerInfo {
+    font-size: var(--textFontSize);
+
+  }
+  .rulesInfo {
+    font-size: var(--textFontSize);
+  }
+  .privatePolice {
+    font-size: var(--textFontSize);
   }
 }

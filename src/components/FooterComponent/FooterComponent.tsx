@@ -1,13 +1,21 @@
+import { useMediaQuery } from "react-responsive";
 import NavLinks from "../HeaderSection/NavLins/NavLinks";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import s from "./FooterComponent.module.css";
 
 const FooterComponent = () => {
+
+  const mobSize = useMediaQuery({maxWidth:768 })
   return (
-    <section className="container">
+    <section className={s.footerSection}>
+    <div className="container">
       <div className={s.footerWrapper}>
         <div className={s.footerNavWrap}>
           <NavLinks footerNavigation={s.footerNav} />
+{mobSize ? null :<SocialIcons
+            footerStyle={s.footerSocIcon}
+            footerStyleList={s.footerStyleList}
+          />}
         </div>
 
         <h2 className={s.footerText}>
@@ -15,10 +23,10 @@ const FooterComponent = () => {
           <span className={s.markText}>swoją przewagę</span> <br /> online
         </h2>
         <div className={s.footerSocWrap}>
-          <SocialIcons
+          {mobSize && <SocialIcons
             footerStyle={s.footerSocIcon}
             footerStyleList={s.footerStyleList}
-          />
+          />}
         </div>
         <div className={s.footerInfo}>
           <p className={s.ownerInfo}>Use of materials is permitted only with the project owner’s consent.</p>
@@ -28,6 +36,7 @@ const FooterComponent = () => {
          </div>
         </div>
       </div>
+    </div>
     </section>
   );
 };
