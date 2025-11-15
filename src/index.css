@@ -20,7 +20,12 @@
   --footerNavColor: #626068;
   --footerNavSize: 14px;
 }
-
+.LSloader.loader{
+  position: fixed !important; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 body {
   overflow-x: hidden; 
   background: var(--mainBackground);
