@@ -1,11 +1,22 @@
-.portfolioSection{
-    position: relative;
+.portfolioSection {
+  position: relative;
 }
-.portfolioSlider{
-    max-width: 100vw;
-    overflow: hidden;
+.portfolioSlider {
+  width: 100%;
+  max-width: 1240px;
+  overflow: hidden;
 }
 
-.slide{
-    max-width: 500px;
-     overflow: hidden;}
+.slide {
+  max-width: 500px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+ 
+ .portfolioSlider {
+  width: 100%;
+  max-width: 1240px;
+  overflow: visible;
+}
+}

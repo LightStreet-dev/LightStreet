@@ -15,6 +15,7 @@ const PortfolioComponent:React.FC<webPage> = ({ webPage:{img, retina} }) => {
             src={img}
             srcSet={`${retina} 2x`}
             alt={"img"}
+     
           />
           {/* <p>{key}</p> */}
         </div>
