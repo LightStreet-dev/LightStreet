@@ -40,7 +40,7 @@ position: relative;
   gap: 8px;
 }
 
-.customPagination :global(.swiper-pagination-bullet) {
+ :global(.swiper-pagination-bullet) {
   width: 12px;
   height: 12px;
   background: transparent;
@@ -51,7 +51,7 @@ position: relative;
   transform: scale(0.8);
 }
 
-.customPagination :global(.swiper-pagination-bullet-active) {
+:global(.swiper-pagination-bullet-active) {
   background: #0066ff;
   transform: scale(1);
 }

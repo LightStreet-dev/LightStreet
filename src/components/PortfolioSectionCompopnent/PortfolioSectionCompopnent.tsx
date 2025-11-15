@@ -11,7 +11,7 @@ import SwiperNavigationComponent from "../OferSectionComponent/OfersListComponen
 import { useRef } from "react";
 
 const PortfolioSectionCompopnent: React.FC = () => {
-   const paginationRef = useRef<HTMLDivElement | null>(null);
+   const paginationPortfolioRef = useRef<HTMLDivElement | null>(null);
   return (
     <div className={s.portfolioSection}>
       <Swiper
@@ -29,7 +29,7 @@ const PortfolioSectionCompopnent: React.FC = () => {
           enabled: true,
         }}
           pagination={{
-          el: paginationRef.current,
+          el: `.${s.customPaginationProjects}`,
           clickable: true,
         }}
         coverflowEffect={{
@@ -53,7 +53,7 @@ const PortfolioSectionCompopnent: React.FC = () => {
         <div className={s.navWrapper}>
   <SwiperNavigationComponent type="prev" />
 
-  <div ref={paginationRef} className={s.customPagination}></div>
+  <div ref={paginationPortfolioRef} className={s.customPaginationProjects}></div>
 
   <SwiperNavigationComponent type="next" />
 </div>

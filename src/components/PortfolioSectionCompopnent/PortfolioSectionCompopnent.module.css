@@ -20,11 +20,9 @@
   align-items: center;
   gap: 10px;
   margin-top: 20px;
-    max-width: 250px;
-
-
+  max-width: 250px;
 }
-.customPagination {
+.customPaginationProjects {
   display: flex;
   justify-content: center;
   flex: 1; /* займає простір між кнопками */
@@ -41,15 +39,10 @@
   .navWrapper {
     margin-top: 50px;
     max-width: 320px;
-
-
-
-
- 
   }
 }
 @media (min-width: 1024px) {
-   :global(.swiper-pagination-bullet) {
+  :global(.swiper-pagination-bullet) {
     width: 20px;
     height: 20px;
     z-index: 10;
