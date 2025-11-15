@@ -6,15 +6,18 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination, Keyboard } from "swiper/modules";
+import SwiperNavigationComponent from "../OferSectionComponent/OfersListComponent/SwiperNavigationComponent";
+import { useRef } from "react";
 
 const PortfolioSectionCompopnent: React.FC = () => {
+   const paginationRef = useRef<HTMLDivElement | null>(null);
   return (
     <div className={s.portfolioSection}>
       <Swiper
        
         className={s.portfolioSlider}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Pagination, Keyboard]}
         spaceBetween={50}
         centeredSlides={true}
         effect="coverflow"
@@ -22,6 +25,13 @@ const PortfolioSectionCompopnent: React.FC = () => {
         loop={true}
         slidesPerView="auto"
         watchSlidesProgress={true}
+         keyboard={{
+          enabled: true,
+        }}
+          pagination={{
+          el: paginationRef.current,
+          clickable: true,
+        }}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -29,16 +39,24 @@ const PortfolioSectionCompopnent: React.FC = () => {
           modifier: 1,
           slideShadows: true,
         }}
+        
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
         {portfolioDB.map((item, idx) => (
           <SwiperSlide key={idx} className={s.slide}>
-            <a href="">
+          
               <PortfolioComponent webPage={item} />
-            </a>
+          
           </SwiperSlide>
         ))}
+        <div className={s.navWrapper}>
+  <SwiperNavigationComponent type="prev" />
+
+  <div ref={paginationRef} className={s.customPagination}></div>
+
+  <SwiperNavigationComponent type="next" />
+</div>
       </Swiper>
     </div>
   );

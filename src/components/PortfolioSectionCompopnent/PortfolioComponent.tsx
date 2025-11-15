@@ -10,7 +10,7 @@ type webPage ={
 const PortfolioComponent:React.FC<webPage> = ({ webPage:{img, retina} }) => {
   return (
     <div className={s.portfolioCard}>
-             <div  className={s.portfolioItem}>
+             <a href="" className={s.portfolioItem}>
           <img
             src={img}
             srcSet={`${retina} 2x`}
@@ -18,7 +18,7 @@ const PortfolioComponent:React.FC<webPage> = ({ webPage:{img, retina} }) => {
      
           />
           {/* <p>{key}</p> */}
-        </div>
+        </a>
  
     </div>
   );

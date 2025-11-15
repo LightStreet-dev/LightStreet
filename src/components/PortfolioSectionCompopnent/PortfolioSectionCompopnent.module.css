@@ -12,11 +12,48 @@
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
- 
- .portfolioSlider {
-  width: 100%;
-  max-width: 1240px;
-  overflow: visible;
+.navWrapper {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+    max-width: 240px;
+
+
 }
+.customPagination {
+  display: flex;
+  justify-content: center;
+  flex: 1; /* займає простір між кнопками */
+  gap: 8px;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .portfolioSlider {
+    width: 100%;
+    max-width: 1240px;
+    overflow: visible;
+  }
+  .navWrapper {
+    max-width: 320px;
+
+
+
+
+ 
+  }
+}
+@media (min-width: 1024px) {
+  .customPagination :global(.swiper-pagination-bullet) {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navWrapper {
+    max-width: 400px;
+  }
 }
