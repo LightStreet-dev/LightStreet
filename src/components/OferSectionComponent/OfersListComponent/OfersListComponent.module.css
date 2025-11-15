@@ -1,9 +1,11 @@
 
+
 .oferSwiper {
 position: relative;
   display: flex;
   width: 100%;
   max-width: 310px;
+  overflow: visible;
 
 }
 
@@ -19,6 +21,7 @@ position: relative;
     inset 0px -30.19px 30.19px rgba(3, 71, 124, 1) 0px 61.47px 122.93px rgba(1, 24, 42, 0.52);
   border-radius: 30px;
   padding: 38px 35px;
+  overflow: visible
 }
 .navWrapper {
   display: flex;

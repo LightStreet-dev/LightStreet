@@ -56,10 +56,14 @@
   .oferButton {
     width: 220px;
   }
+  .oferTitle {
+    font-size: 48px;
+
+  }
 }
 
 
-@media (min-width: 1224px) {
+@media (min-width: 1024px) {
   .oferContainer {
     padding-top: 100px;
 

@@ -1,3 +1,15 @@
+.portfolioTitle{
+color: var(--secondContentColor);
+font-weight: 600;
+
+font-size: 40px;
+
+line-height: 50px;
+letter-spacing: 0%;
+text-align: center;
+margin-bottom: 50px;
+
+}
 .portfolioSection {
   position: relative;
 }
@@ -31,6 +43,12 @@
 }
 
 @media (min-width: 768px) {
+
+    .portfolioTitle{
+    font-size: 48px;
+    text-align: start;
+    
+    }
   .portfolioSlider {
     width: 100%;
     max-width: 1240px;
@@ -42,6 +60,10 @@
   }
 }
 @media (min-width: 1024px) {
+    .portfolioTitle{
+    font-size: 96px;
+    text-align: start;
+margin-bottom: 100px;}
   :global(.swiper-pagination-bullet) {
     width: 20px;
     height: 20px;

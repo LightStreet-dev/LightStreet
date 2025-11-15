@@ -14,6 +14,9 @@ const PortfolioSectionCompopnent: React.FC = () => {
    const paginationPortfolioRef = useRef<HTMLDivElement | null>(null);
   return (
     <div className={s.portfolioSection}>
+      <div className="container">
+        <h2 className={s.portfolioTitle}>Portfolio</h2>
+      </div>
       <Swiper
        
         className={s.portfolioSlider}
