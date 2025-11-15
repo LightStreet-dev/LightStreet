@@ -10,7 +10,7 @@ import AditionalServices from "./components/AditionalServices/AditionalServices"
 import BenefitsComponent from "./components/BenefitsSection/BenefitsComponent/BenefitsComponent";
 import ContactSectionComponent from "./components/ContactSectionComponent/ContactSectionComponent";
 import FooterComponent from "./components/FooterComponent/FooterComponent";
-// import PortfolioSection from "./components/PortfolioSection/PortfolioSection";
+import PortfolioSectionCompopnent from "./components/PortfolioSectionCompopnent/PortfolioSectionCompopnent";
 
 const App: React.FC = () => {
   const [openForm, setOpenForm] = useState<boolean>(false);
@@ -29,7 +29,7 @@ const App: React.FC = () => {
       <AboutUsComponent/>
       <OferSectionComponent toggleForm={toggleOpenForm}/>
       <AditionalServices/>
-      {/* <PortfolioSection/> */}
+<PortfolioSectionCompopnent/>
       <BenefitsComponent/>
       <ContactSectionComponent/>
       <SubmitForm openForm={openForm} setOpenForm={setOpenForm} />

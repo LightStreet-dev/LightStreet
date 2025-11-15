@@ -1,0 +1,11 @@
+.portfolioSection{
+    position: relative;
+}
+.portfolioSlider{
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.slide{
+    max-width: 500px;
+     overflow: hidden;}
