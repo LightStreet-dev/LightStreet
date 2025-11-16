@@ -24,7 +24,7 @@ const ShortFormComponent: React.FC = () => {
     try {
       if (!shortFormRef.current) return;
 
-      emailjs
+      await emailjs
         .send(
           "service_8lry4ov",
           "template_7z2h40f",
