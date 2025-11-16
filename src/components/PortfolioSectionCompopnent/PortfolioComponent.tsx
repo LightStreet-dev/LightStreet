@@ -4,13 +4,14 @@ type webPage ={
   webPage: {
     img: string
     retina: string
+    link:string
   }
 }
 
-const PortfolioComponent:React.FC<webPage> = ({ webPage:{img, retina} }) => {
+const PortfolioComponent:React.FC<webPage> = ({ webPage:{img, retina, link} }) => {
   return (
     <div className={s.portfolioCard}>
-             <a href="" className={s.portfolioItem}>
+             <a href={link} className={s.portfolioItem} target="blank">
           <img
             src={img}
             srcSet={`${retina} 2x`}

@@ -22,6 +22,8 @@ margin-bottom: 50px;
 .slide {
   max-width: 500px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .navWrapper {
@@ -74,7 +76,7 @@ margin-bottom: 100px;}
     max-width: 400px;
   }
 }
-@media (min-width: 1224px){
+@media (min-width: 1424px){
 .portfolioSlider {
     width: 100%;
     max-width: 1240px;
