@@ -1,33 +1,55 @@
 import s from "./ShortFormComponent.module.css";
 import { Form, Formik } from "formik";
-
-// import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 // import { useTranslation } from "react-i18next";
 import InputComponent from "../ContactForm/InputComponent/InputComponent";
 
-type FormValue = {
+type shortFormValue = {
   Name: string;
   Phone: string;
 };
 
 const ShortFormComponent: React.FC = () => {
-  //  const formRef = useRef<HTMLFormElement>(null);
+   const shortFormRef = useRef<HTMLFormElement>(null);
   // const { t } = useTranslation();
-  const initialValues: FormValue = {
+  const initialValues: shortFormValue = {
     Name: "",
     Phone: "",
   };
+const sendEmail = async (
+  values: shortFormValue,
+  actions: import("formik").FormikHelpers<shortFormValue>
+) => {
+  try {
+  if (shortFormRef.current) {
+     emailjs.send(
+      "service_8lry4ov",
+      "template_7z2h40f",
+      {
+        name: values.Name,
+        phone: values.Phone,
+      },
+      "DL-X4Ig0PYNtnqTUb"
+    );
+  } else {
+    console.error("Form reference is null.");
+  }
 
+  actions.resetForm();
+  } catch (error) {
+    console.error("Email failed:", error);
+    actions.setSubmitting(false);
+  }
+};
   return (
     <div>
       <Formik
         initialValues={initialValues}
-        onSubmit={(values) => {
-          console.log(values);
-        }}
+        onSubmit={sendEmail}
       >
         {({  isSubmitting }) => (
-          <Form>
+          <Form ref={shortFormRef}>
             <div className={s.inputWrapper}>
               <InputComponent
                 labelClassName={s.labelStyle}

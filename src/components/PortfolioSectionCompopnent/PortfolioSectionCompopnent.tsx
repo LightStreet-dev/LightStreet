@@ -43,8 +43,7 @@ const PortfolioSectionCompopnent: React.FC = () => {
           slideShadows: true,
         }}
         
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        
       >
         {portfolioDB.map((item, idx) => (
           <SwiperSlide key={idx} className={s.slide}>
