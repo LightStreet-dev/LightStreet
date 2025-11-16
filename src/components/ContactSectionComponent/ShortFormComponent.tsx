@@ -11,44 +11,46 @@ type shortFormValue = {
 };
 
 const ShortFormComponent: React.FC = () => {
-   const shortFormRef = useRef<HTMLFormElement>(null);
+  const shortFormRef = useRef<HTMLFormElement>(null);
   // const { t } = useTranslation();
   const initialValues: shortFormValue = {
     Name: "",
     Phone: "",
   };
-const sendEmail = async (
-  values: shortFormValue,
-  actions: import("formik").FormikHelpers<shortFormValue>
-) => {
-  try {
-  if (shortFormRef.current) {
-     emailjs.send(
-      "service_8lry4ov",
-      "template_7z2h40f",
-      {
-        name: values.Name,
-        phone: values.Phone,
-      },
-      "DL-X4Ig0PYNtnqTUb"
-    );
-  } else {
-    console.error("Form reference is null.");
-  }
+  const sendEmail = async (
+    values: shortFormValue,
+    actions: import("formik").FormikHelpers<shortFormValue>
+  ) => {
+    try {
+      if (!shortFormRef.current) return;
 
-  actions.resetForm();
-  } catch (error) {
-    console.error("Email failed:", error);
-    actions.setSubmitting(false);
-  }
-};
+      emailjs
+        .send(
+          "service_8lry4ov",
+          "template_7z2h40f",
+          {
+            name: values.Name,
+            phone: values.Phone,
+          },
+          "DL-X4Ig0PYNtnqTUb"
+        )
+        .then(() => {});
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.log("FAILED...", error.message);
+      } else {
+        console.log("FAILED...", error);
+      }
+    } finally {
+      actions.setSubmitting(false);
+
+      actions.resetForm();
+    }
+  };
   return (
     <div>
-      <Formik
-        initialValues={initialValues}
-        onSubmit={sendEmail}
-      >
-        {({  isSubmitting }) => (
+      <Formik initialValues={initialValues} onSubmit={sendEmail}>
+        {({ isSubmitting }) => (
           <Form ref={shortFormRef}>
             <div className={s.inputWrapper}>
               <InputComponent
@@ -67,7 +69,7 @@ const sendEmail = async (
               />
               <button
                 className={s.submitBtn}
-                disabled={ isSubmitting}
+                disabled={isSubmitting}
                 type="submit"
               >
                 {isSubmitting ? "Sending..." : "Send"}

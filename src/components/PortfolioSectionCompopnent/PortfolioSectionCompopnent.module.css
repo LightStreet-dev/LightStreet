@@ -52,7 +52,7 @@ margin-bottom: 50px;
   .portfolioSlider {
     width: 100%;
     max-width: 1240px;
-    overflow: visible;
+    overflow: hidden;
   }
   .navWrapper {
     margin-top: 50px;
