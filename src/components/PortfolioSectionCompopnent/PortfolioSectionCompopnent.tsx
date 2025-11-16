@@ -21,7 +21,7 @@ const PortfolioSectionCompopnent: React.FC = () => {
        
         className={s.portfolioSlider}
         modules={[EffectCoverflow, Pagination, Keyboard]}
-        spaceBetween={50}
+        spaceBetween={35}
         centeredSlides={true}
         effect="coverflow"
         grabCursor={true}

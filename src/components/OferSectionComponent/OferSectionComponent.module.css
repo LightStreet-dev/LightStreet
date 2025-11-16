@@ -1,6 +1,8 @@
 .oferContainer {
   padding-top: 50px;
   padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
 }
 .oferTitle {
   color: var(--secondContentColor);
@@ -62,8 +64,12 @@
   }
 }
 
-
-@media (min-width: 1024px) {
+@media (min-width: 1024px){
+  .oferTitle {
+    font-size: 96px;
+  }
+}
+@media (min-width: 1224px) {
   .oferContainer {
     padding-top: 100px;
 

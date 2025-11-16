@@ -25,7 +25,8 @@ const OferSectionComponent: React.FC<modalProps> = ({toggleForm}) => {
         <ContactButton className={s.oferButton}  toggleForm={toggleForm} />
       </div>
       </div>
-<OfersListComponent/>
+      <OfersListComponent/>
+
     </div>
   );
 };

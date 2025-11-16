@@ -21,7 +21,7 @@ const OfersListComponent = () => {
   const paginationRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <div className={s.oferSwiperWrapper}>
+ 
       <Swiper
         modules={[Keyboard, Navigation, Pagination, Autoplay]}
         className={s.oferSwiper}
@@ -91,7 +91,7 @@ const OfersListComponent = () => {
   <SwiperNavigationComponent type="next" />
 </div>
       </Swiper>
-    </div>
+ 
   );
 };
 

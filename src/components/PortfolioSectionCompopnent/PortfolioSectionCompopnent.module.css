@@ -15,7 +15,7 @@ margin-bottom: 50px;
 }
 .portfolioSlider {
   width: 100%;
-  max-width: 1240px;
+  max-width: 400px;
   overflow: hidden;
 }
 
@@ -72,5 +72,12 @@ margin-bottom: 100px;}
 
   .navWrapper {
     max-width: 400px;
+  }
+}
+@media (min-width: 1224px){
+.portfolioSlider {
+    width: 100%;
+    max-width: 1240px;
+    overflow: visible;
   }
 }

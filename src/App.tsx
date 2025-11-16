@@ -35,7 +35,7 @@ const App: React.FC = () => {
       <SubmitForm openForm={openForm} setOpenForm={setOpenForm} />
       <FooterComponent/>
     </>
-  );
+  ); 
 };
 
 export default App;
