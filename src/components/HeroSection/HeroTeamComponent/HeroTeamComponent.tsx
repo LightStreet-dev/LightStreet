@@ -1,5 +1,5 @@
 import s from "./HeroTeamComponent.module.css";
-import type { teamText as teamType } from "../../../data/teamData";
+import type { teamText as teamType } from "../../../assets/data/teamData";
 import clsx from "clsx";
 
 interface teamProps {

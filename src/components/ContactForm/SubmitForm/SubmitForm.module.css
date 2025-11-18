@@ -7,7 +7,9 @@ html:has(.modalFormOverlayActive) {
 html {
   -webkit-text-size-adjust: 100%; /* відключає автоматичне масштабування */
 }
-
+.inputWrapper{
+  position: relative;
+}
 .form{
     display: flex;
     flex-direction: column;
@@ -15,7 +17,15 @@ html {
  
 }
 
+.error{
+  color: red;
+  font-size: 10px;
+  text-align:right;
+  position: absolute;
+  bottom: -15px;
+  width: 100%;
 
+}
 .modalFormOverlay {
   position: fixed;
   top: 0;

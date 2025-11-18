@@ -1,5 +1,5 @@
 import s from "./HeroTemList.module.css";
-import teamInfo from "../../../data/teamData.ts";
+import teamInfo from "../../../assets/data/teamData.ts";
 
 import { useState } from "react";
 import clsx from "clsx";
