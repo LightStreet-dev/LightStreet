@@ -8,7 +8,7 @@ interface inputProps {
     type:string
     altDesing?:string
     labelClassName?:string
-    label:string
+    label?:string
 }
 const InputComponent:React.FC<inputProps> = ({name,as,type, altDesing, labelClassName, label}) => {
     const id = useId()
