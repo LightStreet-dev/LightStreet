@@ -6,7 +6,7 @@ interface navProps{
  
 }
 const  NavLinks:React.FC<navProps> =({footerNavigation}) => {
-      const {t} = useTranslation();
+      const {t} = useTranslation("translation");
     return(
         <ul className={clsx(s.navigation, footerNavigation )}>
             <li><a className={s.navItem} href="#">{t("header.about")}</a></li>

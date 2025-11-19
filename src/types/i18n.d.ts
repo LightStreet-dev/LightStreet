@@ -98,6 +98,19 @@ declare module "i18next" {
           };
         };
       };
+      formTranslation: {
+        formPlaseholders: {
+          name: string;
+          company: string;
+          telefon: string;
+          email: string;
+          text: string;
+          agree: string;
+        };
+        errors:{
+          error:string;
+        }
+      };
     };
   }
 }

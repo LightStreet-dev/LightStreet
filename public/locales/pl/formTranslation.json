@@ -1,0 +1,15 @@
+{
+  "formPlaseholders": {
+    "name": "Imię",
+    "company": "Firma",
+    "telefon": "Telefon",
+    "email": "E-mail",
+    "text": "Wiadomość",
+    "agree":"  Wyrażam zgodę na przetwarzanie moich danych osobowych"
+  },
+  "errors":{
+"error":"To pole jest wymagane"
+   } 
+  
+
+}

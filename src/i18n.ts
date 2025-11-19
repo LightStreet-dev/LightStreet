@@ -10,6 +10,8 @@ i18n
   .init({
     fallbackLng: 'en',
     debug: true,
+     ns: ["translation","formTranslation" ],
+      defaultNS: "translation",
     interpolation: { escapeValue: false },
     keySeparator: '.',
     load: 'languageOnly',
@@ -20,5 +22,6 @@ i18n
       lookupFromPathIndex: 0, 
     },
   });
-
+ 
 export default i18n;
+

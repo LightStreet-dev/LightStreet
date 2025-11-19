@@ -1,0 +1,14 @@
+{
+  "formPlaseholders": {
+    "name": "Name",
+    "company": "Company",
+    "telefon": "Phone",
+    "email": "Email",
+    "text": "Message",
+    "agree":"I agree to the processing of my personal data"
+  },
+   "errors": {
+"error":"This field is required"
+   } 
+  }
+

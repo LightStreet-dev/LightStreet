@@ -23,7 +23,7 @@ interface SubmitFormProps {
 
 const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
   const formRef = useRef<HTMLFormElement>(null);
-  const { t } = useTranslation();
+  const { t } = useTranslation(["translation", "formTranslation"]);
   const initialValues: FormValue = {
     Name: "",
     Company: "",
@@ -108,28 +108,28 @@ const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
           {({ values, isSubmitting }) => (
             <Form ref={formRef} className={s.form}>
               <div className={s.inputWrapper}>
-                <InputComponent name="Name" as="input" type="text" />
+                <InputComponent name="Name" as="input" type="text" label={t("formTranslation:formPlaseholders.name")} />
                 <ErrorMessage className={s.error} name="Name" component="p" />
               </div>
               <div className={s.inputWrapper}>
-                <InputComponent name="Company" as="input" type="text" />
+                <InputComponent name="Company" as="input" type="text" label={t("formTranslation:formPlaseholders.company")} />
                 <ErrorMessage className={s.error} name="Company" component="p" />
               </div>
               <div className={s.inputWrapper}>
-                <InputComponent name="Phone" as="input" type="number" />
+                <InputComponent name="Phone" as="input" type="number" label={t("formTranslation:formPlaseholders.telefon")} />
                 <ErrorMessage className={s.error} name="Phone" component="p" />
               </div>
               <div className={s.inputWrapper}>
-                <InputComponent name="Email" as="input" type="text" />
+                <InputComponent name="Email" as="input" type="text" label={t("formTranslation:formPlaseholders.email")} />
                 <ErrorMessage className={s.error} name="Email" component="p" />
               </div>
               <div className={s.inputWrapper}>
-                <InputComponent name="Text" as="textarea" type="text" />
+                <InputComponent name="Text" as="textarea" type="text" label={t("formTranslation:formPlaseholders.text")} />
                 <ErrorMessage className={s.error} name="Text" component="p" />
               </div>
               <label className={s.checkbox}>
                 <Field type="checkbox" name="agree" />
-                <span className={s.checkboxText}>I agree all rules </span>
+                <span className={s.checkboxText}>{t("formTranslation:formPlaseholders.agree")} </span>
            
               </label>
 

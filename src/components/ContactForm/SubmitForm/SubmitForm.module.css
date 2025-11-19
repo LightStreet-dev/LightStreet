@@ -99,9 +99,10 @@ margin: 0 auto;
 
 }
 .checkboxText{
+  font-size: 10px;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: start;
    color: black;
 }
 .submitBtn{
