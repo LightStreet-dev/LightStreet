@@ -187,7 +187,7 @@ const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
                 disabled={isSubmitting}
                 type="submit"
               >
-                {isSubmitting ? "Sending..." : "Send"}
+                {isSubmitting ? t("formTranslation:button.sending") : t("formTranslation:button.send")}
               </button>
             </Form>
           )}

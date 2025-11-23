@@ -2,8 +2,9 @@ import s from "./ShortFormComponent.module.css";
 import { Form, Formik } from "formik";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import InputComponent from "../ContactForm/InputComponent/InputComponent";
+import shortFormSchema from "../../validators/shortFormValidation";
 
 type shortFormValue = {
   Name: string;
@@ -12,7 +13,7 @@ type shortFormValue = {
 
 const ShortFormComponent: React.FC = () => {
   const shortFormRef = useRef<HTMLFormElement>(null);
-  // const { t } = useTranslation();
+  const { t } = useTranslation(["translation", "formTranslation"]);
   const initialValues: shortFormValue = {
     Name: "",
     Phone: "",
@@ -49,7 +50,11 @@ const ShortFormComponent: React.FC = () => {
   };
   return (
     <div>
-      <Formik initialValues={initialValues} onSubmit={sendEmail}>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={sendEmail}
+        validationSchema={shortFormSchema}
+      >
         {({ isSubmitting }) => (
           <Form ref={shortFormRef}>
             <div className={s.inputWrapper}>
@@ -59,7 +64,7 @@ const ShortFormComponent: React.FC = () => {
                 name="Name"
                 as="input"
                 type="text"
-                label="Name"
+                label={t("formTranslation:formPlaseholders.name")}
               />
               <InputComponent
                 labelClassName={s.labelStyle}
@@ -67,14 +72,14 @@ const ShortFormComponent: React.FC = () => {
                 name="Phone"
                 as="input"
                 type="number"
-                  label="Phone"
+                label={t("formTranslation:formPlaseholders.telefon")}
               />
               <button
                 className={s.submitBtn}
                 disabled={isSubmitting}
                 type="submit"
               >
-                {isSubmitting ? "Sending..." : "Send"}
+                 {isSubmitting ? t("formTranslation:button.sending") : t("formTranslation:button.send")}
               </button>
             </div>
           </Form>

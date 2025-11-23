@@ -116,6 +116,10 @@ declare module "i18next" {
           mail:string;
           onlyLetters:string
           phone:string
+        },
+        button:{
+send:string,
+sending:string
         }
       };
     };
