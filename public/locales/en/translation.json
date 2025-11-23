@@ -10,7 +10,12 @@
     "heroTitle2": "Design",
     "heroTitle3": "Solutions",
     "heroText": "From idea to launch — tailored UI/UX, visual identity, and web assets for your product.",
-    "heroBtn": "START NOW"
+    "heroBtn": "See offer",
+    "team": {
+      "karina": "Karina is a UI/UX and Web Designer. Logical, user-friendly, and effective solutions that truly sell.",
+      "dmytro": "Dmytro is an experienced developer. He builds fast, reliable, and user-friendly web applications that meet modern standards.",
+      "alex":"Alex is an expert in photography, video content. He shapes visual and written materials that strengthen the brand."
+    }
   },
   "formReply": {
     "reply": "Thank you! We received your request and will contact you soon.",

@@ -17,6 +17,11 @@ declare module "i18next" {
           heroTitle3: string;
           heroText: string;
           heroBtn: string;
+          team:{
+            karina:string,
+            dmytro:string,
+            alex:string
+          }
         };
         formReply: {
           reply: string;

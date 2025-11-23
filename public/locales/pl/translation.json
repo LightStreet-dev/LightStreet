@@ -10,7 +10,12 @@
     "heroTitle2": "internetowe",
     "heroTitle3": "pod klucz",
     "heroText": "Od pomysłu po wdrożenie — Tworzymy dopasowany UI/UX, identyfikacja wizualna i materiały webowe dla Twojego produktu.",
-    "heroBtn": "Poznaj ofertę"
+    "heroBtn": "Poznaj ofertę",
+    "team": {
+      "karina": "Karina to projektantka UI/UX i stron internetowych. Logiczne, przyjazne użytkownikowi i skuteczne rozwiązania, które realnie sprzedają.",
+      "dmytro": "Dmytro to doświadczony programista. Tworzy szybkie, niezawodne i przyjazne użytkownikowi aplikacje internetowe zgodne z nowoczesnymi standardami.",
+      "alex":"Alex to ekspert fotografii,  wideo i treści. Kształtuje materiały wizualne i tekstowe, które wzmacniają markę."
+    }
   },
   "formReply": {
     "reply": "Dziękujemy! Otrzymaliśmy Twoje zgłoszenie i wkrótce się odezwemy",
