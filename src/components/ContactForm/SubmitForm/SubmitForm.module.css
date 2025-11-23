@@ -93,11 +93,44 @@ margin: 0 auto;
 }
 .checkbox{
   display: flex;
-  
-  gap: 10px;
+    gap: 10px;
   margin: 10px 0;
 
 }
+
+
+  .checkboxField {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  appearance: none; /* прибираємо стандартний стиль */
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  position: relative;
+  transform: all 0.3s ease;
+}
+
+
+.checkboxField:checked {
+  border: 1px solid #4caf50; /* зелена галочка, якщо потрібно */
+  background-color: #4caf50;
+}
+.checkboxFieldError {
+  border: 2px solid red; /* червоний бордер коли не відмічено */
+}
+.checkboxField:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
 .checkboxText{
   font-size: 10px;
   align-items: center;

@@ -109,6 +109,12 @@ declare module "i18next" {
         };
         errors:{
           error:string;
+          min:string;
+          max:string;
+          maxText:string
+          mail:string;
+          onlyLetters:string
+          phone:string
         }
       };
     };

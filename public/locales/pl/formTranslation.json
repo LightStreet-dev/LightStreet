@@ -8,7 +8,14 @@
     "agree":"  Wyrażam zgodę na przetwarzanie moich danych osobowych"
   },
   "errors":{
-"error":"To pole jest wymagane"
+"error":"To pole jest wymagane",
+"min": "Minimum 3 litery",
+"max":"Tekst nie może zawierać więcej niż 20 liter",
+"maxText":"Osiągnięto maksymalną dozwoloną liczbę liter",
+"mail":"Nieprawidłowy format adresu e-mail",
+"onlyLetters":"Pole powinno zawierać tylko litery",
+"phone":"Proszę wprowadzić poprawny numer telefonu"
+
    } 
   
 

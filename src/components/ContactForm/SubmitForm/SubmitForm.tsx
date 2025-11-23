@@ -102,40 +102,86 @@ const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
         <h2 className={s.formHeader}>Contact us</h2>
         <Formik
           initialValues={initialValues}
-          onSubmit={sendEmail}
+          onSubmit={(values, actions) => {
+            if (!values.agree) {
+              actions.setFieldTouched("agree", true);
+              actions.setSubmitting(false);
+              return;
+            }
+
+            sendEmail(values, actions); // якщо agree=true, відправляємо форму
+          }}
           validationSchema={mainFormSchema}
+          validateOnBlur={true}
+          validateOnChange={false}
         >
-          {({ values, isSubmitting }) => (
+          {({ values, isSubmitting, touched }) => (
             <Form ref={formRef} className={s.form}>
               <div className={s.inputWrapper}>
-                <InputComponent name="Name" as="input" type="text" label={t("formTranslation:formPlaseholders.name")} />
+                <InputComponent
+                  name="Name"
+                  as="input"
+                  type="text"
+                  label={t("formTranslation:formPlaseholders.name")}
+                />
                 <ErrorMessage className={s.error} name="Name" component="p" />
               </div>
               <div className={s.inputWrapper}>
-                <InputComponent name="Company" as="input" type="text" label={t("formTranslation:formPlaseholders.company")} />
-                <ErrorMessage className={s.error} name="Company" component="p" />
+                <InputComponent
+                  name="Company"
+                  as="input"
+                  type="text"
+                  label={t("formTranslation:formPlaseholders.company")}
+                />
+                <ErrorMessage
+                  className={s.error}
+                  name="Company"
+                  component="p"
+                />
               </div>
               <div className={s.inputWrapper}>
-                <InputComponent name="Phone" as="input" type="number" label={t("formTranslation:formPlaseholders.telefon")} />
+                <InputComponent
+                  name="Phone"
+                  as="input"
+                  type="number"
+                  label={t("formTranslation:formPlaseholders.telefon")}
+                />
                 <ErrorMessage className={s.error} name="Phone" component="p" />
               </div>
               <div className={s.inputWrapper}>
-                <InputComponent name="Email" as="input" type="text" label={t("formTranslation:formPlaseholders.email")} />
+                <InputComponent
+                  name="Email"
+                  as="input"
+                  type="text"
+                  label={t("formTranslation:formPlaseholders.email")}
+                />
                 <ErrorMessage className={s.error} name="Email" component="p" />
               </div>
               <div className={s.inputWrapper}>
-                <InputComponent name="Text" as="textarea" type="text" label={t("formTranslation:formPlaseholders.text")} />
+                <InputComponent
+                  name="Text"
+                  as="textarea"
+                  type="text"
+                  label={t("formTranslation:formPlaseholders.text")}
+                />
                 <ErrorMessage className={s.error} name="Text" component="p" />
               </div>
               <label className={s.checkbox}>
-                <Field type="checkbox" name="agree" />
-                <span className={s.checkboxText}>{t("formTranslation:formPlaseholders.agree")} </span>
-           
+                <Field
+                  type="checkbox"
+                  name="agree"
+                  className={clsx(
+                    s.checkboxField,
+                    !values.agree && touched.agree && s.checkboxFieldError
+                  )}
+                />
+                <span className={s.checkboxText}>
+                  {t("formTranslation:formPlaseholders.agree")}
+                </span>
               </label>
-
               <button
                 className={s.submitBtn}
-                disabled={!values.agree || isSubmitting}
+                disabled={isSubmitting}
                 type="submit"
               >
                 {isSubmitting ? "Sending..." : "Send"}
