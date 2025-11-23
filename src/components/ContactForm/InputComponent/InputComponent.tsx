@@ -9,14 +9,15 @@ interface inputProps {
     altDesing?:string
     labelClassName?:string
     label?:string
+    require?:boolean
 }
-const InputComponent:React.FC<inputProps> = ({name,as,type, altDesing, labelClassName, label}) => {
+const InputComponent:React.FC<inputProps> = ({name,as,type, altDesing, labelClassName, label, require = false}) => {
     const id = useId()
   return (
     
          <div className={s.fieldWrapper}>
             <Field className={clsx(s.fieldStyle, altDesing )} as={as} type={type} id={id} placeholder=' '  name={name} />
-            <label className={clsx( s.labelForm, type==="textarea" && s.labelFormTextArea, labelClassName)} htmlFor={id}>{label}</label>
+            <label className={clsx( s.labelForm, type==="textarea" && s.labelFormTextArea, labelClassName)} htmlFor={id}>{label} <span className={clsx(s.requireNone, require && s.require)}>*</span></label>
             </div>
     
   )

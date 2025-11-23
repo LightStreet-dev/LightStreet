@@ -99,7 +99,7 @@ const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
           className={s.closeFormBtn}
           onMouseDown={() => setOpenForm(false)}
         />
-        <h2 className={s.formHeader}>Contact us</h2>
+        <h2 className={s.formHeader}>{t("formTranslation:formTitle")}</h2>
         <Formik
           initialValues={initialValues}
           onSubmit={(values, actions) => {
@@ -123,6 +123,7 @@ const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
                   as="input"
                   type="text"
                   label={t("formTranslation:formPlaseholders.name")}
+                  require={true}
                 />
                 <ErrorMessage className={s.error} name="Name" component="p" />
               </div>
@@ -145,6 +146,7 @@ const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
                   as="input"
                   type="number"
                   label={t("formTranslation:formPlaseholders.telefon")}
+                  require={true}
                 />
                 <ErrorMessage className={s.error} name="Phone" component="p" />
               </div>
@@ -154,6 +156,7 @@ const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
                   as="input"
                   type="text"
                   label={t("formTranslation:formPlaseholders.email")}
+                  require={true}
                 />
                 <ErrorMessage className={s.error} name="Email" component="p" />
               </div>

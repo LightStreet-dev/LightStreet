@@ -99,6 +99,7 @@ declare module "i18next" {
         };
       };
       formTranslation: {
+        formTitle:string;
         formPlaseholders: {
           name: string;
           company: string;

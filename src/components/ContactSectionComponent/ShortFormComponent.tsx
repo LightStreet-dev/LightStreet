@@ -59,6 +59,7 @@ const ShortFormComponent: React.FC = () => {
                 name="Name"
                 as="input"
                 type="text"
+                label="Name"
               />
               <InputComponent
                 labelClassName={s.labelStyle}
@@ -66,6 +67,7 @@ const ShortFormComponent: React.FC = () => {
                 name="Phone"
                 as="input"
                 type="number"
+                  label="Phone"
               />
               <button
                 className={s.submitBtn}

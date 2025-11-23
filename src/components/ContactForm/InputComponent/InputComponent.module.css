@@ -50,8 +50,15 @@
   color: black;
 }
 
-  
+ .requireNone {
+  opacity: 0;
+  transition: 0.3s;
+}
 
+.require {
+  opacity: 1;
+  color: red;
+}
 
 textarea.fieldStyle:focus{
   height: 85px;
