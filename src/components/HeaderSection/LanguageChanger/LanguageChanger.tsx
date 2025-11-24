@@ -34,10 +34,10 @@ const customStyles: StylesConfig<OptionType, false> = {
     cursor: "pointer",
 
     ":active": {
-      backgroundColor: "#4CAF50",
+      backgroundColor: "#4c5eafff",
     },
     backgroundColor: state.isFocused
-      ? "rgba(255, 255, 255, 0.1)"
+      ? "rgba(104, 147, 153, 0.34)"
       : "transparent",
   }),
   container: (provided) => ({

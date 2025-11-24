@@ -28,3 +28,4 @@ const HeroFeatures: React.FC = () => {
 };
 
 export default HeroFeatures;
+  
