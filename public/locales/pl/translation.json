@@ -13,8 +13,16 @@
     "heroBtn": "Poznaj ofertę",
     "team": {
       "karina": "Karina to projektantka UI/UX i stron internetowych. Logiczne, przyjazne użytkownikowi i skuteczne rozwiązania, które realnie sprzedają.",
-      "dmytro": "Dmytro to doświadczony programista. Tworzy szybkie, niezawodne i przyjazne użytkownikowi aplikacje internetowe zgodne z nowoczesnymi standardami.",
+      "dmytro": "Dmytro tworzy szybkie, niezawodne i przyjazne użytkownikowi aplikacje internetowe zgodne z nowoczesnymi standardami.",
       "alex":"Alex to ekspert fotografii,  wideo i treści. Kształtuje materiały wizualne i tekstowe, które wzmacniają markę."
+    },
+    "features": {
+      "rating": {
+        "rating": "ocena",
+         "text": "opierając się o opinię naszych klientów"
+      },
+      "pages": "wdrożonych stron",
+      "clients": "naszych klientów nas poleca"
     }
   },
   "formReply": {

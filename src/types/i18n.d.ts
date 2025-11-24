@@ -17,11 +17,19 @@ declare module "i18next" {
           heroTitle3: string;
           heroText: string;
           heroBtn: string;
-          team:{
-            karina:string,
-            dmytro:string,
-            alex:string
-          }
+          team: {
+            karina: string;
+            dmytro: string;
+            alex: string;
+          };
+          features: {
+            rating: {
+              rating: string;
+              text:string
+            };
+            pages: string;
+            clients: string;
+          };
         };
         formReply: {
           reply: string;
@@ -104,7 +112,7 @@ declare module "i18next" {
         };
       };
       formTranslation: {
-        formTitle:string;
+        formTitle: string;
         formPlaseholders: {
           name: string;
           company: string;
@@ -113,19 +121,19 @@ declare module "i18next" {
           text: string;
           agree: string;
         };
-        errors:{
-          error:string;
-          min:string;
-          max:string;
-          maxText:string
-          mail:string;
-          onlyLetters:string
-          phone:string
-        },
-        button:{
-send:string,
-sending:string
-        }
+        errors: {
+          error: string;
+          min: string;
+          max: string;
+          maxText: string;
+          mail: string;
+          onlyLetters: string;
+          phone: string;
+        };
+        button: {
+          send: string;
+          sending: string;
+        };
       };
     };
   }

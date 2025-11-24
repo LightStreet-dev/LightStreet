@@ -13,8 +13,16 @@
     "heroBtn": "See offer",
     "team": {
       "karina": "Karina is a UI/UX and Web Designer. Logical, user-friendly, and effective solutions that truly sell.",
-      "dmytro": "Dmytro is an experienced developer. He builds fast, reliable, and user-friendly web applications that meet modern standards.",
-      "alex":"Alex is an expert in photography, video content. He shapes visual and written materials that strengthen the brand."
+      "dmytro": "Dmytro builds fast, reliable, and user-friendly web applications that meet modern standards.",
+      "alex": "Alex is an expert in photography, video content. He shapes visual and written materials that strengthen the brand."
+    },
+    "features": {
+      "rating": {
+        "rating": "rating",
+        "text": "based on the opinion of our customers"
+      },
+      "pages": "implemented pages",
+      "clients": "our clients recommend us"
     }
   },
   "formReply": {
@@ -34,7 +42,8 @@
       ],
       "price": "Cena: od 3500 zł",
       "timeTitle": "Czas realizacji:",
-      "time": "7-10 dni roboczych"},
+      "time": "7-10 dni roboczych"
+    },
     "site": {
       "title": "Strona internetowa",
       "features": [
@@ -51,7 +60,8 @@
       "features": [
         "Katalog produktów z opisami, zdjęciami i cenami",
         "Zamówienia online i obsługa wysyłki",
-        "Integracja z systemami płatności", "Marketing i rozwój"
+        "Integracja z systemami płatności",
+        "Marketing i rozwój"
       ],
       "price": "Cena: od 40 000 zł",
       "timeTitle": "Czas realizacji:",
