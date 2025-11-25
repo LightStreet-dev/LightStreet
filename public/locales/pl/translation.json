@@ -37,6 +37,10 @@
     "signatureOne": "Z poważaniem ",
     "signatureTwo": "Zespół Light Street"
   },
+  "oferSection":{
+    "title":"Oferta",
+    "text":"Koszt stworzenia strony internetowej zależy od wielu czynników - m.in. stopnia złożoności projektu, projektu graficznego, liczby podstron, treści oraz dodatkowych funkcjonalności. Każdą realizację wyceniamy indywidualnie, po analizie potrzeb i oczekiwań klienta. Umów się z nami na bezpłatną konsultację, a przygotujemy wycenę Twojej strony www dopasowaną do budżetu i celów biznesowych."
+  },
   "ofers": {
     "landingPage": {
       "title": "Landing page",

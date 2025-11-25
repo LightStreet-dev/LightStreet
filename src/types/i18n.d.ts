@@ -43,6 +43,10 @@ declare module "i18next" {
           signatureOne: string;
           signatureTwo: string;
         };
+        oferSection:{
+          title:string;
+          text:string
+        };
         ofers: {
           landingPage: {
             title: string;
