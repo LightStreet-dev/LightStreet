@@ -31,6 +31,11 @@ declare module "i18next" {
             clients: string;
           };
         };
+        aboutUs:{
+          title:string;
+          textOne:string;
+          textTwo:string;
+        }
         formReply: {
           reply: string;
           title: string;

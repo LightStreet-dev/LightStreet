@@ -14,16 +14,21 @@
     "team": {
       "karina": "Karina to projektantka UI/UX i stron internetowych. Logiczne, przyjazne użytkownikowi i skuteczne rozwiązania, które realnie sprzedają.",
       "dmytro": "Dmytro tworzy szybkie, niezawodne i przyjazne użytkownikowi aplikacje internetowe zgodne z nowoczesnymi standardami.",
-      "alex":"Alex to ekspert fotografii,  wideo i treści. Kształtuje materiały wizualne i tekstowe, które wzmacniają markę."
+      "alex": "Alex to ekspert fotografii,  wideo i treści. Kształtuje materiały wizualne i tekstowe, które wzmacniają markę."
     },
     "features": {
       "rating": {
         "rating": "ocena",
-         "text": "opierając się o opinię naszych klientów"
+        "text": "opierając się o opinię naszych klientów"
       },
       "pages": "wdrożonych stron",
       "clients": "naszych klientów nas poleca"
     }
+  },
+  "aboutUs": {
+    "title": "O nas",
+    "textOne": "Jesteśmy doświadczonym studiem projektowym, które tworzy strony internetowe i aplikacje mobilne dla firm z różnych branż. Specjalizujemy się w nowoczesnych landing pages, sklepach online i treściach marketingowych, które pomagają markom wyróżnić się w cyfrowym świecie z myślą o SEO i pozycjonowaniu w Google.",
+    "textTwo": "Każdy projekt realizujemy z dbałością o detale, łącząc nowoczesny design z technologią. Tworzymy strony i aplikacje, które są estetyczne, skuteczne biznesowo i przyjazne w obsłudze. Dzięki naszemu doświadczeniu łączymy estetykę z funkcjonalnością, co buduje rozpoznawalność marki i pozytywne doświadczenia użytkowników."
   },
   "formReply": {
     "reply": "Dziękujemy! Otrzymaliśmy Twoje zgłoszenie i wkrótce się odezwemy",
@@ -99,5 +104,4 @@
       "info": "Strony internetowej to gwarancja jej sprawnego i bezpiecznego działania. Obejmuje bieżące aktualizacje, monitorowanie wydajności, ochronę przed awariami i cyberzagrożeniami oraz szybkie reagowanie na problemy techniczne. Dzięki temu Twoja strona działa stabilnie, jest zawsze dostępna dla użytkowników i wspiera realizację celów biznesowych."
     }
   }
-  
 }

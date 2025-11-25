@@ -25,6 +25,11 @@
       "clients": "our clients recommend us"
     }
   },
+  "aboutUs":{
+    "title":"About us",
+    "textOne":"We are an experienced design studio that creates websites and mobile applications for companies across various industries. We specialize in modern landing pages, online stores, and marketing content that help brands stand out in the digital world, with a strong focus on SEO and Google ranking.",
+    "textTwo":"We execute every project with great attention to detail, combining modern design with technology. We create websites and applications that are visually appealing, business-effective, and easy to use. Thanks to our experience, we merge aesthetics with functionality, enhancing brand recognition and delivering a positive user experience."
+  },
   "formReply": {
     "reply": "Thank you! We received your request and will contact you soon.",
     "title": "We’ve received your message",
