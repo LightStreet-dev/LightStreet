@@ -71,6 +71,7 @@ declare module "i18next" {
           };
         };
         additionalServises: {
+          title:string;
           Optimisation: {
             svg: string;
             serviceName: string;

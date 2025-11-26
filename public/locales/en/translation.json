@@ -69,5 +69,41 @@
       "timeTitle": "Lead time::",
       "time": "2–4 months"
     }
+  },
+  "ASsection":{
+      "title":"Additional services"
+  },
+   "additionalServises": {
+    "title":"Additional services",
+    "Optimisation": {
+      "svg": "\\svg\\symbol-defs.svg#code",
+      "serviceName": "Optimization",
+      "info": "Optimization of the client's existing website to increase its speed and performance, as well as expanding it with new functionalities tailored to business needs."
+    },
+    "Redesign": {
+      "svg": "\\svg\\symbol-defs.svg#stick",
+      "serviceName": "Redesign",
+      "info": "Redesign of the client's existing website in accordance with modern design, usability, and SEO standards. We update the website’s appearance, improve navigation, adapt it for mobile devices, and implement solutions that increase conversion rates."
+    },
+    "Copywriting": {
+      "svg": "\\svg\\symbol-defs.svg#pen",
+      "serviceName": "Copywriting",
+      "info": "A key element of every website. Well-prepared and thoughtfully crafted content increases conversions, builds trust in the company, product, or service, and supports positioning in Google and other search engines."
+    },
+    "Content": {
+      "svg": "\\svg\\symbol-defs.svg#diament",
+      "serviceName": "Content",
+      "info": "That is, photos, graphics, videos, and multimedia that build the brand image. Consistent and valuable content attracts user attention, increases engagement, improves visibility on Google, and supports the sale of products and services."
+    },
+    "SEO": {
+      "svg": "\\svg\\symbol-defs.svg#zoom",
+      "serviceName": "SEO optimization",
+      "info": "It is the process of adapting a website to meet search engine requirements to achieve higher rankings on Google. It includes keyword analysis, improving site structure, content optimization, loading speed, and internal linking. Effective SEO optimization makes your site more visible, attracts more users, and increases the chances of conversion."
+    },
+    "Support": {
+      "svg": "\\svg\\symbol-defs.svg#bliskavka",
+      "serviceName": "Technical support",
+      "info": "Website technical support ensures its smooth and secure operation. It includes regular updates, performance monitoring, protection against failures and cyber threats, and quick response to technical issues. This ensures your website operates reliably, is always accessible to users, and supports the achievement of business goals."
+    }
   }
 }
