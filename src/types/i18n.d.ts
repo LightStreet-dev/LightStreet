@@ -74,85 +74,46 @@ declare module "i18next" {
           title: string;
         };
         additionalServises: {
-          Optimisation: {
-            svg: string;
-            serviceName: string;
-            info: string;
-          };
-          Redesign: {
-            svg: string;
-            serviceName: string;
-            info: string;
-          };
-          Copywriting: {
-            svg: string;
-            serviceName: string;
-            info: string;
-          };
-          Content: {
-            svg: string;
-            serviceName: string;
-            info: string;
-          };
-          SEO: {
-            svg: string;
-            serviceName: string;
-            info: string;
-          };
-          Support: {
-            svg: string;
-            serviceName: string;
-            info: string;
-          };
+          Optimisation: { svg: string; serviceName: string; info: string };
+          Redesign: { svg: string; serviceName: string; info: string };
+          Copywriting: { svg: string; serviceName: string; info: string };
+          Content: { svg: string; serviceName: string; info: string };
+          SEO: { svg: string; serviceName: string; info: string };
+          Support: { svg: string; serviceName: string; info: string };
         };
-        Portfolio: {
-          portfolio: string;
-        };
+        Portfolio: { portfolio: string };
         Benefits: {
           title: string;
           benefitsList: {
-            expiriance: {
-              title: string;
-              text: string;
-            };
-            efects: {
-              title: string;
-              text: string;
-            };
-            approach: {
-              title: string;
-              text: string;
-            };
-            support: {
-              title: string;
-              text: string;
-            };
+            expiriance: { title: string; text: string };
+            efects: { title: string; text: string };
+            approach: { title: string; text: string };
+            support: { title: string; text: string };
           };
         };
-
-        formTranslation: {
-          formTitle: string;
-          formPlaseholders: {
-            name: string;
-            company: string;
-            telefon: string;
-            email: string;
-            text: string;
-            agree: string;
-          };
-          errors: {
-            error: string;
-            min: string;
-            max: string;
-            maxText: string;
-            mail: string;
-            onlyLetters: string;
-            phone: string;
-          };
-          button: {
-            send: string;
-            sending: string;
-          };
+      };
+      formTranslation: {
+        formTitle: string;
+        formPlaseholders: {
+          name: string;
+          company: string;
+          telefon: string;
+          email: string;
+          text: string;
+          agree: string;
+        };
+        errors: {
+          error: string;
+          min: string;
+          max: string;
+          maxText: string;
+          mail: string;
+          onlyLetters: string;
+          phone: string;
+        };
+        button: {
+          send: string;
+          sending: string;
         };
       };
     };

@@ -8,14 +8,14 @@ const phoneValidation = /^\+?\d{1,15}$/;
 
 const shortFormSchema = Yup.object().shape({
   Name: Yup.string()
-    .required(() => t("formTranslation.errors.error"))
-    .matches(letterValidation, () => t("formTranslation.errors.onlyLetters"))
-    .min(3, () => t("formTranslation.errors.min"))
-    .max(20, () => t("formTranslation.errors.max")),
+    .required(() => t("formTranslation:errors.error"))
+    .matches(letterValidation, () => t("formTranslation:errors.onlyLetters"))
+    .min(3, () => t("formTranslation:errors.min"))
+    .max(20, () => t("formTranslation:errors.max")),
 
   Phone: Yup.string()
-    .required(() => t("formTranslation.errors.error"))
-    .matches(phoneValidation, () => t("formTranslation.errors.phone")),
+    .required(() => t("formTranslation:errors.error"))
+    .matches(phoneValidation, () => t("formTranslation:errors.phone")),
 });
 
 export default shortFormSchema;
