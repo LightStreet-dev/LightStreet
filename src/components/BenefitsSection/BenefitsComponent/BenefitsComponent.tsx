@@ -1,10 +1,12 @@
 import s from "./BenefitsComponent.module.css";
+import { useTranslation } from "react-i18next";
 
 const BenefitsComponent = () => {
+    const { t } = useTranslation();
   return (
     <div className="container">
       <div className={s.benefitsWrapper}>
-        <h2 className={s.benefitsTitle}>Dlaczego warto pracować z nami?</h2>
+        <h2 className={s.benefitsTitle}>{t("Benefits.title")}</h2>
         <ul className={s.benefitsList}>
           <li className={s.benefitItem}>
             <svg className={s.benefitIcon} width="150" height="150">
@@ -12,12 +14,10 @@ const BenefitsComponent = () => {
             </svg>
             <div className={s.benefitTextWrapper}>
               <h2 className={s.benefitItemTitle}>
-                Doświadczenie i profesjonalizm
+               {t("Benefits.benefitsList.expiriance.title")}
               </h2>
               <p className={s.benefitText}>
-                Tworzymy strony internetowe i aplikacje dla firm z różnych
-                branż. Jesteśmy w stałym kontakcie z klientem przed, w trakcie i
-                po zakończeniu projektu.
+                 {t("Benefits.benefitsList.expiriance.text")}
               </p>
             </div>
           </li>
@@ -26,11 +26,9 @@ const BenefitsComponent = () => {
               <use href="svg\symbol-defs.svg#BenefitTwo"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
-              <h2 className={s.benefitItemTitle}>Efekty biznesowe</h2>
+              <h2 className={s.benefitItemTitle}>{t("Benefits.benefitsList.efects.title")}</h2>
               <p className={s.benefitText}>
-                Łączymy estetykę z funkcjonalnością, aby Twoja strona była nie
-                tylko piękna, ale też skutecznie przyciągała klientów i
-                zwiększała konwersję.
+                {t("Benefits.benefitsList.efects.text")}
               </p>
             </div>
           </li>
@@ -39,10 +37,9 @@ const BenefitsComponent = () => {
               <use href="svg\symbol-defs.svg#BenefitTree"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
-              <h2 className={s.benefitItemTitle}>Indywidualne podejście</h2>
+              <h2 className={s.benefitItemTitle}>{t("Benefits.benefitsList.approach.title")}</h2>
               <p className={s.benefitText}>
-                Nie stosujemy gotowych schematów — każdą stronę projektujemy od
-                podstaw, tak aby najlepiej prezentował firmę lub produkt/usługę.
+               {t("Benefits.benefitsList.approach.text")}
               </p>
             </div>
           </li>
@@ -51,10 +48,9 @@ const BenefitsComponent = () => {
               <use href="svg\symbol-defs.svg#BenefitFour"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
-              <h2 className={s.benefitItemTitle}>Projekt pod klucz</h2>
+              <h2 className={s.benefitItemTitle}>{t("Benefits.benefitsList.support.title")}</h2>
               <p className={s.benefitText}>
-                Zapewniamy pełne wsparcie - od projektu graficznego, kontentu i
-                treści, po SEO oraz opiekę techniczną
+                {t("Benefits.benefitsList.support.text")}
               </p>
             </div>
           </li>

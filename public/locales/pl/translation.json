@@ -111,5 +111,30 @@
       "serviceName": "Wsparcie techniczne",
       "info": "Strony internetowej to gwarancja jej sprawnego i bezpiecznego działania. Obejmuje bieżące aktualizacje, monitorowanie wydajności, ochronę przed awariami i cyberzagrożeniami oraz szybkie reagowanie na problemy techniczne. Dzięki temu Twoja strona działa stabilnie, jest zawsze dostępna dla użytkowników i wspiera realizację celów biznesowych."
     }
+  },
+  "Portfolio":{
+    "portfolio": "Portfolio"
+  },
+  "Benefits":{
+    "title":"Dlaczego warto pracować z nami?",
+    "benefitsList":{
+      "expiriance":{
+        "title": "Doświadczenie i profesjonalizm",
+        "text":"Tworzymy strony internetowe i aplikacje dla firm z różnych branż. Jesteśmy w stałym kontakcie z klientem przed, w trakcie i po zakończeniu projektu."
+      },
+      "efects":{
+        "title": "Efekty biznesowe",
+        "text":"Łączymy estetykę z funkcjonalnością, aby Twoja strona była nie tylko piękna, ale też skutecznie przyciągała klientów i zwiększała konwersję."
+      },
+      "approach":{
+        "title": "Indywidualne podejście",
+        "text":"Nie stosujemy gotowych schematów — każdą stronę projektujemy od podstaw, tak aby najlepiej prezentował firmę lub produkt/usługę."
+      },
+      "support":{
+        "title": "Projekt pod klucz",
+        "text":"Zapewniamy pełne wsparcie - od projektu graficznego, kontentu i treści, po SEO oraz opiekę techniczną"
+      }
+    }
   }
+
 }

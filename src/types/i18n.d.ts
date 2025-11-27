@@ -25,17 +25,17 @@ declare module "i18next" {
           features: {
             rating: {
               rating: string;
-              text:string
+              text: string;
             };
             pages: string;
             clients: string;
           };
         };
-        aboutUs:{
-          title:string;
-          textOne:string;
-          textTwo:string;
-        }
+        aboutUs: {
+          title: string;
+          textOne: string;
+          textTwo: string;
+        };
         formReply: {
           reply: string;
           title: string;
@@ -43,9 +43,9 @@ declare module "i18next" {
           signatureOne: string;
           signatureTwo: string;
         };
-        oferSection:{
-          title:string;
-          text:string
+        oferSection: {
+          title: string;
+          text: string;
         };
         ofers: {
           landingPage: {
@@ -70,8 +70,10 @@ declare module "i18next" {
             time: string;
           };
         };
+        ASsection: {
+          title: string;
+        };
         additionalServises: {
-          title:string;
           Optimisation: {
             svg: string;
             serviceName: string;
@@ -103,46 +105,54 @@ declare module "i18next" {
             info: string;
           };
         };
-        portfolio: {
-          pageNanowo: {
-            name: string;
-            image: string;
-            transcription: string;
-          };
-          pageBrig: {
-            name: string;
-            image: string;
-            transcription: string;
-          };
-          pageLS: {
-            name: string;
-            image: string;
-            transcription: string;
+        Portfolio: {
+          portfolio: string;
+        };
+        Benefits: {
+          title: string;
+          benefitsList: {
+            expiriance: {
+              title: string;
+              text: string;
+            };
+            efects: {
+              title: string;
+              text: string;
+            };
+            approach: {
+              title: string;
+              text: string;
+            };
+            support: {
+              title: string;
+              text: string;
+            };
           };
         };
-      };
-      formTranslation: {
-        formTitle: string;
-        formPlaseholders: {
-          name: string;
-          company: string;
-          telefon: string;
-          email: string;
-          text: string;
-          agree: string;
-        };
-        errors: {
-          error: string;
-          min: string;
-          max: string;
-          maxText: string;
-          mail: string;
-          onlyLetters: string;
-          phone: string;
-        };
-        button: {
-          send: string;
-          sending: string;
+
+        formTranslation: {
+          formTitle: string;
+          formPlaseholders: {
+            name: string;
+            company: string;
+            telefon: string;
+            email: string;
+            text: string;
+            agree: string;
+          };
+          errors: {
+            error: string;
+            min: string;
+            max: string;
+            maxText: string;
+            mail: string;
+            onlyLetters: string;
+            phone: string;
+          };
+          button: {
+            send: string;
+            sending: string;
+          };
         };
       };
     };

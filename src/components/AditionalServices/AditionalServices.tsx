@@ -18,17 +18,20 @@ const AditionalServices: React.FC = () => {
     <div className="container">
       <div className={s.asWrapper}>
       <div className={s.AStitleWrapper}>
-        <h2 className={s.AStitle}>Dodatkowe usługi</h2>
+        <h2 className={s.AStitle}>{t("ASsection.title")}</h2>
       </div>
       <div className={s.ASlist}>
-        {Object.entries(addittional).map(([key, value], idx) => (
-          <ASComponent
-            key={key + idx}
-            asInfo={value}
-            isOpen={openIdx === idx}
-            onClick={() => handleToggle(idx)}
-          />
-        ))}
+        {Object.entries(addittional).map(([key, value], idx) => {
+          if (typeof value === "string") return null;
+          return (
+            <ASComponent
+              key={key + idx}
+              asInfo={value}
+              isOpen={openIdx === idx}
+              onClick={() => handleToggle(idx)}
+            />
+          );
+        })}
       </div>
       </div>
     </div>

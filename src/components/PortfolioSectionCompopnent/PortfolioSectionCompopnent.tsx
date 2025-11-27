@@ -5,17 +5,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
+import { useTranslation } from "react-i18next";
 import { EffectCoverflow, Pagination, Keyboard } from "swiper/modules";
 import SwiperNavigationComponent from "../OferSectionComponent/OfersListComponent/SwiperNavigationComponent";
 import { useRef } from "react";
 
 const PortfolioSectionCompopnent: React.FC = () => {
    const paginationPortfolioRef = useRef<HTMLDivElement | null>(null);
+   const {t} = useTranslation()
   return (
     <div className={s.portfolioSection}>
       <div className="container">
-        <h2 className={s.portfolioTitle}>Portfolio</h2>
+        <h2 className={s.portfolioTitle}>{t("Portfolio.portfolio")}</h2>
       </div>
       <Swiper
        

@@ -105,5 +105,29 @@
       "serviceName": "Technical support",
       "info": "Website technical support ensures its smooth and secure operation. It includes regular updates, performance monitoring, protection against failures and cyber threats, and quick response to technical issues. This ensures your website operates reliably, is always accessible to users, and supports the achievement of business goals."
     }
-  }
+  },
+  "Portfolio":{
+    "portfolio": "Portfolio"
+  },
+  "Benefits":{
+    "title":"Why choose us?",
+     "benefitsList":{
+      "expiriance":{
+         "title":"Experience and professionalism",
+        "text": "We create websites and applications for companies in various industries. Always maintain constant contact with the client before, during, and after the completion of the project.."
+      },
+      "efects":{
+        "title": "Business results",
+        "text":"We combine aesthetics with functionality so that your website is not only beautiful but also effectively attracts customers and increases conversion."
+      },
+      "approach":{
+        "title": "Individual approach",
+        "text":"We don’t use ready-made templates — we design each website from scratch so that it presents the company or product/service in the best possible way."
+      },
+      "support":{
+        "title": "Turnkey solution",
+        "text":"We provide full support — from graphic design, content and copy, to SEO and technical maintenance."
+      }
+    }
+}
 }
