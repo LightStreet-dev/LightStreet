@@ -20,6 +20,7 @@
   transition: background-color 0.3s ease;
 }
 
+
 .swiperBtnDisabled {
    opacity: 0.5;
 fill: rgb(29, 60, 236);
