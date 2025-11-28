@@ -135,6 +135,18 @@
         "text":"Zapewniamy pełne wsparcie - od projektu graficznego, kontentu i treści, po SEO oraz opiekę techniczną"
       }
     }
+  },
+  "ContactSection":{
+    "title":"Kontakt",
+    "text":"Wypełnij krótki formularz, a nasz menedżer skontaktuje się z Tobą, by doradzić najlepsze rozwiązanie dopasowane do Twoich potrzeb"
+  },
+  "footer":{
+    "title1":"Zbuduj z nami",
+    "title2":"swoją przewagę",
+    "title3":"online",
+    "ownerInfo":"Wykorzystanie materiałów jest dozwolone wyłącznie za zgodą właściciela projektu.",
+    "privatePolice":"2025 Wszelkie prawa zastrzeżone.",
+    "link":"link"
   }
 
 }

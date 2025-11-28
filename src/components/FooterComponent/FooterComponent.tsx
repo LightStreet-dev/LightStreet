@@ -2,9 +2,10 @@ import { useMediaQuery } from "react-responsive";
 import NavLinks from "../HeaderSection/NavLins/NavLinks";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import s from "./FooterComponent.module.css";
+import { useTranslation } from "react-i18next";
 
 const FooterComponent = () => {
-
+ const { t } = useTranslation();
   const mobSize = useMediaQuery({maxWidth:768 })
   return (
     <section className={s.footerSection}>
@@ -19,8 +20,8 @@ const FooterComponent = () => {
         </div>
 
         <h2 className={s.footerText}>
-          Zbuduj z nami <br />
-          <span className={s.markText}>swoją przewagę</span> <br /> online
+          {t("footer.title1")} <br />
+          <span className={s.markText}> {t("footer.title2")}</span> <br />  {t("footer.title3")}
         </h2>
         <div className={s.footerSocWrap}>
           {mobSize && <SocialIcons
@@ -29,10 +30,10 @@ const FooterComponent = () => {
           />}
         </div>
         <div className={s.footerInfo}>
-          <p className={s.ownerInfo}>Use of materials is permitted only with the project owner’s consent.</p>
+          <p className={s.ownerInfo}> {t("footer.ownerInfo")}</p>
          <div className={s.righsWrapper}>
-            <p className={s.rulesInfo}>© 2025 All rights reserved.</p>
-            <a className={s.privatePolice} href="#">link</a>
+            <p className={s.rulesInfo}>{t("footer.privatePolice")}</p>
+            <a className={s.privatePolice} href="#">{t("footer.link")}</a>
          </div>
         </div>
       </div>

@@ -25,10 +25,10 @@
       "clients": "our clients recommend us"
     }
   },
-  "aboutUs":{
-    "title":"About us",
-    "textOne":"We are an experienced design studio that creates websites and mobile applications for companies across various industries. We specialize in modern landing pages, online stores, and marketing content that help brands stand out in the digital world, with a strong focus on SEO and Google ranking.",
-    "textTwo":"We execute every project with great attention to detail, combining modern design with technology. We create websites and applications that are visually appealing, business-effective, and easy to use. Thanks to our experience, we merge aesthetics with functionality, enhancing brand recognition and delivering a positive user experience."
+  "aboutUs": {
+    "title": "About us",
+    "textOne": "We are an experienced design studio that creates websites and mobile applications for companies across various industries. We specialize in modern landing pages, online stores, and marketing content that help brands stand out in the digital world, with a strong focus on SEO and Google ranking.",
+    "textTwo": "We execute every project with great attention to detail, combining modern design with technology. We create websites and applications that are visually appealing, business-effective, and easy to use. Thanks to our experience, we merge aesthetics with functionality, enhancing brand recognition and delivering a positive user experience."
   },
   "formReply": {
     "reply": "Thank you! We received your request and will contact you soon.",
@@ -37,15 +37,17 @@
     "signatureOne": "Best regards",
     "signatureTwo": " The Light Street Team"
   },
-  "oferSection":{
-    "title":"Services",
-    "text":"The cost of creating a website depends on many factors — including project complexity, graphic design, number of subpages, content, and additional functionalities. Each project is priced individually after analyzing the client’s needs and expectations. Schedule a free consultation with us, and we will prepare a quote for your website tailored to your budget and business goals."
+  "oferSection": {
+    "title": "Services",
+    "text": "The cost of creating a website depends on many factors — including project complexity, graphic design, number of subpages, content, and additional functionalities. Each project is priced individually after analyzing the client’s needs and expectations. Schedule a free consultation with us, and we will prepare a quote for your website tailored to your budget and business goals."
   },
   "ofers": {
     "landingPage": {
       "title": "Landing page",
       "features": [
-          "A single, custom-designed website", "Captures the user’s attention", "Converts, meaning it drives action — sign-up, purchase, or contact"
+        "A single, custom-designed website",
+        "Captures the user’s attention",
+        "Converts, meaning it drives action — sign-up, purchase, or contact"
       ],
       "price": "Price start 600€ ",
       "timeTitle": "Lead time:",
@@ -54,7 +56,9 @@
     "site": {
       "title": "Multi-page website",
       "features": [
-        "Multi-page - 3–8 subpages", "May include forms", "Basic SEO and preparation for further optimization"
+        "Multi-page - 3–8 subpages",
+        "May include forms",
+        "Basic SEO and preparation for further optimization"
       ],
       "price": "Price start 1500€",
       "timeTitle": "Lead time:",
@@ -63,18 +67,20 @@
     "store": {
       "title": "Online store",
       "features": [
-        "Product catalog with descriptions, images, and prices", "Online orders and shipping management", "Integration with payment systems"
+        "Product catalog with descriptions, images, and prices",
+        "Online orders and shipping management",
+        "Integration with payment systems"
       ],
       "price": "Price start 7500€",
       "timeTitle": "Lead time::",
       "time": "2–4 months"
     }
   },
-  "ASsection":{
-      "title":"Additional services"
+  "ASsection": {
+    "title": "Additional services"
   },
-   "additionalServises": {
-    "title":"Additional services",
+  "additionalServises": {
+    "title": "Additional services",
     "Optimisation": {
       "svg": "\\svg\\symbol-defs.svg#code",
       "serviceName": "Optimization",
@@ -106,28 +112,40 @@
       "info": "Website technical support ensures its smooth and secure operation. It includes regular updates, performance monitoring, protection against failures and cyber threats, and quick response to technical issues. This ensures your website operates reliably, is always accessible to users, and supports the achievement of business goals."
     }
   },
-  "Portfolio":{
+  "Portfolio": {
     "portfolio": "Portfolio"
   },
-  "Benefits":{
-    "title":"Why choose us?",
-     "benefitsList":{
-      "expiriance":{
-         "title":"Experience and professionalism",
+  "Benefits": {
+    "title": "Why choose us?",
+    "benefitsList": {
+      "expiriance": {
+        "title": "Experience and professionalism",
         "text": "We create websites and applications for companies in various industries. Always maintain constant contact with the client before, during, and after the completion of the project.."
       },
-      "efects":{
+      "efects": {
         "title": "Business results",
-        "text":"We combine aesthetics with functionality so that your website is not only beautiful but also effectively attracts customers and increases conversion."
+        "text": "We combine aesthetics with functionality so that your website is not only beautiful but also effectively attracts customers and increases conversion."
       },
-      "approach":{
+      "approach": {
         "title": "Individual approach",
-        "text":"We don’t use ready-made templates — we design each website from scratch so that it presents the company or product/service in the best possible way."
+        "text": "We don’t use ready-made templates — we design each website from scratch so that it presents the company or product/service in the best possible way."
       },
-      "support":{
+      "support": {
         "title": "Turnkey solution",
-        "text":"We provide full support — from graphic design, content and copy, to SEO and technical maintenance."
+        "text": "We provide full support — from graphic design, content and copy, to SEO and technical maintenance."
       }
     }
-}
+  },
+  "ContactSection": {
+    "title": "Contact",
+    "text": "Fill out a short form, and our manager will contact you to advise the best solution tailored to your needs."
+  },
+  "footer":{
+    "title1":"Build your",
+    "title2":"online advantage",
+    "title3":"with us",
+    "ownerInfo":"Use of materials is permitted only with the project owner’s consent.",
+    "privatePolice":"© 2025 All rights reserved.",
+    "link":"link"
+  }
 }
