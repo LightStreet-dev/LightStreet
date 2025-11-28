@@ -8,7 +8,7 @@ const AboutUsComponent: React.FC = () => {
 const {t} = useTranslation()
 
   return (
-    <div className={s.aboutUs}>
+    <div className={s.aboutUs} id="about">
       <div className="container">
         <h2 className={s.aboutUsTitle}>{t("aboutUs.title")}</h2>
 

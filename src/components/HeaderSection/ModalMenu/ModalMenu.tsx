@@ -5,15 +5,15 @@ import s from "./ModalMenu.module.css";
 import SocialIcons from "../../SocialIcons/SocialIcons";
 import ContactButton from "../../ContactButton/ContactButton";
 import { useTranslation } from "react-i18next";
+import scrollToId from "../../animation/scroll";
 interface modalProps {
-  toggleForm: ()=> void
+  toggleForm: () => void;
 }
 
-const ModalMenu: React.FC<modalProps> = ({toggleForm}) => {
+const ModalMenu: React.FC<modalProps> = ({ toggleForm }) => {
   const { t } = useTranslation();
   const [isOpen, setOpen] = useState<boolean>(false);
 
-  
   const handleBackdropClick = (evt: React.MouseEvent<HTMLDivElement>) => {
     if (evt.target === evt.currentTarget) {
       setOpen(false);
@@ -42,24 +42,40 @@ const ModalMenu: React.FC<modalProps> = ({toggleForm}) => {
           <div className={s.modalContent}>
             <ul className={s.modalNavList}>
               <li>
-                <a href="#" onClick={() => setOpen(false)}>
+                <button
+              
+                  onClick={() => {
+                    setOpen(false);
+                    scrollToId("about");
+                  }}
+                >
                   {t("header.about")}
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" onClick={() => setOpen(false)}>
+                <button onClick={() => {
+                    setOpen(false);
+                    scrollToId("ourWorks");
+                  }}>
                   {t("header.ourWorks")}
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" onClick={() => setOpen(false)}>
+                <button  onClick={() => {
+                    setOpen(false);
+                    scrollToId("contact");
+                  }}>
                   {t("header.contact")}
-                </a>
+                </button>
               </li>
             </ul>
           </div>
           <SocialIcons isOpen={isOpen} />
-          <ContactButton isOpen={isOpen} setOpen={setOpen} toggleForm={toggleForm}  />
+          <ContactButton
+            isOpen={isOpen}
+            setOpen={setOpen}
+            toggleForm={toggleForm}
+          />
         </div>
       }
     </div>

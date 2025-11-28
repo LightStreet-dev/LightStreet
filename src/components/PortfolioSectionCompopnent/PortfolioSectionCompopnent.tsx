@@ -14,7 +14,7 @@ const PortfolioSectionCompopnent: React.FC = () => {
    const paginationPortfolioRef = useRef<HTMLDivElement | null>(null);
    const {t} = useTranslation()
   return (
-    <div className={s.portfolioSection}>
+    <div className={s.portfolioSection} id="ourWorks">
       <div className="container">
         <h2 className={s.portfolioTitle}>{t("Portfolio.portfolio")}</h2>
       </div>

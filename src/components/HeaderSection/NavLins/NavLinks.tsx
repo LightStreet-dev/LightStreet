@@ -1,17 +1,22 @@
 import clsx from 'clsx';
 import s from './NavLinks.module.css'
 import { useTranslation } from 'react-i18next'
+import scrollToId from '../../animation/scroll';
+
 interface navProps{
   footerNavigation?: string  
  
 }
 const  NavLinks:React.FC<navProps> =({footerNavigation}) => {
       const {t} = useTranslation("translation");
+
+
+
     return(
         <ul className={clsx(s.navigation, footerNavigation )}>
-            <li><a className={s.navItem} href="#">{t("header.about")}</a></li>
-            <li><a className={s.navItem} href="#">{t("header.ourWorks")}</a></li>
-            <li><a className={s.navItem} href="#">{t("header.contact")}</a></li>
+            <li><button className={s.navItem} onClick={()=>scrollToId("about")}>{t("header.about")}</button></li>
+            <li><button className={s.navItem} onClick={()=>scrollToId("ourWorks")}>{t("header.ourWorks")}</button></li>
+            <li><button className={s.navItem} onClick={()=>scrollToId("contact")}>{t("header.contact")}</button></li>
         </ul>
     )
 }

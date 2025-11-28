@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const ContactSectionComponent = () => {
   const { t } = useTranslation();
   return (
-    <div className={s.contactWrapper}>
+    <div className={s.contactWrapper} id="contact">
       <div className="container">
         <h2 className={s.contactTitle}>{t("ContactSection.title")}</h2>
         <p className={s.contactText}>{t("ContactSection.text")}</p>
