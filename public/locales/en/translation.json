@@ -1,7 +1,7 @@
 {
   "header": {
     "about": "About",
-    "ourWorks": "Our works",
+    "services": "Services",
     "contact": "Contact",
     "contactButton": "Consultation"
   },
@@ -10,7 +10,7 @@
     "heroTitle2": "Design",
     "heroTitle3": "Solutions",
     "heroText": "From idea to launch — tailored UI/UX, visual identity, and web assets for your product.",
-    "heroBtn": "See offer",
+    "heroBtn": "Our Projects",
     "team": {
       "karina": "Karina is a UI/UX and Web Designer. Logical, user-friendly, and effective solutions that truly sell.",
       "dmytro": "Dmytro builds fast, reliable, and user-friendly web applications that meet modern standards.",

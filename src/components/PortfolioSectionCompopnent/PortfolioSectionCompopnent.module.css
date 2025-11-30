@@ -65,6 +65,7 @@ margin-bottom: 30px;
 @media (min-width: 1024px) {
     .portfolioTitle{
     font-size: 96px;
+    line-height: 100%;
     text-align: start;
 margin-bottom: 62px;}
   :global(.swiper-pagination-bullet) {

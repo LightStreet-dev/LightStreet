@@ -15,7 +15,7 @@ const  NavLinks:React.FC<navProps> =({footerNavigation}) => {
     return(
         <ul className={clsx(s.navigation, footerNavigation )}>
             <li><button className={s.navItem} onClick={()=>scrollToId("about")}>{t("header.about")}</button></li>
-            <li><button className={s.navItem} onClick={()=>scrollToId("ourWorks")}>{t("header.ourWorks")}</button></li>
+            <li><button className={s.navItem} onClick={()=>scrollToId("services")}>{t("header.services")}</button></li>
             <li><button className={s.navItem} onClick={()=>scrollToId("contact")}>{t("header.contact")}</button></li>
         </ul>
     )

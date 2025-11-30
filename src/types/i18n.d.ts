@@ -7,7 +7,7 @@ declare module "i18next" {
       translation: {
         header: {
           about: string;
-          ourWorks: string;
+          services: string;
           contact: string;
           contactButton: string;
         };

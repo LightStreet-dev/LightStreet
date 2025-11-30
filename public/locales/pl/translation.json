@@ -1,7 +1,7 @@
 {
   "header": {
     "about": "O nas",
-    "ourWorks": "Realizacje",
+    "services": "Oferta",
     "contact": "Kontakt",
     "contactButton": " Konsultacja"
   },
@@ -10,7 +10,7 @@
     "heroTitle2": "internetowe",
     "heroTitle3": "pod klucz",
     "heroText": "Od pomysłu po wdrożenie — Tworzymy dopasowany UI/UX, identyfikacja wizualna i materiały webowe dla Twojego produktu.",
-    "heroBtn": "Poznaj ofertę",
+    "heroBtn": "Nasze realizacje",
     "team": {
       "karina": "Karina to projektantka UI/UX i stron internetowych. Logiczne, przyjazne użytkownikowi i skuteczne rozwiązania, które realnie sprzedają.",
       "dmytro": "Dmytro tworzy szybkie, niezawodne i przyjazne użytkownikowi aplikacje internetowe zgodne z nowoczesnymi standardami.",

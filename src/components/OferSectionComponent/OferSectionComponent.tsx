@@ -9,7 +9,7 @@ interface modalProps {
 const OferSectionComponent: React.FC<modalProps> = ({toggleForm}) => {
   const {t} = useTranslation()
   return (
-    <div className={`container ${s.oferContainer}`}>
+    <div className={`container ${s.oferContainer}`} id="services">
       <div>
       <div>
         <h2 className={s.oferTitle}>{t("oferSection.title")}</h2>
