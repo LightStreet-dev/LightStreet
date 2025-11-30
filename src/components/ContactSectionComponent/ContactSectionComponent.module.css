@@ -16,12 +16,13 @@
 .contactTitle {
   font-weight: 600;
   font-size: 40px;
-  margin-bottom: 40px;
+  line-height: 90%;
+  margin-bottom: 30px;
   text-align: start;
 }
 
 .contactText {
- 
+ font-size: var(--textFontSize);
   text-align: start;
   max-width: 470px;
 }
@@ -43,8 +44,10 @@
   }
   .contactTitle {
       position: relative;
+      margin-bottom: 40px;
     font-size: 48px;
         z-index: 100;
+
   }
   .contactText {
       position: relative;
@@ -79,6 +82,8 @@
   .contactTitle {
      position: relative;
     font-size: 96px;
+    margin-bottom: 62px;
+        z-index: 100;
 
   }
   .contactText {

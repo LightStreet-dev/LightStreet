@@ -11,7 +11,7 @@
   line-height: 50px;
   color: var(--secondContentColor);
   text-align: start;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .benefitsList {
@@ -69,6 +69,7 @@
 .benefitsTitle{
   font-size: 48px;
   max-width: 430px;
+  margin-bottom: 40px;
 }
 
   .benefitsList {
@@ -119,7 +120,7 @@
   font-size: 96px;
   max-width: 850px;
 line-height: 100px;
-margin-bottom: 70px;
+margin-bottom: 62px;
 }
   .benefitsList{
     max-width: 1024px;

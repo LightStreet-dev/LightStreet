@@ -14,7 +14,7 @@
 }
 .oferText {
   color: var(--secondContentColor);
-  font-size: 16px;
+  font-size: var(--textFontSize);
   text-align: start;
   margin-bottom: 30px;
 }

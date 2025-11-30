@@ -39,6 +39,7 @@ justify-content: space-between;
  
 }
 .AStext {
+  font-size: var(--textFontSize);
 text-align: start;
   max-height: 0;
   overflow: hidden;
@@ -79,6 +80,7 @@ text-align: start;
  .AScontainer {
   width: 280px;
   padding: 20px 40px;}
+  
   .AStitle {
 
   font-size: 20px;
