@@ -30,7 +30,7 @@
   margin-right: auto;
   height: auto;
   position: relative;
-  max-width: 360px;
+  max-width: 100%;
   color: var(--secondContentColor);
   background-color: var(--mainBackground);
   width: 100%;

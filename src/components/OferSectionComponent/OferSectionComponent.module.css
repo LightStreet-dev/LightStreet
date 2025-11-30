@@ -1,6 +1,5 @@
 .oferContainer {
   padding-top: 50px;
-  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -11,6 +10,7 @@
   font-size: 40px;
   text-align: start;
   margin-bottom: 30px;
+  line-height: 100%;
 }
 .oferText {
   color: var(--secondContentColor);
@@ -45,7 +45,7 @@
 @media (min-width: 768px) {
   .oferContainer {
   padding-top: 65px;
-  padding-bottom: 65px;
+
 }
   .oferBtnWrap {
     display: flex;

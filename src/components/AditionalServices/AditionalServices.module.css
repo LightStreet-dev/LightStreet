@@ -12,7 +12,7 @@
 }
 
 .ASlist {
-  margin-top: 24px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -21,7 +21,7 @@
 
 @media (min-width: 768px) {
   .asWrapper{
-  padding-top: 65px;
+  padding-top: 50px;
   padding-bottom: 65px;
 }
   .AStitle {
