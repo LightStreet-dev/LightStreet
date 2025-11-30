@@ -1,14 +1,5 @@
-.burgerWrapper {
-  
-  display: flex;
-  position: relative; 
-  top: 0;
-  right: 0;
-  cursor: pointer;
- z-index: 1100;
-}
 
-.modalOverlay {
+.privateOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -25,17 +16,17 @@ background:  linear-gradient(
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 1000;
+  z-index: 10;
   transform: translateY(-100%);
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-.modalOverlayActive {
+.privateOverlayActive {
   transform: translateY(0);
   opacity: 1;
 }
 
-.modalContent {
+.privateContent {
 display: flex;
   padding: 20px 30px;
   border-radius: 8px;
@@ -46,12 +37,5 @@ display: flex;
 
   
 
-}
-.modalNavList{
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 20px;
-  font-size: 25px;
 }
 

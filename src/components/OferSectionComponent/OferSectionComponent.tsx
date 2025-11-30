@@ -4,9 +4,10 @@ import OfersListComponent from "./OfersListComponent/OfersListComponent";
 import { useTranslation } from 'react-i18next'
 
 interface modalProps {
-  toggleForm: ()=> void
+  toggleForm: (setter: React.Dispatch<React.SetStateAction<boolean>>) => void;
+  setOpenForm:React.Dispatch<React.SetStateAction<boolean>>;
 }
-const OferSectionComponent: React.FC<modalProps> = ({toggleForm}) => {
+const OferSectionComponent: React.FC<modalProps> = ({toggleForm, setOpenForm}) => {
   const {t} = useTranslation()
   return (
     <div className={`container ${s.oferContainer}`} id="services">
@@ -18,7 +19,7 @@ const OferSectionComponent: React.FC<modalProps> = ({toggleForm}) => {
         </p>
       </div>
       <div className={s.oferBtnWrap}>
-        <ContactButton className={s.oferButton}  toggleForm={toggleForm} />
+        <ContactButton className={s.oferButton}  toggleForm={toggleForm} setOpenForm={setOpenForm}/>
       </div>
       </div>
       <OfersListComponent/>

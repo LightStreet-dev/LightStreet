@@ -44,7 +44,7 @@ background:  linear-gradient(
   justify-content: center;
   align-items: center;
   flex-direction: column;
-   z-index: 12;
+   z-index: 1000;
    opacity: 0;
   visibility: hidden;
   pointer-events: none;

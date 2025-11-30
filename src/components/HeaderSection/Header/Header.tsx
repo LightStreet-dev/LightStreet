@@ -8,9 +8,10 @@ import LanguageChanger from "../LanguageChanger/LanguageChanger";
 import ModalMenu from "../ModalMenu/ModalMenu";
 interface HeaderProps {
   mobMediaQuery: boolean;
-  toggleForm: ()=> void;
+  toggleForm:  (setter: React.Dispatch<React.SetStateAction<boolean>>) => void;
+  setOpenForm:React.Dispatch<React.SetStateAction<boolean>>;
 }
-const Header: React.FC<HeaderProps> = ({ mobMediaQuery, toggleForm }) => {
+const Header: React.FC<HeaderProps> = ({ mobMediaQuery, toggleForm, setOpenForm }) => {
   return (
     <header className={s.header}>
    <div className={s.headerWrapper} >
@@ -19,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ mobMediaQuery, toggleForm }) => {
       {mobMediaQuery ? (
         <div className={s.modalWraper}>
           <LanguageChanger />
-          <ModalMenu toggleForm={toggleForm} />
+          <ModalMenu toggleForm={toggleForm} setOpenForm={setOpenForm} />
         </div>
       ) : (
         <>
@@ -30,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ mobMediaQuery, toggleForm }) => {
             </div>
 
             <>
-              <LanguageChanger /> <ContactButton toggleForm={toggleForm} />
+              <LanguageChanger /> <ContactButton toggleForm={toggleForm} setOpenForm={setOpenForm} />
             </>
           </div>
         </>

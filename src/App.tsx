@@ -11,29 +11,33 @@ import BenefitsComponent from "./components/BenefitsSection/BenefitsComponent/Be
 import ContactSectionComponent from "./components/ContactSectionComponent/ContactSectionComponent";
 import FooterComponent from "./components/FooterComponent/FooterComponent";
 import PortfolioSectionCompopnent from "./components/PortfolioSectionCompopnent/PortfolioSectionCompopnent";
+import PrivateData from "./components/FooterComponent/PrivateDataComponent/PrivateData";
 
 const App: React.FC = () => {
   const [openForm, setOpenForm] = useState<boolean>(false);
   const isMobileHeader = useMediaQuery({ maxWidth: 860 });
+  const [openLink, setOpenLink] = useState<boolean>(false);
 
-  const toggleOpenForm = () => {
-    setOpenForm((prev) => !prev);
+  
+  const handleToggle = (setter: React.Dispatch<React.SetStateAction<boolean>>) => {
+    setter((prev) => !prev);
   };
 
   return (
     <>
       <div className="headerHerroWrapper">
-        <Header mobMediaQuery={isMobileHeader} toggleForm={toggleOpenForm} />
+        <Header mobMediaQuery={isMobileHeader} toggleForm={handleToggle} setOpenForm={setOpenForm} />
         <HeroSection />
       </div>
       <AboutUsComponent/>
-      <OferSectionComponent toggleForm={toggleOpenForm}/>
+      <OferSectionComponent toggleForm={handleToggle} setOpenForm={setOpenForm}/>
       <AditionalServices/>
 <PortfolioSectionCompopnent/>
       <BenefitsComponent/>
       <ContactSectionComponent/>
       <SubmitForm openForm={openForm} setOpenForm={setOpenForm} />
-      <FooterComponent/>
+      <FooterComponent toggleModal = {handleToggle} setOpenLink={setOpenLink}/>
+      <PrivateData toggleModal = {handleToggle} openLink={openLink} setOpenLink={setOpenLink}/>
     </>
   ); 
 };

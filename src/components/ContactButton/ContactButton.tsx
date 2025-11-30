@@ -6,12 +6,12 @@ import { useMediaQuery } from 'react-responsive'
 interface contactButton{
   
   isOpen?: boolean
-  setOpen?: (value: boolean) => void 
-  toggleForm: () => void
+   toggleForm:  (setter: React.Dispatch<React.SetStateAction<boolean>>) => void;
+  setOpenForm:React.Dispatch<React.SetStateAction<boolean>>;
   className?: string;
 }
 
-const ContactButton:React.FC<contactButton> = ({isOpen, setOpen, toggleForm, className}) => {
+const ContactButton:React.FC<contactButton> = ({isOpen, setOpenForm, toggleForm, className}) => {
   const maxWidth = useMediaQuery({maxWidth:767})
       const {t} = useTranslation();
   return (
@@ -19,8 +19,8 @@ const ContactButton:React.FC<contactButton> = ({isOpen, setOpen, toggleForm, cla
         <button
           className={clsx(s.contactbtn, (isOpen || maxWidth) && s.modalContactBtn, className )}
           onClick={() => {
-            setOpen?.(false);
-            toggleForm();
+            setOpenForm(false);
+            toggleForm(setOpenForm);
           }}
          
         >

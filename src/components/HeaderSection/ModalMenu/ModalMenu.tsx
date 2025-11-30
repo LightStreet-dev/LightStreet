@@ -7,10 +7,11 @@ import ContactButton from "../../ContactButton/ContactButton";
 import { useTranslation } from "react-i18next";
 import scrollToId from "../../animation/scroll";
 interface modalProps {
-  toggleForm: () => void;
+  toggleForm: (setter: React.Dispatch<React.SetStateAction<boolean>>) => void;
+setOpenForm:React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const ModalMenu: React.FC<modalProps> = ({ toggleForm }) => {
+const ModalMenu: React.FC<modalProps> = ({ toggleForm, setOpenForm}) => {
   const { t } = useTranslation();
   const [isOpen, setOpen] = useState<boolean>(false);
 
@@ -57,7 +58,7 @@ const ModalMenu: React.FC<modalProps> = ({ toggleForm }) => {
                     setOpen(false);
                     scrollToId("ourWorks");
                   }}>
-                  {t("header.ourWorks")}
+                  {t("header.services")}
                 </button>
               </li>
               <li>
@@ -73,8 +74,9 @@ const ModalMenu: React.FC<modalProps> = ({ toggleForm }) => {
           <SocialIcons isOpen={isOpen} />
           <ContactButton
             isOpen={isOpen}
-            setOpen={setOpen}
+            setOpenForm={setOpenForm}
             toggleForm={toggleForm}
+       
           />
         </div>
       }
