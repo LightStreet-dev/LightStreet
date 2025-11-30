@@ -8,10 +8,10 @@ import { useTranslation } from "react-i18next";
 import scrollToId from "../../animation/scroll";
 interface modalProps {
   toggleForm: (setter: React.Dispatch<React.SetStateAction<boolean>>) => void;
-setOpenForm:React.Dispatch<React.SetStateAction<boolean>>;
+  setOpenForm: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const ModalMenu: React.FC<modalProps> = ({ toggleForm, setOpenForm}) => {
+const ModalMenu: React.FC<modalProps> = ({ toggleForm, setOpenForm }) => {
   const { t } = useTranslation();
   const [isOpen, setOpen] = useState<boolean>(false);
 
@@ -44,7 +44,6 @@ const ModalMenu: React.FC<modalProps> = ({ toggleForm, setOpenForm}) => {
             <ul className={s.modalNavList}>
               <li>
                 <button
-              
                   onClick={() => {
                     setOpen(false);
                     scrollToId("about");
@@ -54,18 +53,22 @@ const ModalMenu: React.FC<modalProps> = ({ toggleForm, setOpenForm}) => {
                 </button>
               </li>
               <li>
-                <button onClick={() => {
+                <button
+                  onClick={() => {
                     setOpen(false);
                     scrollToId("ourWorks");
-                  }}>
+                  }}
+                >
                   {t("header.services")}
                 </button>
               </li>
               <li>
-                <button  onClick={() => {
+                <button
+                  onClick={() => {
                     setOpen(false);
                     scrollToId("contact");
-                  }}>
+                  }}
+                >
                   {t("header.contact")}
                 </button>
               </li>
@@ -76,7 +79,7 @@ const ModalMenu: React.FC<modalProps> = ({ toggleForm, setOpenForm}) => {
             isOpen={isOpen}
             setOpenForm={setOpenForm}
             toggleForm={toggleForm}
-       
+            setOpen={setOpen}
           />
         </div>
       }
