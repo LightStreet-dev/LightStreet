@@ -17,25 +17,36 @@ background:  linear-gradient(
   align-items: center;
   flex-direction: column;
   z-index: 10;
-  transform: translateY(-100%);
+  transform: translateY(100%);
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 .privateOverlayActive {
-  transform: translateY(0);
+  transform: translateY(50%);
   opacity: 1;
 }
 
 .privateContent {
 display: flex;
+position: relative;
   padding: 20px 30px;
   border-radius: 8px;
-  max-width: 90%;
+  max-width: 70%;
   max-height: 80vh;
   overflow-y: auto;
-  margin:auto 0;
-
-  
-
+margin-bottom: auto;
 }
-
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--mainContentColor);
+  cursor: pointer;
+}
+.provateText{
+  font-size: var(--textFontSize);
+  margin-top: 50px;
+  text-align: start;
+}

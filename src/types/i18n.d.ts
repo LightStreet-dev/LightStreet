@@ -91,18 +91,21 @@ declare module "i18next" {
             support: { title: string; text: string };
           };
         };
-         ContactSection:{
-    title:string;
-    text:string;
-  };
-  footer:{
-    title1:string;
-    title2:string;
-    title3:string;
-    ownerInfo:string;
-    privatePolice:string;
-    link:string
-  }
+        ContactSection: {
+          title: string;
+          text: string;
+        };
+        footer: {
+          title1: string;
+          title2: string;
+          title3: string;
+          ownerInfo: string;
+          privatePolice: string;
+          link: string;
+        };
+        privatePolicy: {
+          text: string;
+        };
       };
       formTranslation: {
         formTitle: string;
