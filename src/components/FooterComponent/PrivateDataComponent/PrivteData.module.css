@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100dvh;
+  height: 100%;
 background:  linear-gradient(
     246.04deg,
     rgba(0, 36, 46, 0.6) 3.77%,
@@ -16,13 +16,13 @@ background:  linear-gradient(
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 10;
+  z-index: 1000;
   transform: translateY(100%);
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 .privateOverlayActive {
-  transform: translateY(50%);
+  transform: translateY(0);
   opacity: 1;
 }
 
@@ -31,15 +31,15 @@ display: flex;
 position: relative;
   padding: 20px 30px;
   border-radius: 8px;
-  max-width: 70%;
+  max-width: 100%;
   max-height: 80vh;
   overflow-y: auto;
-margin-bottom: auto;
+
 }
 .closeBtn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
+  position: fixed;
+  top: 25px;
+  right: 25px;
   background: none;
   border: none;
   color: var(--mainContentColor);
@@ -49,4 +49,19 @@ margin-bottom: auto;
   font-size: var(--textFontSize);
   margin-top: 50px;
   text-align: start;
+  white-space: pre-line; /* показує \n як перенос */
+  text-indent: 1.5em;    /* відступ абзацу */
+
+
 }
+@media (min-width: 768px) {
+.privateContent {
+
+
+  max-width: 80%;
+  max-height: 80vh;
+  overflow-y: auto;
+
+}
+}
+

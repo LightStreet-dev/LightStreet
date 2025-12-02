@@ -40,7 +40,7 @@ const PrivateData: React.FC<PrivatModalProps> = ({
           onClick={() => toggleModal(setOpenLink)}
           style={{ fontSize: 35 }}
         >
-          X
+          x
         </button>
         <p className={s.provateText}>
           {t("privatePolicy.text")}
