@@ -68,7 +68,7 @@
 }
 .privatePolice {
   color: var(--footerNavColor);
-  font-size: 12px;
+  font-size: 10px;
   text-align: end;
   cursor: pointer;
 }
@@ -123,6 +123,6 @@
     font-size: var(--textFontSize);
   }
   .privatePolice {
-    font-size: var(--textFontSize);
+    font-size: 12px;
   }
 }
