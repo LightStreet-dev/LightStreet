@@ -56,7 +56,7 @@ const ModalMenu: React.FC<modalProps> = ({ toggleForm, setOpenForm }) => {
                 <button
                   onClick={() => {
                     setOpen(false);
-                    scrollToId("ourWorks");
+                    scrollToId("services");
                   }}
                 >
                   {t("header.services")}
