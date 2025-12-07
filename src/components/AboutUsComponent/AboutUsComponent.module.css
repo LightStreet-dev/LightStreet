@@ -41,6 +41,11 @@ z-index: 10;
   position: relative;
   font-size: var(--textFontSize);
   z-index: 10;
+
+}
+.aboutUsText div{
+  display: inline-block;
+
 }
 
 @media (min-width: 768px) {
