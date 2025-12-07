@@ -29,12 +29,12 @@ const headerContent = useRef<HTMLDivElement | null>(null);
       tl.from(headerContainer.current, {
     y: -150,
     opacity: 0,
-    duration: 1,
+    duration: 0.6,
   });
    tl.from(headerContent.current, {
     opacity: 0,
-      duration: 0.6,
-  },); 
+      duration: 1,
+  }); 
 });
 
   return (

@@ -7,7 +7,7 @@
   z-index: 200;
 
   /* запускаємо анімацію */
-  animation: headerBlur 0.5s ease-out forwards;
+  animation: headerBlur 0.5s ease-out ;
 }
 
 @keyframes headerBlur {
@@ -29,8 +29,8 @@
   position: absolute;
   inset: 0;
   background: transparent;
-  backdrop-filter: inherit;
-  -webkit-backdrop-filter: inherit;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   z-index: -1;
 }
 
