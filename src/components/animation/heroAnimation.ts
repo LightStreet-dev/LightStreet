@@ -63,13 +63,41 @@ export const teamAnimation = (
       },
       "-=0.6"
     );
-    tl.from(team, {
-      opacity: 0,
-      y: 0,
-      rotationZ: 45,
-      duration: 0.6,
-      ease: "power3.out",
-      stagger: 0.05,
-    },"+=0.3");
+    tl.from(
+      team,
+      {
+        opacity: 0,
+        y: 0,
+        rotationZ: 45,
+        duration: 0.6,
+        ease: "power3.out",
+        stagger: 0.05,
+      },
+      "+=0.3"
+    );
   });
 };
+
+export const featuresAnimation = (featuresAnim: HTMLUListElement) => {
+  gsap.from(featuresAnim, {
+    rotationX: -180, // лежав горизонтально, повернутий до користувача
+    y: 50, // трохи підіймається вгору
+    opacity: 0,
+    duration: 2,
+    ease: "power3.out",
+  });
+};
+
+
+export const heroBtnAnimation = (btnAnimation:HTMLElement) => {
+   gsap.from(btnAnimation, {
+    rotationX: -180, // лежав горизонтально, повернутий до користувача
+    y: -500, 
+    opacity: 0,
+    delay:1,
+    duration: 2,
+    ease: "power3.out",
+  });
+
+
+}

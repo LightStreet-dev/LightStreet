@@ -80,6 +80,7 @@ font-size: 110%;
     margin: 0 auto;
     margin-bottom: 32px;
      align-items: start;
+     gap: 10px;
 
   }
   .heroText {

@@ -10,7 +10,7 @@ import { teamAnimation } from "../../animation/heroAnimation.ts";
 
 const HeroTemList: React.FC = () => {
   const { t } = useTranslation();
-    const teamPicture = useRef<HTMLDivElement | null>(null);
+  const teamPicture = useRef<HTMLDivElement | null>(null);
   const teamText = useRef<HTMLDivElement | null>(null);
   const team = useRef<HTMLDivElement | null>(null);
 

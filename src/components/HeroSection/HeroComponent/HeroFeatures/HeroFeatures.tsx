@@ -1,10 +1,18 @@
 import s from "./HeroFeatures.module.css";
 import { useTranslation } from "react-i18next";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { featuresAnimation } from "../../../animation/heroAnimation";
 
 const HeroFeatures: React.FC = () => {
   const { t } = useTranslation();
+  const featuresAnim = useRef<HTMLUListElement | null>(null);
+  useGSAP(()=>{
+    if (!featuresAnim.current) return;
+    featuresAnimation(featuresAnim.current);
+  }, )
   return (
-    <ul className={s.featuresList}>
+    <ul className={s.featuresList} ref={featuresAnim}>
       <li className={s.featurIteam}>
         <div className={s.ratingWraper}>
           <p className={s.featurCount}>4.8</p>
