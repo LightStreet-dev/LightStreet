@@ -13,9 +13,10 @@ const HeroTitle: React.FC = () => {
   const w1 = useRef<HTMLDivElement | null>(null);
   const w2 = useRef<HTMLDivElement | null>(null);
   const w3 = useRef<HTMLDivElement | null>(null);
+  const titleText = useRef<HTMLDivElement | null>(null);
   useGSAP(() => {
-    if (!w1.current || !w2.current || !w3.current) return;
-    heroTitleAnimation(w1.current, w2.current, w3.current);
+    if (!w1.current || !w2.current || !w3.current || !titleText.current) return;
+    heroTitleAnimation(w1.current, w2.current, w3.current, titleText.current);
   });
 
   return (
@@ -50,7 +51,9 @@ const HeroTitle: React.FC = () => {
         </span>
       </h1>
 
-      <p className={s.heroText}>{t("hero.heroText")}</p>
+      <p className={s.heroText} ref={titleText}>
+        {t("hero.heroText")}
+      </p>
     </div>
   );
 };

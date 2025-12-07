@@ -6,18 +6,18 @@ import clsx from "clsx";
 import HeroTeamComponent from "../HeroTeamComponent/HeroTeamComponent.tsx";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import {teamAnimation} from "../../animation/heroAnimation.ts"
+import { teamAnimation } from "../../animation/heroAnimation.ts";
 
 const HeroTemList: React.FC = () => {
   const { t } = useTranslation();
-  const teamPicture = useRef<HTMLDivElement | null>(null);
+    const teamPicture = useRef<HTMLDivElement | null>(null);
   const teamText = useRef<HTMLDivElement | null>(null);
   const team = useRef<HTMLDivElement | null>(null);
 
-useGSAP(()=>{
-teamAnimation()
-})
-
+  useGSAP(() => {
+    if (!teamPicture.current || !teamText.current || !team.current) return;
+    teamAnimation(teamPicture.current, teamText.current, team.current);
+  });
 
   const teamInfo = getTeamInfo(t);
 
@@ -42,12 +42,19 @@ teamAnimation()
           ))}
         </div>
 
-        <p className={clsx(s.reviewsText, activeIndex && s.reviewsTextActive)} ref={team}>
+        <p
+          className={clsx(s.reviewsText, activeIndex && s.reviewsTextActive)}
+          ref={team}
+        >
           Our <br /> Team
         </p>
-      </div >
+      </div>
 
-      {activeReview && <p ref={teamText} className={s.reviewText}>{activeReview.text}</p>}
+      {activeReview && (
+        <p ref={teamText} className={s.reviewText}>
+          {activeReview.text}
+        </p>
+      )}
     </div>
   );
 };
