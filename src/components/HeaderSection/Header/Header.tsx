@@ -33,9 +33,8 @@ const headerContent = useRef<HTMLDivElement | null>(null);
   });
    tl.from(headerContent.current, {
     opacity: 0,
-    x: -20,
-    duration: 0.6,
-  }, "-=0.3"); 
+      duration: 0.6,
+  },); 
 });
 
   return (
