@@ -7,7 +7,7 @@
   z-index: 200;
 
   /* запускаємо анімацію */
-  animation: headerBlur 0.5s ease-out ;
+  animation: headerBlur 1s ease-out ;
 }
 
 @keyframes headerBlur {

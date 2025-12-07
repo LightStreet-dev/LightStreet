@@ -22,7 +22,7 @@ const isActive = activeIndex === index
   };
   return (
     <div className={s.teamWraper} onClick={handleClickRewiev}>
-      <img className={clsx(s.teamImg, isActive && s.activeImg)} src={photo} alt="Review" />
+      <img className={clsx(s.teamImg, isActive && s.activeImg)} src={photo} alt="team" />
     </div>
   );
 };

@@ -1,9 +1,7 @@
 import s from "./HeroComponent.module.css";
 import HeroTitle from "../HeroTitle/HeroTitle";
-
 import HeroTemList from "../HeroTemList/HeroTemList";
 import { useMediaQuery } from "react-responsive";
-
 import HeroButton from "./HeroButton/HeroButton";
 import HeroFeatures from "./HeroFeatures/HeroFeatures";
 

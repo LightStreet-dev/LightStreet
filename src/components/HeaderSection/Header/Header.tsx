@@ -5,11 +5,9 @@ import SocialIcons from "../../SocialIcons/SocialIcons";
 import s from "./Header.module.css";
 import LanguageChanger from "../LanguageChanger/LanguageChanger";
 import ModalMenu from "../ModalMenu/ModalMenu";
-
 import { useRef } from "react";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
+import headerAnimation from "../../animation/headerAnimation";
 
 interface HeaderProps {
   mobMediaQuery: boolean;
@@ -23,18 +21,8 @@ const headerContent = useRef<HTMLDivElement | null>(null);
  useGSAP(
     () => {
  if (!headerContainer.current || !headerContent.current) return;
-
-  const tl = gsap.timeline({ ease: "power3.out" });
-
-      tl.from(headerContainer.current, {
-    y: -150,
-    opacity: 0,
-    duration: 0.6,
-  });
-   tl.from(headerContent.current, {
-    opacity: 0,
-      duration: 1,
-  }); 
+headerAnimation(headerContainer.current,headerContent.current )
+ 
 });
 
   return (
