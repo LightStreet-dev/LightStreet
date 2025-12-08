@@ -26,8 +26,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+html{
+  overflow-x: hidden;
+}
 body {
-  overflow-x: hidden; 
+  overflow: hidden; 
   background: var(--mainBackground);
   font-family: var(--mainFontFamily);
   font-weight: var(--mainFontHeight);
