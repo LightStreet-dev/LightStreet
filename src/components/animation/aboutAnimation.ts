@@ -19,9 +19,9 @@ if (animTextTwo) Split(animTextTwo);
     ease: "power3.out",
     scrollTrigger: {
       trigger: aboutTrigger, // елемент, при якому запускається анімація
-      start: "top 50%", // коли верх тригера входить у 80% висоти viewport
+      start: "top 80%", // коли верх тригера входить у 80% висоти viewport
       toggleActions: "play none none none",
-      markers: true,
+  
     },
   });
 
