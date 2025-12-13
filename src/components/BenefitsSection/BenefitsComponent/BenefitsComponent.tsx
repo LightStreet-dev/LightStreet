@@ -1,11 +1,13 @@
 import s from "./BenefitsComponent.module.css";
 import { useTranslation } from "react-i18next";
-
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
 const BenefitsComponent = () => {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
+  const benefitTrigger = useRef<HTMLDivElement | null>(null);
   return (
     <div className="container">
-      <div className={s.benefitsWrapper}>
+      <div ref={benefitTrigger} className={s.benefitsWrapper}>
         <h2 className={s.benefitsTitle}>{t("Benefits.title")}</h2>
         <ul className={s.benefitsList}>
           <li className={s.benefitItem}>
@@ -14,10 +16,10 @@ const BenefitsComponent = () => {
             </svg>
             <div className={s.benefitTextWrapper}>
               <h2 className={s.benefitItemTitle}>
-               {t("Benefits.benefitsList.expiriance.title")}
+                {t("Benefits.benefitsList.expiriance.title")}
               </h2>
               <p className={s.benefitText}>
-                 {t("Benefits.benefitsList.expiriance.text")}
+                {t("Benefits.benefitsList.expiriance.text")}
               </p>
             </div>
           </li>
@@ -26,7 +28,9 @@ const BenefitsComponent = () => {
               <use href="svg\symbol-defs.svg#BenefitTwo"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
-              <h2 className={s.benefitItemTitle}>{t("Benefits.benefitsList.efects.title")}</h2>
+              <h2 className={s.benefitItemTitle}>
+                {t("Benefits.benefitsList.efects.title")}
+              </h2>
               <p className={s.benefitText}>
                 {t("Benefits.benefitsList.efects.text")}
               </p>
@@ -37,9 +41,11 @@ const BenefitsComponent = () => {
               <use href="svg\symbol-defs.svg#BenefitTree"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
-              <h2 className={s.benefitItemTitle}>{t("Benefits.benefitsList.approach.title")}</h2>
+              <h2 className={s.benefitItemTitle}>
+                {t("Benefits.benefitsList.approach.title")}
+              </h2>
               <p className={s.benefitText}>
-               {t("Benefits.benefitsList.approach.text")}
+                {t("Benefits.benefitsList.approach.text")}
               </p>
             </div>
           </li>
@@ -48,7 +54,9 @@ const BenefitsComponent = () => {
               <use href="svg\symbol-defs.svg#BenefitFour"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
-              <h2 className={s.benefitItemTitle}>{t("Benefits.benefitsList.support.title")}</h2>
+              <h2 className={s.benefitItemTitle}>
+                {t("Benefits.benefitsList.support.title")}
+              </h2>
               <p className={s.benefitText}>
                 {t("Benefits.benefitsList.support.text")}
               </p>

@@ -9,7 +9,6 @@ const aboutAnimation = (
   aboutTrigger: HTMLElement
 ) => {
   gsap.registerPlugin(ScrollTrigger);
-
   const media = gsap.matchMedia();
 
   media.add("(max-width: 768px)", () => {

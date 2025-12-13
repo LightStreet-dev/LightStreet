@@ -1,7 +1,7 @@
 import PortfolioComponent from "./PortfolioComponent";
 import s from "./PortfolioSectionCompopnent.module.css";
 import portfolioDB from "../../assets/data/portfolioDB";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, type SwiperRef } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -9,17 +9,31 @@ import { useTranslation } from "react-i18next";
 import { EffectCoverflow, Pagination, Keyboard } from "swiper/modules";
 import SwiperNavigationComponent from "../OferSectionComponent/OfersListComponent/SwiperNavigationComponent";
 import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import portfolioAnimation from "../animation/portfolioAnimation";
+
+
 
 const PortfolioSectionCompopnent: React.FC = () => {
    const paginationPortfolioRef = useRef<HTMLDivElement | null>(null);
    const {t} = useTranslation()
+const portfolioTrigger = useRef<HTMLDivElement | null>(null);
+  const portfolioTitle = useRef<HTMLDivElement | null>(null);
+  const portfolioList = useRef<HTMLDivElement | null>(null);
+useGSAP(()=>{
+if (!portfolioTitle.current || !portfolioList.current ) return;
+
+portfolioAnimation(portfolioTitle.current,portfolioList.current,portfolioTrigger.current as HTMLElement )
+})
+
   return (
-    <div className={s.portfolioSection} >
+    <div ref={portfolioTrigger} className={s.portfolioSection} >
       <div className="container" id="ourWorks">
-        <h2 className={s.portfolioTitle}>{t("Portfolio.portfolio")}</h2>
+        <h2 ref={portfolioTitle} className={s.portfolioTitle}>{t("Portfolio.portfolio")}</h2>
       </div>
+      <div   ref={portfolioList}> 
       <Swiper
-       
+     
         className={s.portfolioSlider}
         modules={[EffectCoverflow, Pagination, Keyboard]}
         spaceBetween={35}
@@ -61,6 +75,7 @@ const PortfolioSectionCompopnent: React.FC = () => {
   <SwiperNavigationComponent type="next" />
 </div>
       </Swiper>
+      </div>
     </div>
   );
 };
