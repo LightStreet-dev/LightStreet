@@ -2,16 +2,32 @@ import s from "./BenefitsComponent.module.css";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import benefotsAnimation from "../../animation/benefitsAnimation";
 const BenefitsComponent = () => {
   const { t } = useTranslation();
-  const benefitTrigger = useRef<HTMLDivElement | null>(null);
+  const benefitsTrigger = useRef<HTMLDivElement | null>(null);
+  const benefitsTitle = useRef<HTMLDivElement | null>(null);
+  const benefitsList = useRef<HTMLUListElement | null>(null);
+  const benefitsSVG = useRef<SVGSVGElement | null>(null);
+
+  useGSAP(()=>{ 
+    if(!benefitsTitle.current || !benefitsList.current || !benefitsSVG.current  ) return;
+    benefotsAnimation(benefitsTitle.current, benefitsList.current, benefitsSVG.current, benefitsTrigger.current as HTMLElement)
+  })
   return (
     <div className="container">
-      <div ref={benefitTrigger} className={s.benefitsWrapper}>
-        <h2 className={s.benefitsTitle}>{t("Benefits.title")}</h2>
-        <ul className={s.benefitsList}>
+      <div ref={benefitsTrigger} className={s.benefitsWrapper}>
+        <h2 ref={benefitsTitle} className={s.benefitsTitle}>
+          {t("Benefits.title")}
+        </h2>
+        <ul ref={benefitsList} className={s.benefitsList}>
           <li className={s.benefitItem}>
-            <svg className={s.benefitIcon} width="150" height="150">
+            <svg
+              ref={benefitsSVG}
+              className={s.benefitIcon}
+              width="150"
+              height="150"
+            >
               <use href="svg\symbol-defs.svg#benefitOne"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
@@ -24,7 +40,12 @@ const BenefitsComponent = () => {
             </div>
           </li>
           <li className={s.benefitItem}>
-            <svg className={s.benefitIcon} width="150" height="150">
+            <svg
+              ref={benefitsSVG}
+              className={s.benefitIcon}
+              width="150"
+              height="150"
+            >
               <use href="svg\symbol-defs.svg#BenefitTwo"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
@@ -37,7 +58,12 @@ const BenefitsComponent = () => {
             </div>
           </li>
           <li className={s.benefitItem}>
-            <svg className={s.benefitIcon} width="150" height="150">
+            <svg
+              ref={benefitsSVG}
+              className={s.benefitIcon}
+              width="150"
+              height="150"
+            >
               <use href="svg\symbol-defs.svg#BenefitTree"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
@@ -50,7 +76,12 @@ const BenefitsComponent = () => {
             </div>
           </li>
           <li className={s.benefitItem}>
-            <svg className={s.benefitIcon} width="150" height="150">
+            <svg
+              ref={benefitsSVG}
+              className={s.benefitIcon}
+              width="150"
+              height="150"
+            >
               <use href="svg\symbol-defs.svg#BenefitFour"></use>
             </svg>
             <div className={s.benefitTextWrapper}>
