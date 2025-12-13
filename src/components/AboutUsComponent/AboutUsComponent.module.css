@@ -7,14 +7,13 @@
     #006fba 87.12%
   );
   padding: 50px 0;
-
 }
 
 .aboutUsTitle {
   text-align: start;
   font-weight: 600;
-position: relative;
-z-index: 10;
+  position: relative;
+  z-index: 10;
   font-size: 40px;
   line-height: 0.9;
   margin-bottom: 26px;
@@ -36,16 +35,15 @@ z-index: 10;
   max-width: 132px;
   height: 75px;
   fill: #006fba;
+  z-index: 5;
 }
 .aboutUsText {
   position: relative;
   font-size: var(--textFontSize);
   z-index: 10;
-
 }
-.aboutUsText div{
+.aboutUsText div {
   display: inline-block;
-
 }
 
 @media (min-width: 768px) {
@@ -79,15 +77,13 @@ z-index: 10;
     font-size: 20px;
     max-width: 480px;
   }
-  .aboutLogo{
+  .aboutLogo {
     position: absolute;
     width: 475px;
-    height: 250px ;
+    height: 250px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-
   }
   .aboutUsWrapper {
     flex-direction: row;

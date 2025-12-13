@@ -4,7 +4,8 @@ export const heroTitleAnimation = (
   w1: HTMLElement,
   w2: HTMLElement,
   w3: HTMLElement,
-  titleText: HTMLElement
+  titleText: HTMLElement,
+
 ) => {
   const tl = gsap.timeline({ ease: "power3.out" });
   tl.from(w1, {
@@ -41,42 +42,7 @@ export const heroTitleAnimation = (
   );
 };
 
-export const teamAnimation = (
-  teamPicture: HTMLElement,
-  teamText: HTMLElement,
-  team: HTMLElement
-) => {
-  const media = gsap.matchMedia();
-  media.add("(min-width: 769px)", () => {
-    const tl = gsap.timeline({ ease: "power3.out" });
-    tl.from(teamPicture, {
-      y: -100,
-      opacity: 0,
-      duration: 0.6,
-    });
-    tl.from(
-      teamText,
-      {
-        y: 100,
-        opacity: 0,
-        duration: 0.6,
-      },
-      "-=0.6"
-    );
-    tl.from(
-      team,
-      {
-        opacity: 0,
-        y: 0,
-        rotationZ: 45,
-        duration: 0.6,
-        ease: "power3.out",
-        stagger: 0.05,
-      },
-      "+=0.3"
-    );
-  });
-};
+
 
 export const featuresAnimation = (featuresAnim: HTMLUListElement) => {
   gsap.from(featuresAnim, {
@@ -88,16 +54,13 @@ export const featuresAnimation = (featuresAnim: HTMLUListElement) => {
   });
 };
 
-
-export const heroBtnAnimation = (btnAnimation:HTMLElement) => {
-   gsap.from(btnAnimation, {
+export const heroBtnAnimation = (btnAnimation: HTMLElement) => {
+  gsap.from(btnAnimation, {
     rotationX: -180, // лежав горизонтально, повернутий до користувача
-    y: -500, 
+    y: -500,
     opacity: 0,
-    delay:1,
+    delay: 1,
     duration: 2,
     ease: "power3.out",
   });
-
-
-}
+};

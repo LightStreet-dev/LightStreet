@@ -6,17 +6,22 @@ import clsx from "clsx";
 import HeroTeamComponent from "../HeroTeamComponent/HeroTeamComponent.tsx";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import { teamAnimation } from "../../animation/heroAnimation.ts";
+import { teamAnimation } from "../../animation/teamAnimation.ts";
 
 const HeroTemList: React.FC = () => {
   const { t } = useTranslation();
   const teamPicture = useRef<HTMLDivElement | null>(null);
   const teamText = useRef<HTMLDivElement | null>(null);
   const team = useRef<HTMLDivElement | null>(null);
-
+  const teamTrigger = useRef<HTMLElement | null>(null);
   useGSAP(() => {
     if (!teamPicture.current || !teamText.current || !team.current) return;
-    teamAnimation(teamPicture.current, teamText.current, team.current);
+    teamAnimation(
+      teamPicture.current as HTMLElement,
+      teamText.current as HTMLElement,
+      team.current as HTMLElement,
+      teamTrigger.current as HTMLElement
+    );
   });
 
   const teamInfo = getTeamInfo(t);
@@ -28,7 +33,7 @@ const HeroTemList: React.FC = () => {
   const activeReview = activeIndex !== null ? teamInfo[activeIndex] : null;
 
   return (
-    <div className={s.rewiewsWrapper}>
+    <div ref={teamTrigger} className={s.rewiewsWrapper}>
       <div className={s.wrapWithText}>
         <div className={s.reviewsContainer} ref={teamPicture}>
           {teamInfo.map((review, index) => (

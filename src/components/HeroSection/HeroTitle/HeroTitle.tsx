@@ -14,6 +14,7 @@ const HeroTitle: React.FC = () => {
   const w2 = useRef<HTMLDivElement | null>(null);
   const w3 = useRef<HTMLDivElement | null>(null);
   const titleText = useRef<HTMLDivElement | null>(null);
+
   useGSAP(() => {
     if (!w1.current || !w2.current || !w3.current || !titleText.current) return;
     heroTitleAnimation(w1.current, w2.current, w3.current, titleText.current);
