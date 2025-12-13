@@ -14,7 +14,7 @@ const ASComponent: React.FC<AsInfo> = ({
   asInfo: { svg, serviceName, info }, isOpen, onClick
 }) => {
   return (
-    <div className={s.AScontainer} onClick={onClick}>
+    <li className={s.AScontainer} onClick={onClick}>
       <div className={s.iconWrapper}>
         <svg className={s.asIcon}>
           <use href={svg}></use>
@@ -25,7 +25,7 @@ const ASComponent: React.FC<AsInfo> = ({
         <svg className={clsx(s.arrowIcon, isOpen && s.rotate)}>
           <use href="/svg/symbol-defs.svg#chevron-arrows"></use>
         </svg>
-    </div>
+    </li>
   );
 };
 
