@@ -44,7 +44,7 @@ export const teamAnimation = (
           duration: 0.7,
      
         },
-        "-=0.4"
+        "-=0.5"
       );
   });
 

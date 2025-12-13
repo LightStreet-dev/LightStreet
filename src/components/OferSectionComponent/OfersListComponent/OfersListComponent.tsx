@@ -12,6 +12,8 @@ import clsx from "clsx";
 import { useRef } from "react";
 
 
+
+
 const OfersListComponent = () => {
   const { t } = useTranslation();
   const PCsize: boolean = useMediaQuery({ minWidth: 768 });
@@ -81,7 +83,9 @@ const OfersListComponent = () => {
               </div>
             )}
           </SwiperSlide>
-        ))}
+        ))
+        
+        }
 
        <div className={s.navWrapper}>
   <SwiperNavigationComponent type="prev" />

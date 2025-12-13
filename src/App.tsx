@@ -24,7 +24,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="bodyWrapper">
       <div className="headerHerroWrapper">
         <Header mobMediaQuery={isMobileHeader} toggleForm={handleToggle} setOpenForm={setOpenForm} />
         <HeroSection />
@@ -38,7 +38,7 @@ const App: React.FC = () => {
       <SubmitForm openForm={openForm} setOpenForm={setOpenForm} />
       <FooterComponent toggleModal = {handleToggle} setOpenLink={setOpenLink}/>
       <PrivateData toggleModal = {handleToggle} openLink={openLink} setOpenLink={setOpenLink}/>
-    </>
+    </div>
   ); 
 };
 
