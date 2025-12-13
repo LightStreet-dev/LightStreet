@@ -13,7 +13,7 @@ const HeroTemList: React.FC = () => {
   const teamPicture = useRef<HTMLDivElement | null>(null);
   const teamText = useRef<HTMLDivElement | null>(null);
   const team = useRef<HTMLDivElement | null>(null);
-  const teamTrigger = useRef<HTMLElement | null>(null);
+  const teamTrigger = useRef<HTMLDivElement | null>(null);
   useGSAP(() => {
     if (!teamPicture.current || !teamText.current || !team.current) return;
     teamAnimation(
