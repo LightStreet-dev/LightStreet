@@ -1,10 +1,18 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-const benefotsAnimation = (benefitsTitle:HTMLElement,benefitsList:HTMLElement,benefitsSVG:SVGSVGElement,benefitsTrigger:HTMLElement)=>{
- gsap.registerPlugin(ScrollTrigger);
+const benefotsAnimation = (
+  benefitsTitle: HTMLElement,
+  benefitsList: HTMLElement,
+  benefitsSVG1: SVGSVGElement,
+  benefitsSVG2: SVGSVGElement,
+  benefitsSVG3: SVGSVGElement,
+  benefitsSVG4: SVGSVGElement,
+  benefitsTrigger: HTMLElement
+) => {
+  gsap.registerPlugin(ScrollTrigger);
   const media = gsap.matchMedia();
-media.add("(max-width: 768px)", () => {
+  media.add("(max-width: 768px)", () => {
     const tl = gsap.timeline({
       ease: "power3.out",
       scrollTrigger: {
@@ -20,17 +28,31 @@ media.add("(max-width: 768px)", () => {
       opacity: 0,
       duration: 0.5,
     });
-     tl.from(benefitsList, {
+    tl.from(benefitsList, {
       y: 50,
       opacity: 0,
       duration: 0.5,
-    })
-     tl.from(benefitsSVG, {
-      x: 50,
+    });
+    tl.from(benefitsSVG1, {
+      x: -50,
       opacity: 0,
       duration: 0.5,
-    })
-    
-  
-})}
-export default benefotsAnimation
+    });
+    tl.from(benefitsSVG2, {
+      x: -50,
+      opacity: 0,
+      duration: 0.5,
+    },"-=0.5");
+    tl.from(benefitsSVG3, {
+      x: -50,
+      opacity: 0,
+      duration: 0.5,
+    },"-=0.5");
+    tl.from(benefitsSVG4, {
+      x: -50,
+      opacity: 0,
+      duration: 0.5,
+    },"-=0.5");
+  });
+};
+export default benefotsAnimation;
