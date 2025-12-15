@@ -19,6 +19,8 @@
   --featuresFortFamily: Onest, sans-serif;
   --footerNavColor: #626068;
   --footerNavSize: 14px;
+  --benefitsAnimationLineStart: 0 ;
+  --benefitsAnimationLineEnd: 0 ;
 }
 .LSloader.loader{
   position: fixed !important; 
