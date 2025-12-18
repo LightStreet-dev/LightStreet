@@ -56,7 +56,7 @@ const contactAnimation = (
       ease: "power3.out",
       scrollTrigger: {
         trigger: contactTrigger,
-        start: "top 70%",
+        start: "top 50%",
         toggleActions: "play none none none",
         markers: true,
       },
@@ -71,29 +71,26 @@ const contactAnimation = (
         opacity: 0,
         duration: 0.5,
       })
-      .from(
-        contactLogo,
-        {
-          rotate: 180,
-          opacity: 0,
-          duration: 0.5,
-        },
-        "-=0.5"
-      )
+
       .from(contactImg, {
-        opacity: 0,
-        rotateY: 90,
-        duration: 0.8,
-      })
+        rotate: 300,
+
+        duration: 2,
+      },"-0.5")
       .from(
         contactForm,
         {
           opacity: 0,
-          scale: 90,
-          duration: 0.8,
+          x: -170,
+          duration: 1,
         },
-        "-=0.5"
-      );
+        "-=1.4"
+      )
+      .from(contactLogo, {
+        opacity: 0,
+        rotateY: 630,
+        duration: 0.8,
+      },"-=0.5");
   });
 };
 
