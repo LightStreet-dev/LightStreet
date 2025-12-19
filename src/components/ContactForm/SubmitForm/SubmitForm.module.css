@@ -1,30 +1,27 @@
 html:has(.modalFormOverlayActive) {
- overflow: hidden; /* забороняє будь-яку прокрутку */
+  overflow: hidden; /* забороняє будь-яку прокрутку */
   overscroll-behavior: none; /* блокує “підтікання” на мобільних */
   touch-action: none; /* блокує прокрутку на тачскрінах */
-  
 }
 html {
   -webkit-text-size-adjust: 100%; /* відключає автоматичне масштабування */
 }
-.inputWrapper{
+.inputWrapper {
   position: relative;
 }
-.form{
-    display: flex;
-    flex-direction: column;
-    gap:15px;
- 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.error{
+.error {
   color: red;
   font-size: 10px;
-  text-align:right;
+  text-align: right;
   position: absolute;
   bottom: -15px;
   width: 100%;
-
 }
 .modalFormOverlay {
   position: fixed;
@@ -32,76 +29,84 @@ html {
   left: 0;
   width: 100vw;
   height: 100dvh;
- overflow: clip;
-background:  linear-gradient(
+  overflow: clip;
+  background: linear-gradient(
     246.04deg,
     rgba(0, 36, 46, 0.6) 3.77%,
     rgba(0, 111, 186, 0.6) 99.15%
-  );;
- backdrop-filter: blur(8px);
+  );
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px); /* для Safari */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-   z-index: 1000;
-   opacity: 0;
+  z-index: 1000;
+  opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .modalFormOverlayActive {
- opacity: 1;
+  opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  
 }
-.formWrapper{
- max-width: 90vw;
+.formWrapper {
+  max-width: 90vw;
   width: 100%;
   padding: 20px;
-margin: 0 auto;
+  margin: 0 auto;
   background-color: #cedadb;
   border-radius: 5%;
   position: relative;
   box-sizing: border-box;
 }
 
-.formHeader{
+.formHeader {
   text-align: center;
   margin-bottom: 20px;
   color: black;
 }
 
 .modalContent {
-
   padding: 20px 30px;
   border-radius: 8px;
   max-width: 90%;
   max-height: 80vh;
   overflow-y: auto;
-  margin:auto 0;
+  margin: auto 0;
 }
 
-.closeFormBtn{
+.closeFormBtn {
   color: black;
   cursor: pointer;
   position: absolute;
   top: 15px;
   right: 15px;
-  
 }
-.checkbox{
+.checkbox {
   display: flex;
-    gap: 10px;
+  gap: 10px;
   margin: 10px 0;
-
+}
+.checkWrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.fileText2{
+  width: 10px;
+  height: 10px;
+fill: blue;
+  cursor: pointer;
 }
 
-
-  .checkboxField {
+.checkboxField {
   width: 14px;
   height: 14px;
+  margin: auto 0;
   cursor: pointer;
   appearance: none; /* прибираємо стандартний стиль */
   background-color: whitesmoke;
@@ -110,7 +115,6 @@ margin: 0 auto;
   position: relative;
   transform: all 0.3s ease;
 }
-
 
 .checkboxField:checked {
   border: 1px solid #4caf50; /* зелена галочка, якщо потрібно */
@@ -131,15 +135,14 @@ margin: 0 auto;
   transform: rotate(45deg);
 }
 
-
-.checkboxText{
+.checkboxText {
   font-size: 10px;
   align-items: center;
   justify-content: center;
   text-align: start;
-   color: black;
+  color: black;
 }
-.submitBtn{
+.submitBtn {
   width: 100%;
   padding: 10px;
   background-color: #0073e6;
@@ -150,12 +153,9 @@ margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-.formWrapper{
- max-width: 400px;
-  width: 100%;
-  padding: 50px;
-  
-  
-}
-  
+  .formWrapper {
+    max-width: 400px;
+    width: 100%;
+    padding: 50px;
+  }
 }

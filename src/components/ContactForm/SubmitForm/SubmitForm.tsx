@@ -19,9 +19,11 @@ type FormValue = {
 interface SubmitFormProps {
   openForm: boolean;
   setOpenForm: (open: boolean) => void;
+  setOpenLink: (open: boolean) => void;
+   toggleModal: (setter: (open: boolean) => void) => void;
 }
 
-const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
+const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm, setOpenLink, toggleModal }) => {
   const formRef = useRef<HTMLFormElement>(null);
   const { t } = useTranslation(["translation", "formTranslation"]);
   const initialValues: FormValue = {
@@ -178,9 +180,14 @@ const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm }) => {
                     !values.agree && touched.agree && s.checkboxFieldError
                   )}
                 />
-                <span className={s.checkboxText}>
+                <div className={s.checkWrap}>
+                <span className={s.checkboxText} >
                   {t("formTranslation:formPlaseholders.agree")}
                 </span>
+                <button className={s.checkLink} onClick={() => toggleModal(setOpenLink)}>
+                 <svg className={s.fileText2} ><use href="/svg/symbol-defs.svg#icon-file-text2"></use></svg>
+                </button>
+                </div>
               </label>
               <button
                 className={s.submitBtn}

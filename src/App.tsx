@@ -35,8 +35,8 @@ const App: React.FC = () => {
 <PortfolioSectionCompopnent/>
       <BenefitsComponent/>
       <ContactSectionComponent/>
-      <SubmitForm openForm={openForm} setOpenForm={setOpenForm} />
-      <FooterComponent toggleModal = {handleToggle} setOpenLink={setOpenLink}/>
+      <SubmitForm openForm={openForm} setOpenForm={setOpenForm} setOpenLink={setOpenLink} toggleModal = {handleToggle} />
+      <FooterComponent toggleModal = {handleToggle} setOpenLink={setOpenLink} />
       <PrivateData toggleModal = {handleToggle} openLink={openLink} setOpenLink={setOpenLink}/>
     </div>
   ); 
