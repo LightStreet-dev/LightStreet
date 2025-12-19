@@ -18,9 +18,9 @@ type FormValue = {
 
 interface SubmitFormProps {
   openForm: boolean;
-  setOpenForm: (open: boolean) => void;
-  setOpenLink: (open: boolean) => void;
-   toggleModal: (setter: (open: boolean) => void) => void;
+ setOpenForm: React.Dispatch<React.SetStateAction<boolean>>;
+  setOpenLink: React.Dispatch<React.SetStateAction<boolean>>;
+   toggleModal: (setter: React.Dispatch<React.SetStateAction<boolean>>) => void;
 }
 
 const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm, setOpenLink, toggleModal }) => {
