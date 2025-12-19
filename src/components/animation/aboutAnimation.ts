@@ -46,6 +46,10 @@ const aboutAnimation = (
         rotateY: 90,
         duration: 0.8,
       });
+        return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
   });
 
   media.add("(min-width: 769px)", () => {
@@ -83,7 +87,12 @@ const aboutAnimation = (
         rotateY: 630,
         duration: 0.8,
       });
+        return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
   });
+  
 };
 
 export default aboutAnimation;

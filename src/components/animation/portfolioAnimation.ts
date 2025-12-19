@@ -24,6 +24,10 @@ tl.from(portfolioTitle, {
       opacity: 0,
       duration: 0.5,
     });
+      return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
 }
 
 export default portfolioAnimation

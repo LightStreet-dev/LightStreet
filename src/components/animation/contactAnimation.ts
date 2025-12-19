@@ -50,6 +50,10 @@ const contactAnimation = (
         },
         "-=0.5"
       );
+    return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
   });
   media.add("(min-width: 769px)", () => {
     const tl = gsap.timeline({
@@ -72,11 +76,15 @@ const contactAnimation = (
         duration: 0.5,
       })
 
-      .from(contactImg, {
-        rotate: 300,
+      .from(
+        contactImg,
+        {
+          rotate: 300,
 
-        duration: 2,
-      },"-0.5")
+          duration: 2,
+        },
+        "-0.5"
+      )
       .from(
         contactForm,
         {
@@ -86,11 +94,19 @@ const contactAnimation = (
         },
         "-=1.4"
       )
-      .from(contactLogo, {
-        opacity: 0,
-        rotateY: 630,
-        duration: 0.8,
-      },"-=0.5");
+      .from(
+        contactLogo,
+        {
+          opacity: 0,
+          rotateY: 630,
+          duration: 0.8,
+        },
+        "-=0.5"
+      );
+    return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
   });
 };
 

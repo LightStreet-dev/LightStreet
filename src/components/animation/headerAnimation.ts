@@ -4,17 +4,32 @@ const headerAnimation = (
   headerContainer: HTMLElement,
   headerContent: HTMLElement
 ) => {
-  const tl = gsap.timeline({ ease: "power3.out" });
+  const tl = gsap.timeline();
 
   tl.from(headerContainer, {
-    y: -100,
+    y: -80,
     opacity: 0,
-    duration: 0.8,
-  });
-  tl.from(headerContent, {
-    opacity: 0,
-    duration: 0.8,
-  });
+    duration: 0.7,
+    ease: "power3.out",
+    clearProps: "all",
+  })
+  .from(
+    headerContent,
+    {
+      y: 20,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power3.out",
+      clearProps: "all",
+    },
+    "-=0.3"
+  );
+
+
+    return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
 };
 
 export default headerAnimation;

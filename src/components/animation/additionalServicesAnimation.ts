@@ -1,10 +1,14 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-const AdditionalServiceAnimation = (ASTitle:HTMLElement, ASList:HTMLElement, ASTrigger:HTMLElement ) =>{
-gsap.registerPlugin(ScrollTrigger);
-const media = gsap.matchMedia();
-media.add("(max-width: 768px)", () => {
+const AdditionalServiceAnimation = (
+  ASTitle: HTMLElement,
+  ASList: HTMLElement,
+  ASTrigger: HTMLElement
+) => {
+  gsap.registerPlugin(ScrollTrigger);
+  const media = gsap.matchMedia();
+  media.add("(max-width: 768px)", () => {
     const tl = gsap.timeline({
       ease: "power3.out",
       scrollTrigger: {
@@ -14,7 +18,7 @@ media.add("(max-width: 768px)", () => {
         markers: true,
       },
     });
-tl.from(ASTitle, {
+    tl.from(ASTitle, {
       y: 50,
       opacity: 0,
       duration: 0.5,
@@ -24,10 +28,12 @@ tl.from(ASTitle, {
       opacity: 0,
       duration: 0.5,
     });
-   
-
-});
-media.add("(min-width: 769px)", () => {
+    return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
+  });
+  media.add("(min-width: 769px)", () => {
     const tl = gsap.timeline({
       ease: "power3.out",
       scrollTrigger: {
@@ -37,20 +43,21 @@ media.add("(min-width: 769px)", () => {
         markers: true,
       },
     });
-tl.from(ASTitle, {
+    tl.from(ASTitle, {
       y: 50,
       opacity: 0,
       duration: 0.5,
     });
-   tl.from(ASList, {
+    tl.from(ASList, {
       y: 50,
       opacity: 0,
       duration: 0.5,
     });
-   
+    return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
+  });
+};
 
-
-})}
-
-export default AdditionalServiceAnimation
-
+export default AdditionalServiceAnimation;

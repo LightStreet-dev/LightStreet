@@ -65,6 +65,10 @@ const benefotsAnimation = (
       },
       "-=0.5"
     );
+    return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
   });
   media.add("(min-width: 769px)", () => {
     const tl = gsap.timeline({
@@ -86,11 +90,9 @@ const benefotsAnimation = (
       y: 50,
       opacity: 0,
       duration: 0.5,
-       "--benefitsAnimationLineStart": "-200%",
-    "--benefitsAnimationLineEnd": "200%",
+      "--benefitsAnimationLineStart": "-200%",
+      "--benefitsAnimationLineEnd": "200%",
     });
-
-
 
     tl.from(benefitsSVG1, {
       x: -50,
@@ -124,6 +126,10 @@ const benefotsAnimation = (
       },
       "-=0.5"
     );
+    return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
   });
 };
 export default benefotsAnimation;

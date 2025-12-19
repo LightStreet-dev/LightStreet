@@ -35,7 +35,10 @@ tl.from(offerTitle, {
       opacity: 0,
       duration: 0.5,
     },"-=0.5");
-
+  return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
 
 });
 media.add("(min-width: 769px)", () => {
@@ -68,7 +71,10 @@ tl.from(offerTitle, {
       opacity: 0,
       duration: 0.5,
     },"-=0.5");
-
+  return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
 
 })}
 
