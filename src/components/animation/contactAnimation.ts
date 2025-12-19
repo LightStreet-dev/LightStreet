@@ -19,7 +19,7 @@ const contactAnimation = (
         trigger: contactTrigger,
         start: "top 70%",
         toggleActions: "play none none none",
-        markers: true,
+        // markers: true,
       },
     });
     tl.from(contactTitle, {
@@ -62,7 +62,7 @@ const contactAnimation = (
         trigger: contactTrigger,
         start: "top 50%",
         toggleActions: "play none none none",
-        markers: true,
+        // markers: true,
       },
     });
     tl.from(contactTitle, {

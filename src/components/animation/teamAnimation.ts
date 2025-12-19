@@ -17,7 +17,7 @@ export const teamAnimation = (
         trigger: teamTrigger,
         start: "top 70%",
         toggleActions: "play none none none",
-        markers: true,
+        // markers: true,
       },
       defaults: { ease: "power3.out" },
     });
@@ -54,7 +54,7 @@ export const teamAnimation = (
         trigger: teamTrigger,
         start: "top 70%",
         toggleActions: "play none none none",
-        markers: true,
+        // markers: true,
       },
       defaults: { ease: "power3.out" },
     });

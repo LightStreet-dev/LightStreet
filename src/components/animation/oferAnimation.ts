@@ -12,7 +12,7 @@ media.add("(max-width: 768px)", () => {
         trigger: offerTrigger,
         start: "top 70%",
         toggleActions: "play none none none",
-        markers: true,
+        // markers: true,
       },
     });
 tl.from(offerTitle, {
@@ -48,7 +48,7 @@ media.add("(min-width: 769px)", () => {
         trigger: offerTrigger,
         start: "top 70%",
         toggleActions: "play none none none",
-        markers: true,
+        // markers: true,
       },
     });
 tl.from(offerTitle, {

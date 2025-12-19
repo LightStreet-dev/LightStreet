@@ -15,7 +15,7 @@ const AdditionalServiceAnimation = (
         trigger: ASTrigger,
         start: "top 70%",
         toggleActions: "play none none none",
-        markers: true,
+        // markers: true,
       },
     });
     tl.from(ASTitle, {
@@ -40,7 +40,7 @@ const AdditionalServiceAnimation = (
         trigger: ASTrigger,
         start: "top 70%",
         toggleActions: "play none none none",
-        markers: true,
+        // markers: true,
       },
     });
     tl.from(ASTitle, {

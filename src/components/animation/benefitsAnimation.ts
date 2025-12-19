@@ -19,7 +19,7 @@ const benefotsAnimation = (
         trigger: benefitsTrigger,
         start: "top 70%",
         toggleActions: "play none none none",
-        markers: true,
+        // markers: true,
       },
     });
 
@@ -77,7 +77,7 @@ const benefotsAnimation = (
         trigger: benefitsTrigger,
         start: "top 70%",
         toggleActions: "play none none none",
-        markers: true,
+        // markers: true,
       },
     });
 

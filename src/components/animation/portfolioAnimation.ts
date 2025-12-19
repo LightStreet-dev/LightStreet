@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
         trigger: portfolioTrigger,
         start: "top 70%",
         toggleActions: "play none none none",
-        markers: true,
+        // markers: true,
       },
     });
 tl.from(portfolioTitle, {

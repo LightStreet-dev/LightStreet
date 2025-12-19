@@ -18,7 +18,7 @@ const aboutAnimation = (
         trigger: aboutTrigger,
         start: "top 70%",
         toggleActions: "play none none none",
-        markers: true,
+        // markers: true,
       },
     });
 
@@ -59,7 +59,7 @@ const aboutAnimation = (
         trigger: aboutTrigger,
         start: "top 70%",
         toggleActions: "play none none none",
-        markers: true,
+        // markers: true,
       },
     });
 
