@@ -8,8 +8,8 @@
 .inputStyle {
   height: auto;
   position: relative;
+width: 100%;
 
-  max-width: 360px;
   color: var(--textColor);
   width: 100%;
   padding: 10px;
@@ -31,6 +31,7 @@
   height: auto;
   position: relative;
   max-width: 100%;
+
   color: var(--secondContentColor);
   background-color: var(--mainBackground);
   width: 100%;
