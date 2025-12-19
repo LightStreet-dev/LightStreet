@@ -3,48 +3,91 @@ import NavLinks from "../HeaderSection/NavLins/NavLinks";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import s from "./FooterComponent.module.css";
 import { useTranslation } from "react-i18next";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import footerAnimation from "../animation/footerAnimation";
 
 interface PrivatModalProps {
- toggleModal: (setter: React.Dispatch<React.SetStateAction<boolean>>) => void;
-setOpenLink: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleModal: (setter: React.Dispatch<React.SetStateAction<boolean>>) => void;
+  setOpenLink: React.Dispatch<React.SetStateAction<boolean>>;
 }
-const FooterComponent: React.FC<PrivatModalProps> = ({ toggleModal,setOpenLink }) => {
+const FooterComponent: React.FC<PrivatModalProps> = ({
+  toggleModal,
+  setOpenLink,
+}) => {
   const { t } = useTranslation();
   const mobSize = useMediaQuery({ maxWidth: 768 });
+  const footerTrigger = useRef<HTMLDivElement | null>(null);
+  const footerNav = useRef<HTMLDivElement | null>(null);
+  const footerSoc = useRef<HTMLDivElement | null>(null);
+  const footerinfo = useRef<HTMLDivElement | null>(null);
+  const footerTitle = useRef<HTMLDivElement | null>(null);
+  const footerSpan = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(() => {
+    if (
+      !footerNav.current ||
+      !footerSoc.current ||
+      !footerinfo.current ||
+      !footerTitle.current ||
+      !footerSpan.current
+    )
+      return;
+
+    footerAnimation(
+      footerNav.current,
+      footerSoc.current,
+      footerTitle.current,
+      footerSpan.current,
+      footerinfo.current,
+      footerTrigger.current as HTMLDivElement,
+     
+    );
+  });
+
   return (
-    <section className={s.footerSection}>
+    <section ref={footerTrigger} className={s.footerSection}>
       <div className="container">
-        <div className={s.footerWrapper}>
+        <div  className={s.footerWrapper}>
           <div className={s.footerNavWrap}>
-            <NavLinks footerNavigation={s.footerNav} />
+            <div ref={footerNav}>
+              <NavLinks footerNavigation={s.footerNav} />
+            </div>
             {mobSize ? null : (
-              <SocialIcons
-                footerStyle={s.footerSocIcon}
-                footerStyleList={s.footerStyleList}
-              />
+              <div ref={footerSoc}>
+                <SocialIcons
+                  footerStyle={s.footerSocIcon}
+                  footerStyleList={s.footerStyleList}
+                />
+              </div>
             )}
           </div>
 
-          <h2 className={s.footerText}>
+          <h2 ref={footerTitle} className={s.footerText}>
             {t("footer.title1")} <br />
-            <span className={s.markText}>
-              {" "}
+            <span ref={footerSpan} className={s.markText}>
               {t("footer.title2")}
-            </span> <br /> {t("footer.title3")}
+            </span>{" "}
+            <br /> {t("footer.title3")}
           </h2>
           <div className={s.footerSocWrap}>
             {mobSize && (
+              <div ref={footerSoc}>
               <SocialIcons
                 footerStyle={s.footerSocIcon}
                 footerStyleList={s.footerStyleList}
               />
+              </div>
             )}
           </div>
-          <div className={s.footerInfo}>
+          <div ref={footerinfo} className={s.footerInfo}>
             <p className={s.ownerInfo}> {t("footer.ownerInfo")}</p>
             <div className={s.righsWrapper}>
               <p className={s.rulesInfo}>{t("footer.privatePolice")}</p>
-              <button className={s.privatePolice} onClick={()=>toggleModal((setOpenLink))}>
+              <button
+                className={s.privatePolice}
+                onClick={() => toggleModal(setOpenLink)}
+              >
                 {t("footer.link")}
               </button>
             </div>
