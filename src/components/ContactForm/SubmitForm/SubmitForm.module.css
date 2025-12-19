@@ -92,14 +92,14 @@ html {
 }
 .checkWrap {
   display: flex;
-  gap: 8px;
+  gap: 3px;
   align-items: center;
   justify-content: center;
 }
-.fileText2{
+.fileText2 {
   width: 10px;
   height: 10px;
-fill: blue;
+  fill: blue;
   cursor: pointer;
 }
 
@@ -157,5 +157,8 @@ fill: blue;
     max-width: 400px;
     width: 100%;
     padding: 50px;
+  }
+  .checkWrap {
+    gap: 8px;
   }
 }
