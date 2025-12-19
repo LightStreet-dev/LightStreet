@@ -19,9 +19,9 @@ const App: React.FC = () => {
   const [openLink, setOpenLink] = useState<boolean>(false);
 
   
-  const handleToggle = (setter: React.Dispatch<React.SetStateAction<boolean>>) => {
-    setter((prev) => !prev);
-  };
+  const handleToggle = (setter: (open: boolean) => void) => {
+  setter(true); // або false, якщо хочеш toggle — можна зробити функцію toggle
+};
 
   return (
     <div className="bodyWrapper">
