@@ -12,34 +12,62 @@ import ContactSectionComponent from "./components/ContactSectionComponent/Contac
 import FooterComponent from "./components/FooterComponent/FooterComponent";
 import PortfolioSectionCompopnent from "./components/PortfolioSectionCompopnent/PortfolioSectionCompopnent";
 import PrivateData from "./components/FooterComponent/PrivateDataComponent/PrivateData";
+import { useInView  } from "react-intersection-observer";
+import ScrollUpButtonComponent from "./components/ScrollUpButtonComponent/ScrollUpButtonComponent";
+import clsx from "clsx";
 
 const App: React.FC = () => {
   const [openForm, setOpenForm] = useState<boolean>(false);
   const isMobileHeader = useMediaQuery({ maxWidth: 860 });
   const [openLink, setOpenLink] = useState<boolean>(false);
-
-  
-  const handleToggle = (setter: React.Dispatch<React.SetStateAction<boolean>>) => {
-    setter(prev => !prev);
-};
+ const { ref: inViewRef, inView } = useInView({
+  threshold: 0,
+});
+  const handleToggle = (
+    setter: React.Dispatch<React.SetStateAction<boolean>>
+  ) => {
+    setter((prev) => !prev);
+  };
 
   return (
     <div className="bodyWrapper">
       <div className="headerHerroWrapper">
-        <Header mobMediaQuery={isMobileHeader} toggleForm={handleToggle} setOpenForm={setOpenForm} />
+        <Header
+          observer={inViewRef}
+          mobMediaQuery={isMobileHeader}
+          toggleForm={handleToggle}
+          setOpenForm={setOpenForm}
+        />
         <HeroSection />
       </div>
-      <AboutUsComponent/>
-      <OferSectionComponent toggleForm={handleToggle} setOpenForm={setOpenForm}/>
-      <AditionalServices/>
-<PortfolioSectionCompopnent/>
-      <BenefitsComponent/>
-      <ContactSectionComponent/>
-      <SubmitForm openForm={openForm} setOpenForm={setOpenForm} setOpenLink={setOpenLink} toggleModal = {handleToggle} />
-      <FooterComponent toggleModal = {handleToggle} setOpenLink={setOpenLink} />
-      <PrivateData toggleModal = {handleToggle} openLink={openLink} setOpenLink={setOpenLink}/>
+      <AboutUsComponent />
+      <OferSectionComponent
+        toggleForm={handleToggle}
+        setOpenForm={setOpenForm}
+      />
+      <AditionalServices />
+      <PortfolioSectionCompopnent />
+      <BenefitsComponent />
+      <ContactSectionComponent />
+      <SubmitForm
+        openForm={openForm}
+        setOpenForm={setOpenForm}
+        setOpenLink={setOpenLink}
+        toggleModal={handleToggle}
+      />
+      <FooterComponent toggleModal={handleToggle} setOpenLink={setOpenLink} />
+      <PrivateData
+        toggleModal={handleToggle}
+        openLink={openLink}
+        setOpenLink={setOpenLink}
+      />
+     
+        <div className={clsx("scrollUpBtn", !inView && "scrollUpBtnActive")}>
+          <ScrollUpButtonComponent />
+        </div>
+      
     </div>
-  ); 
+  );
 };
 
 export default App;

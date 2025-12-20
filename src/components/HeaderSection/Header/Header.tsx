@@ -13,8 +13,9 @@ interface HeaderProps {
   mobMediaQuery: boolean;
   toggleForm:  (setter: React.Dispatch<React.SetStateAction<boolean>>) => void;
   setOpenForm:React.Dispatch<React.SetStateAction<boolean>>;
+  observer: (element: Element | null | undefined) => void | (() => void);
 }
-const Header: React.FC<HeaderProps> = ({ mobMediaQuery, toggleForm, setOpenForm }) => {
+const Header: React.FC<HeaderProps> = ({ mobMediaQuery, toggleForm, setOpenForm ,observer }) => {
   
  const headerContainer = useRef<HTMLDivElement | null>(null);
 const headerContent = useRef<HTMLDivElement | null>(null);
@@ -26,7 +27,8 @@ headerAnimation(headerContainer.current,headerContent.current )
 });
 
   return (
-    <header className={s.header} ref={headerContainer}>
+    <div ref={observer}>
+    <header className={s.header} ref={headerContainer} id="header">
       <div className={s.headerWrapper} ref={headerContent}>
         <Logo />
 
@@ -51,6 +53,7 @@ headerAnimation(headerContainer.current,headerContent.current )
         )}
       </div>
     </header>
+    </div>
   );
 };
 

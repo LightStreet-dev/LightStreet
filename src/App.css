@@ -5,6 +5,7 @@
 .bodyWrapper{
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .container {
   width: 100%;
@@ -22,7 +23,9 @@
   display: flex;
   flex-direction: column;
 }
-
+.scrollUpBtn{
+  opacity: 0;
+}
 
 @media (min-width: 768px) {
   .headerHerroWrapper {
@@ -31,6 +34,24 @@
   .container {
     padding: 0 30px;
   }
+.scrollUpBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;                 /* фінальна позиція */
+  transform: translateY(120px); /* схована знизу */
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.scrollUpBtnActive {
+  transform: translateY(0);     /* виїжджає вгору */
+  opacity: 1;
+  pointer-events: auto;
+}
+  
 }
 
 @media (min-width: 800px) {
