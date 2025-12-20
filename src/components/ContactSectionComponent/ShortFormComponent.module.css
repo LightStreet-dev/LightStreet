@@ -55,10 +55,7 @@ width: 100%;
   border-radius: 12px;
   z-index: 2;
   /* головне */
-  background: rgba(255, 255, 255, 0.001); /* практично прозорий */
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(20px);
-
+  
   transition: all 0.5s ease;
 }
 
@@ -72,6 +69,10 @@ width: 100%;
   box-shadow: none;
   z-index: 10;
   border-color: transparent;
+  background: rgba(255, 255, 255, 0.001); /* практично прозорий */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(20px);
+
 }
 
 @media (min-width: 768px) {
