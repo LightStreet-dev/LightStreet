@@ -15,3 +15,6 @@
 .scrollBtn:hover{
     fill: #ff6600;
 }
+.scrollBtn:active{
+    fill: #ff6600;
+}

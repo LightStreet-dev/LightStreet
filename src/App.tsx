@@ -22,6 +22,7 @@ const App: React.FC = () => {
   const [openLink, setOpenLink] = useState<boolean>(false);
  const { ref: inViewRef, inView } = useInView({
   threshold: 0,
+  
 });
   const handleToggle = (
     setter: React.Dispatch<React.SetStateAction<boolean>>
