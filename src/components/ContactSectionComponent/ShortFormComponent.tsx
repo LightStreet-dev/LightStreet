@@ -66,7 +66,7 @@ const ShortFormComponent: React.FC = () => {
 
           notifyConsent(
             () => {
-              sendEmail(values, actions); // 👈 onAccept
+              sendEmail(values); // 👈 onAccept
               actions.setSubmitting(false);
               actions.resetForm();
             },
