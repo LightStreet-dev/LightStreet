@@ -3,7 +3,7 @@
     bottom: 40px;
     right: 40px;
     cursor: pointer;
-    z-index: 1000;
+    
 }
 
 .scrollBtn{
@@ -13,8 +13,8 @@
     transition: fill 0.3s ease;
 }
 .scrollBtn:hover{
-    fill: #ff6600;
+    bottom: 50px;
 }
 .scrollBtn:active{
-    fill: #ff6600;
+    bottom: 50px;
 }

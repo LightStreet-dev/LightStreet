@@ -25,7 +25,7 @@ const OferComponent: React.FC<oferProps> = ({
         ))}
       </ul>
       <div className={clsx(s.priceInfo, isActive && size &&  s.priceInfoActive )}>
-      <p className={s.oferPrice}>{price}</p>
+      <p className={s.oferPrice}></p>
       <p className={s.oferTermin}>{timeTitle}</p>
       <p className={s.oferTermin}>{time}</p>
       </div>

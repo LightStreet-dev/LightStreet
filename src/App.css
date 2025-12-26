@@ -24,7 +24,7 @@
   flex-direction: column;
 }
 .scrollUpBtn{
-  opacity: 0;
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -35,6 +35,7 @@
     padding: 0 30px;
   }
 .scrollUpBtn {
+  display: block;
   position: fixed;
   right: 20px;
   bottom: 20px;                 /* фінальна позиція */
@@ -42,6 +43,7 @@
   opacity: 0;
   pointer-events: none;
   transition:
+  
     transform 0.4s ease,
     opacity 0.4s ease;
 }

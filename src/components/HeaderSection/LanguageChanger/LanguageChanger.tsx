@@ -103,10 +103,11 @@ const handleLanguageChange = (
     { value: "uk", label: "UA" },
     { value: "pl", label: "PL" },
   ];
-console.log(selectedLanguage)
+
   return (
     <div className={s.lngSwitcher}>
       <Select<OptionType, false>
+        
         styles={customStyles}
         value={languageOptions.find((opt) => opt.value === selectedLanguage) || languageOptions.find((opt) => opt.value === i18n.language)}
         onChange={(opt) => opt && handleLanguageChange(opt)}

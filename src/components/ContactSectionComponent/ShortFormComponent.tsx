@@ -5,10 +5,23 @@ import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import InputComponent from "../ContactForm/InputComponent/InputComponent";
 import shortFormSchema from "../../validators/shortFormValidation";
-
+import toast, { Toaster } from "react-hot-toast";
+import ConsentToast from "../Toasts/FormDataToast";
 type shortFormValue = {
   Name: string;
   Phone: string;
+};
+const notifyConsent = (onAccept: () => void, onDecline: () => void) => {
+  toast(
+    <ConsentToast
+      closeToast={toast.dismiss}
+      sendEmail={onAccept}
+      onDecline={onDecline}
+    />,
+    {
+      duration: Infinity,
+    }
+  );
 };
 
 const ShortFormComponent: React.FC = () => {
@@ -20,7 +33,7 @@ const ShortFormComponent: React.FC = () => {
   };
   const sendEmail = async (
     values: shortFormValue,
-    actions: import("formik").FormikHelpers<shortFormValue>
+    // actions: import("formik").FormikHelpers<shortFormValue>
   ) => {
     try {
       if (!shortFormRef.current) return;
@@ -42,17 +55,27 @@ const ShortFormComponent: React.FC = () => {
       } else {
         console.log("FAILED...", error);
       }
-    } finally {
-      actions.setSubmitting(false);
-
-      actions.resetForm();
     }
   };
   return (
     <div>
       <Formik
         initialValues={initialValues}
-        onSubmit={sendEmail}
+        onSubmit={(values, actions) => {
+          actions.setSubmitting(true);
+
+          notifyConsent(
+            () => {
+              sendEmail(values, actions); // 👈 onAccept
+              actions.setSubmitting(false);
+              actions.resetForm();
+            },
+            () => {
+              actions.resetForm(); // 👈 onDecline
+              actions.setSubmitting(false);
+            }
+          );
+        }}
         validationSchema={shortFormSchema}
       >
         {({ isSubmitting }) => (
@@ -79,12 +102,16 @@ const ShortFormComponent: React.FC = () => {
                 disabled={isSubmitting}
                 type="submit"
               >
-                 {isSubmitting ? t("formTranslation:button.sending") : t("formTranslation:button.send")}
+                {isSubmitting
+                  ? t("formTranslation:button.sending")
+                  : t("formTranslation:button.send")}
               </button>
             </div>
           </Form>
         )}
       </Formik>
+
+      <Toaster />
     </div>
   );
 };
