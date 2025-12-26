@@ -14,7 +14,7 @@ interface oferProps {
   size: boolean
 }
 const OferComponent: React.FC<oferProps> = ({
-  page: { title, features, price, timeTitle, time },isActive, size
+  page: { title, features,  timeTitle, time },isActive, size
 }) => {
   return (
     <div className={s.slideWraper}>
