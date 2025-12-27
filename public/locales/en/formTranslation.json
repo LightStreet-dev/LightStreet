@@ -6,7 +6,8 @@
     "telefon": "Phone",
     "email": "Email",
     "text": "Message",
-    "agree": "I agree to the processing of my personal data"
+    "agree": "I agree to the processing of my personal data.",
+    "shortAgree":"I agree to data processing."
   },
   "errors": {
     "error": "This field is required",

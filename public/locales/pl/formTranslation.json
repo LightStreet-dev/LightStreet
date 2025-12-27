@@ -6,7 +6,8 @@
     "telefon": "Telefon",
     "email": "E-mail",
     "text": "Wiadomość",
-    "agree": "  Wyrażam zgodę na przetwarzanie moich danych osobowych"
+    "agree": "  Wyrażam zgodę na przetwarzanie moich danych osobowych",
+    "shortAgree":"Wyrażam zgodę na przetwarzanie danych."
   },
   "errors": {
     "error": "To pole jest wymagane",

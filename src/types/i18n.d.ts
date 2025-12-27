@@ -116,6 +116,7 @@ declare module "i18next" {
           email: string;
           text: string;
           agree: string;
+          shortAgree:string;
         };
         errors: {
           error: string;

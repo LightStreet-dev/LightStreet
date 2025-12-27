@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import InputComponent from "../ContactForm/InputComponent/InputComponent";
 import shortFormSchema from "../../validators/shortFormValidation";
 import toast, { Toaster } from "react-hot-toast";
-import ConsentToast from "../Toasts/FormDataToast";
+import ConsentToast from "../Toasts/ConsentToast";
 type shortFormValue = {
   Name: string;
   Phone: string;
@@ -20,6 +20,14 @@ const notifyConsent = (onAccept: () => void, onDecline: () => void) => {
     />,
     {
       duration: Infinity,
+       position: 'bottom-center',
+      style: {
+        maxWidth: '520px',
+        width: '100%',
+        padding: '0', // важливо, щоб не заважало внутрішньому стилю
+        background: 'transparent', // фон керується в компоненті
+        boxShadow: 'none',
+      },
     }
   );
 };
