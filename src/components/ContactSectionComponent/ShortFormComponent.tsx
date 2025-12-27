@@ -1,5 +1,5 @@
 import s from "./ShortFormComponent.module.css";
-import { Form, Formik } from "formik";
+import { ErrorMessage, Form, Formik } from "formik";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
@@ -89,6 +89,7 @@ const ShortFormComponent: React.FC = () => {
         {({ isSubmitting }) => (
           <Form ref={shortFormRef}>
             <div className={s.inputWrapper}>
+              <div className={s.nameInput}>
               <InputComponent
                 labelClassName={s.labelStyle}
                 altDesing={s.inputStyle}
@@ -97,6 +98,9 @@ const ShortFormComponent: React.FC = () => {
                 type="text"
                 label={t("formTranslation:formPlaseholders.name")}
               />
+               <ErrorMessage className={s.error} name="Name" component="p" />
+               </div>
+               <div className={s.phoneInput}>
               <InputComponent
                 labelClassName={s.labelStyle}
                 altDesing={s.inputStyle}
@@ -105,6 +109,8 @@ const ShortFormComponent: React.FC = () => {
                 type="number"
                 label={t("formTranslation:formPlaseholders.telefon")}
               />
+               <ErrorMessage className={s.error} name="Phone" component="p" />
+               </div>
               <button
                 className={s.submitBtn}
                 disabled={isSubmitting}
