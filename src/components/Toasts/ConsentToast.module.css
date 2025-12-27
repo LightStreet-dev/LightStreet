@@ -1,9 +1,10 @@
 .consentWrapper {
-    font-size: 14px;
+    font-size: 12px;
+    text-align: start;
   max-width: 520px;
   width: 100%;
-  padding: 14px 18px;
-  gap: 12px;
+  padding: 14px 14px;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -18,7 +19,7 @@ transform: translateY(-25px);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
 }
 
 .accept {
