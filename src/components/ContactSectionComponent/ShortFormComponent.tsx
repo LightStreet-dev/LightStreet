@@ -22,7 +22,8 @@ const notifyConsent = (onAccept: () => void, onDecline: () => void) => {
       duration: Infinity,
        position: 'bottom-center',
       style: {
-        margin:'0',
+maxWidth: '520px',
+width:"100%",
         padding: '0', // важливо, щоб не заважало внутрішньому стилю
         background: 'transparent', // фон керується в компоненті
         boxShadow: 'none',
