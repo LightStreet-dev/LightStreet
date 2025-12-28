@@ -1,12 +1,9 @@
-
-
 .oferSwiper {
-position: relative;
+  position: relative;
   display: flex;
   width: 100%;
-  max-width: 350px;
-  overflow: visible;
-
+  max-width: 280px;
+  overflow: hidden;
 }
 
 .oferSlide {
@@ -21,7 +18,7 @@ position: relative;
     inset 0px -30.19px 30.19px rgba(3, 71, 124, 1) 0px 61.47px 122.93px rgba(1, 24, 42, 0.52);
   border-radius: 30px;
   padding: 38px 35px;
-  overflow: visible
+  overflow: visible;
 }
 .navWrapper {
   display: flex;
@@ -33,7 +30,6 @@ position: relative;
   gap: 16px;
   margin-top: 20px;
   max-width: 200px;
-
 }
 
 .customPagination {
@@ -43,7 +39,7 @@ position: relative;
   gap: 8px;
 }
 
- :global(.swiper-pagination-bullet) {
+:global(.swiper-pagination-bullet) {
   width: 12px;
   height: 12px;
   background: transparent;
@@ -58,32 +54,33 @@ position: relative;
   background: #0066ff;
   transform: scale(1);
 }
+@media (min-width: 375px) {
+  .oferSwiper {
+    max-width: 350px;
+    overflow: visible;
+  }
+}
 
 @media (min-width: 768px) {
-  
   .oferSwiper {
-  height: 600px;
-  overflow: hidden;
-  max-width: 730px;
-  width: 100%;
-  position: relative;
-  display: flex;
-
-
+    height: 600px;
+    overflow: hidden;
+    max-width: 730px;
+    width: 100%;
+    position: relative;
+    display: flex;
   }
   .navWrapper {
     max-width: 100%;
     margin-left: auto;
- height: 20px;
+    height: 20px;
     margin-right: 130px;
     position: absolute;
-   right: 0;
-   top: 80%;
-   z-index: 100;
+    right: 0;
+    top: 80%;
+    z-index: 100;
     width: auto;
   }
-
-  
 
   .oferSlide {
     max-width: 348px;
@@ -97,32 +94,30 @@ position: relative;
   }
 
   .oferSlideActive {
-    
     max-height: 900px; /* висота активного слайду */
     width: 100%;
     z-index: 50; /* активний поверх інших */
-    transform: scale(1); 
+    transform: scale(1);
     margin-bottom: 0px;
-      transition: transform 0.5s ease, max-height 0.4s ease;
+    transition: transform 0.5s ease, max-height 0.4s ease;
   }
-
 }
 @media (min-width: 1024px) {
   .customPagination :global(.swiper-pagination-bullet) {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
   }
-  
-.navWrapper {
+
+  .navWrapper {
     margin-left: auto;
 
     margin-right: 100px;
-}
+  }
 }
 @media (min-width: 1240px) {
   .navWrapper {
     margin-left: auto;
 
     margin-right: 100px;
-}
+  }
 }

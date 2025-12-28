@@ -10,8 +10,8 @@
   }
 }
 .teamImg {
-  width: 77px;
-  height: 77px;
+  width: 70px;
+  height: 70px;
   opacity: 1;
   border-radius: 50%;
   border: 5px solid;
@@ -34,3 +34,9 @@
 .activeImg{
   filter: grayscale(20%);
 }
+
+@media (min-width: 375px) {
+  .teamImg {
+  width: 77px;
+  height: 77px;
+}}

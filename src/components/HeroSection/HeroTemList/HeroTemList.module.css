@@ -1,7 +1,11 @@
+
+
 .rewiewsWrapper {
   display: flex;
   flex-direction: column;
-width: 300px;
+max-width: 300px;
+width: 100%;
+  gap: 20px;
 position: relative;
 
 }
@@ -26,7 +30,7 @@ justify-content: flex-start;
   display: flex;
  text-align: start;
   font-family: var(--secondFontFamily);
-  font-size: 23px;
+  font-size: 20px;
   line-height: 20px;
   position: absolute;
   right: 40px;
@@ -46,3 +50,9 @@ transition:  font-size 0.5s ease, right 0.5s ease;
   max-width: 100%;
 
 }
+
+@media (min-width: 375px) {
+  .reviewsText {
+  
+  font-size: 23px;
+}}

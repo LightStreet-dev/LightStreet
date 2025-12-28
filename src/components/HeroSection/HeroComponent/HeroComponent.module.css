@@ -1,13 +1,12 @@
 
 .herroContainer{
     display: flex;
-    padding: 71px 0 0;;
+    padding: 71px 0 0;
     flex-direction: column;
     align-items: start;
     margin-bottom: 83px;
+    
 }
-
-
 
 
 @media (min-width: 768px) {
