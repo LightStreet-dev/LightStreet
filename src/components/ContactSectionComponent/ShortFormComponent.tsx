@@ -7,6 +7,7 @@ import InputComponent from "../ContactForm/InputComponent/InputComponent";
 import shortFormSchema from "../../validators/shortFormValidation";
 import toast, { Toaster } from "react-hot-toast";
 import ConsentToast from "../Toasts/ConsentToast";
+import AutoClearErrorsComponent from "../AutoClearErrorsComponent/AutoClearErrorsComponent";
 type shortFormValue = {
   Name: string;
   Phone: string;
@@ -86,8 +87,10 @@ const ShortFormComponent: React.FC = () => {
         }}
         validationSchema={shortFormSchema}
       >
-        {({ isSubmitting }) => (
+        {({ isSubmitting}) => (
+       
           <Form ref={shortFormRef}>
+               <AutoClearErrorsComponent delay={2000}/>
             <div className={s.inputWrapper}>
               <div className={s.nameInput}>
               <InputComponent

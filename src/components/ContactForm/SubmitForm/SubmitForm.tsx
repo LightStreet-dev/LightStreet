@@ -7,6 +7,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import InputComponent from "../InputComponent/InputComponent";
 import { useTranslation } from "react-i18next";
 import mainFormSchema from "../../../validators/mainFormValidation";
+import AutoClearErrorsComponent from "../../AutoClearErrorsComponent/AutoClearErrorsComponent";
 type FormValue = {
   Name: string;
   Company: string;
@@ -119,6 +120,7 @@ const SubmitForm: React.FC<SubmitFormProps> = ({ openForm, setOpenForm, setOpenL
         >
           {({ values, isSubmitting, touched }) => (
             <Form ref={formRef} className={s.form}>
+                <AutoClearErrorsComponent delay={2000}/>
               <div className={s.inputWrapper}>
                 <InputComponent
                   name="Name"
