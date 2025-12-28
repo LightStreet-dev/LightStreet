@@ -90,7 +90,7 @@ const ShortFormComponent: React.FC = () => {
         {({ isSubmitting}) => (
        
           <Form ref={shortFormRef}>
-               <AutoClearErrorsComponent delay={2000}/>
+               <AutoClearErrorsComponent delay={3000}/>
             <div className={s.inputWrapper}>
               <div className={s.nameInput}>
               <InputComponent
