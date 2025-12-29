@@ -43,38 +43,69 @@
   },
   "ofers": {
     "landingPage": {
-      "title": "Landing page",
+      "title": "Landing Page",
       "features": [
-        "A single, custom-designed website",
-        "Captures the user’s attention",
-        "Converts, meaning it drives action — sign-up, purchase, or contact"
+        "One-page website for selling or collecting leads",
+        "Presentation of services or products that captures attention",
+        "Responsive design for any device",
+        "Integration with forms and messengers for instant contact"
       ],
-      "price": "Price start 600€ ",
-      "timeTitle": "Lead time:",
-      "time": "7–10 business days"
+      "price": "Price from $700",
+      "timeTitle": "Implementation time:",
+      "time": "7-30 working days"
     },
-    "site": {
-      "title": "Multi-page website",
+    "selfWebSite": {
+      "title": "Business Card Website",
       "features": [
-        "Multi-page - 3–8 subpages",
-        "May include forms",
-        "Basic SEO and preparation for further optimization"
+        "Basic information about the company or specialist",
+        "Presentation of services or products that captures attention",
+        "Responsive design for all devices",
+        "Integration with forms and messengers for instant contact"
       ],
-      "price": "Price start 1500€",
-      "timeTitle": "Lead time:",
-      "time": " 1–3 months"
+      "price": "",
+      "timeTitle": "Implementation time:",
+      "time": "7-30 working days"
     },
+    "portfolio": {
+      "title": "Portfolio",
+      "features": [
+        "Grouping works by categories",
+        "Responsive design and mobile version",
+        "Easy addition of new projects",
+        "Perfect for specialists, studios, and creative teams",
+        "Interactive elements and animations for higher visitor engagement"
+      ],
+      "price": "",
+      "timeTitle": "Implementation time:",
+      "time": "1-2 months"
+    },
+   "site": {
+  "title": "Corporate Website",
+  "features": [
+    "Structure with sections 'About Us', 'Services', 'Contacts'...",
+    "Responsive design and mobile version",
+    "SEO preparation and integration with analytics for online sales growth",
+    "Ability to add new pages in the future"
+  ],
+  "price": "Price from $1200",
+  "timeTitle": "Implementation time:",
+  "time": "1-3 months"
+}
+,
     "store": {
-      "title": "Online store",
-      "features": [
-        "Product catalog with descriptions, images, and prices",
-        "Online orders and shipping management",
-        "Integration with payment systems"
-      ],
-      "price": "Price start 7500€",
-      "timeTitle": "Lead time::",
-      "time": "2–4 months"
-    }
+  "title": "Online Store",
+  "features": [
+    "Product catalog with photos, descriptions, and prices",
+    "Online ordering and delivery processing",
+    "Integration with payment systems",
+    "Management of products and orders",
+    "Connection of sales analytics for effective marketing"
+  ],
+  "price": "Price from $8000",
+  "timeTitle": "Implementation time:",
+  "time": "6-8 months"
+}
+
   },
   "ASsection": {
     "title": "Additional services"
@@ -140,15 +171,15 @@
     "title": "Contact",
     "text": "Fill out a short form, and our manager will contact you to advise the best solution tailored to your needs."
   },
-  "footer":{
-    "title1":"Build your",
-    "title2":"online advantage",
-    "title3":"with us",
-    "ownerInfo":"Use of materials is permitted only with the project owner’s consent.",
-    "privatePolice":"© 2025 All rights reserved.",
-    "link":"Private Policy"
+  "footer": {
+    "title1": "Build your",
+    "title2": "online advantage",
+    "title3": "with us",
+    "ownerInfo": "Use of materials is permitted only with the project owner’s consent.",
+    "privatePolice": "© 2025 All rights reserved.",
+    "link": "Private Policy"
   },
-   "privatePolicy": {
-"text": "Light Street Web Studio processes personal data in accordance with Regulation (EU) 2016/679 (GDPR). When you contact us through the website, we may receive your name, email address, phone number or any information you choose to provide in a message or project request. The website also automatically collects technical data such as IP address, browser information, cookies and analytics metrics.\n\n\u00A0\u00A0\u00A0This technical processing is carried out based on our legitimate interest under Article 6(1)(f) GDPR to ensure the website's proper functioning and improve its performance. The data you send intentionally is used to respond to your inquiries, provide consultations, estimate projects and fulfill contractual obligations. This processing is necessary for the performance of a contract or steps needed before entering into one, as outlined in Article 6(1)(b) GDPR.\n\n\u00A0\u00A0\u00A0If you agree to receive marketing messages, such processing relies solely on your consent according to Article 6(1)(a) GDPR, which you may withdraw at any time, as permitted by Article 7(3\n\n\u00A0\u00A0\u00A0We may share your data with trusted service providers such as hosting companies, analytics services or project subcontractors. All such partners act only on our instructions and are bound by Article 28 GDPR as data processors. If international data transfers occur outside the European Union, we rely on Standard Contractual Clauses under Article 46(2)(c) GDPR or transfer data only to countries recognized by the European Commission as providing an adequate level of protection in line with Article 45.\n\n\u00A0\u00A0\u00A0We retain personal data only for as long as necessary for the purposes for which it was collected, following the storage limitation principle established in Article 5(1)(e) GDPR. You have the right to access your personal data, request correction or deletion, restrict or object to processing, and receive your data in a portable format. These rights are guaranteed by Articles 15–21 GDPR. For any privacy-related questions, please contact us at privacy@lightstreet.com."
-}
+  "privatePolicy": {
+    "text": "Light Street Web Studio processes personal data in accordance with Regulation (EU) 2016/679 (GDPR). When you contact us through the website, we may receive your name, email address, phone number or any information you choose to provide in a message or project request. The website also automatically collects technical data such as IP address, browser information, cookies and analytics metrics.\n\n\u00A0\u00A0\u00A0This technical processing is carried out based on our legitimate interest under Article 6(1)(f) GDPR to ensure the website's proper functioning and improve its performance. The data you send intentionally is used to respond to your inquiries, provide consultations, estimate projects and fulfill contractual obligations. This processing is necessary for the performance of a contract or steps needed before entering into one, as outlined in Article 6(1)(b) GDPR.\n\n\u00A0\u00A0\u00A0If you agree to receive marketing messages, such processing relies solely on your consent according to Article 6(1)(a) GDPR, which you may withdraw at any time, as permitted by Article 7(3\n\n\u00A0\u00A0\u00A0We may share your data with trusted service providers such as hosting companies, analytics services or project subcontractors. All such partners act only on our instructions and are bound by Article 28 GDPR as data processors. If international data transfers occur outside the European Union, we rely on Standard Contractual Clauses under Article 46(2)(c) GDPR or transfer data only to countries recognized by the European Commission as providing an adequate level of protection in line with Article 45.\n\n\u00A0\u00A0\u00A0We retain personal data only for as long as necessary for the purposes for which it was collected, following the storage limitation principle established in Article 5(1)(e) GDPR. You have the right to access your personal data, request correction or deletion, restrict or object to processing, and receive your data in a portable format. These rights are guaranteed by Articles 15–21 GDPR. For any privacy-related questions, please contact us at privacy@lightstreet.com."
+  }
 }

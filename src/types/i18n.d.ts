@@ -62,6 +62,20 @@ declare module "i18next" {
             timeTitle: string;
             time: string;
           };
+          selfWebSite: {
+            title: string;
+            features: string[];
+            price: string;
+            timeTitle: string;
+            time: string;
+          };
+           portfolio: {
+            title: string;
+            features: string[];
+            price: string;
+            timeTitle: string;
+            time: string;
+          };
           store: {
             title: string;
             features: string[];
