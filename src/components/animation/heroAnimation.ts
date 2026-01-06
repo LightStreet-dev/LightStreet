@@ -56,8 +56,8 @@ export const featuresAnimation = (featuresAnim: HTMLUListElement) => {
 
 export const heroBtnAnimation = (btnAnimation: HTMLElement) => {
   gsap.from(btnAnimation, {
-    rotationX: -180, // лежав горизонтально, повернутий до користувача
-    y: -500,
+    rotationX: -90, // лежав горизонтально, повернутий до користувача
+    y: 50,
     opacity: 0,
     delay: 1,
     duration: 2,

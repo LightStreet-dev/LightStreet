@@ -26,7 +26,7 @@ const SocialIcons: React.FC<socialProps> = ({ isOpen, footerStyle, footerStyleLi
        <li>
         <a href="#" target="blank">
         <svg className ={clsx(s.svg, isOpen && s.svgModal, footerStyle)} >
-          <use href="/svg/symbol-defs.svg#icon-whatsapp"></use>
+          <use href="/svg/symbol-defs.svg#icon-telegram"></use>
         </svg>
         </a>
       </li>
