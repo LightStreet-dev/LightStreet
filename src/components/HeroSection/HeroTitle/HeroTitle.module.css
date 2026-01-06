@@ -75,6 +75,22 @@ font-size: 110%;
 }
 @media (min-width: 1024px) {
   .heroTitle {
+    font-size: 75px;
+    max-width: 750px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+     align-items: start;
+     gap: 10px;
+
+  }
+  .heroText {
+  font-size: 18px;
+    max-width: 400px;
+}}
+
+
+@media (min-width: 1560px) {
+  .heroTitle {
     font-size: 96px;
     max-width: 750px;
     margin: 0 auto;
@@ -87,3 +103,5 @@ font-size: 110%;
   font-size: 20px;
     max-width: 475px;
 }}
+
+
