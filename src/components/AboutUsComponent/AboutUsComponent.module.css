@@ -67,6 +67,34 @@
 }
 @media (min-width: 1024px) {
   .aboutUs {
+    padding: 60px 0;
+  }
+  .aboutUsTitle {
+    font-size: 75px;
+    margin-bottom: 62px;
+  }
+  .aboutUsText {
+    font-size: 18px;
+    max-width: 480px;
+  }
+  .aboutLogo {
+    position: absolute;
+    width: 455px;
+    height: 230px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .aboutUsWrapper {
+    flex-direction: row;
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1550px) {
+  .aboutUs {
     padding: 95px 0;
   }
   .aboutUsTitle {
@@ -81,14 +109,7 @@
     position: absolute;
     width: 475px;
     height: 250px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+   
   }
-  .aboutUsWrapper {
-    flex-direction: row;
-    margin-bottom: 0;
-    align-items: center;
-    justify-content: space-between;
-  }
+ 
 }

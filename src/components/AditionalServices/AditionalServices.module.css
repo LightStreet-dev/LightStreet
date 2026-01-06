@@ -39,14 +39,21 @@
 
 @media (min-width: 1024px) {
   .asWrapper{
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+   .AStitle {
+margin-bottom: 62px;
+    font-size: 75px ;
+  }
+}
+
+@media (min-width: 1550px) {
+  .asWrapper{
   padding-top: 100px;
   padding-bottom: 100px;
 }
- 
-}
-
-@media (min-width: 1024px) {
-  .AStitle {
+   .AStitle {
 margin-bottom: 62px;
     font-size: 96px ;
   }
