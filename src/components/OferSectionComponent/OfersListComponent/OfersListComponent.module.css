@@ -88,7 +88,7 @@
     padding: 50px 40px;
     z-index: 50;
     position: absolute;
-    max-height: 450px; /* стандартна висота */
+    max-height: 460px; /* стандартна висота */
     transform: scale(0.9); /* початковий масштаб для неактивних слайдів */
     transition: transform 0.5s ease, max-height 0.4s ease;
   }
@@ -111,7 +111,7 @@
   .navWrapper {
     margin-left: auto;
 
-    margin-right: 80px;
+    margin-right: 70px;
   }
 }
 @media (min-width: 1240px) {
