@@ -8,6 +8,10 @@ interface socialProps {
 }
 
 const SocialIcons: React.FC<socialProps> = ({ isOpen, footerStyle, footerStyleList }) => {
+const openTelegramBot = () =>{
+  window.open("https://t.me/LS_contact_Bot?hello=from_site", "_blank");
+}
+
   return (
     <ul className={clsx(s.socIconsList, isOpen && s.socIconsListModal, footerStyleList)}>
       <li><a href="https://www.instagram.com/dimonchikseagull/" target="blank">
@@ -24,7 +28,7 @@ const SocialIcons: React.FC<socialProps> = ({ isOpen, footerStyle, footerStyleLi
         </a>
       </li>
        <li>
-        <a href="#" target="blank">
+        <a onClick={openTelegramBot} href="" target="blank">
         <svg className ={clsx(s.svg, isOpen && s.svgModal, footerStyle)} >
           <use href="/svg/symbol-defs.svg#icon-telegram"></use>
         </svg>
