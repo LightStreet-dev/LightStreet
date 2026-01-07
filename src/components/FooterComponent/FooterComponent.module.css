@@ -107,6 +107,28 @@
 @media (min-width: 1024px) {
   .footerNavWrap {
     
+    margin-bottom: 60px;
+  }
+  .footerWrapper {
+    padding: 60px 0;
+  }
+  .footerText {
+    font-size: 100px;
+  }
+  .ownerInfo {
+    font-size: var(--textFontSize);
+
+  }
+  .rulesInfo {
+    font-size: var(--textFontSize);
+  }
+  .privatePolice {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1550px) {
+  .footerNavWrap {
+    
     margin-bottom: 100px;
   }
   .footerWrapper {

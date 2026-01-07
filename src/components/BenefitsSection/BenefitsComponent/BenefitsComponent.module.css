@@ -1,7 +1,6 @@
-.benefitsWrapper{
+.benefitsWrapper {
   margin-top: 50px;
   padding-bottom: 50px;
-  
 }
 
 .benefitsTitle {
@@ -37,14 +36,11 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-
 }
 
 .benefitTextWrapper {
   max-width: 260px;
   z-index: 5;
-
-  
 }
 .benefitItemTitle {
   color: var(--secondContentColor);
@@ -61,16 +57,15 @@
 }
 
 @media (min-width: 768px) {
-  .benefitsWrapper{
-  margin-top: 65px;
-  padding-bottom: 65px;
-  
-}
-.benefitsTitle{
-  font-size: 48px;
-  max-width: 430px;
-  margin-bottom: 40px;
-}
+  .benefitsWrapper {
+    margin-top: 65px;
+    padding-bottom: 65px;
+  }
+  .benefitsTitle {
+    font-size: 48px;
+    max-width: 430px;
+    margin-bottom: 40px;
+  }
 
   .benefitsList {
     position: relative;
@@ -79,64 +74,68 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     justify-items: stretch;
-     row-gap: 50px;
-      align-items: center;
-      justify-content: space-between;
+    row-gap: 50px;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .benefitsList::before,
-.benefitsList::after {
-  content: "";
-  position: absolute;
-  background-color: #B1CFEB;
+  .benefitsList::after {
+    content: "";
+    position: absolute;
+    background-color: #b1cfeb;
+  }
+
+  .benefitsList::before {
+    /* Вертикальна лінія по центру */
+    top: var(--benefitsAnimationLineStart);
+    bottom: var(--benefitsAnimationLineEnd);
+    left: 50%;
+    width: 1px;
+    transform: translateX(-50%);
+  }
+
+  .benefitsList::after {
+    /* Горизонтальна лінія по центру */
+    left: var(--benefitsAnimationLineEnd);
+    right: 0;
+    top: 50%;
+    height: 1px;
+    transform: translateY(-50%);
+  }
 }
 
-.benefitsList::before {
-  /* Вертикальна лінія по центру */
-  top: var(--benefitsAnimationLineStart);
-  bottom: var(--benefitsAnimationLineEnd);
-  left: 50%;
-  width: 1px;
-  transform: translateX(-50%);
-}
+@media (min-width: 1024px) {
+  .benefitsWrapper {
+    margin-top: 60px;
+    padding-bottom: 60px;
+  }
 
-.benefitsList::after {
-  /* Горизонтальна лінія по центру */
-  left: var(--benefitsAnimationLineEnd);
-  right: 0;
-  top: 50%;
-  height: 1px;
-  transform: translateY(-50%);
-}
-}
-
-@media (min-width: 1024px){
-  
-.benefitsWrapper{
-  margin-top: 100px;
-  padding-bottom: 100px;
-  
-}
-
-  .benefitsTitle{
-  font-size: 96px;
-  max-width: 850px;
-line-height: 100px;
-margin-bottom: 62px;
-}
-  .benefitsList{
-
+  .benefitsTitle {
+    font-size: 75px;
+    max-width: 850px;
+    line-height: 100px;
+    margin-bottom: 62px;
+  }
+  .benefitsList {
     justify-content: space-between;
- 
-   
   }
   .benefitItem {
-  max-width: 519px;
-  width: 100%;
+    max-width: 519px;
+    width: 100%;
+  }
+
+  .benefitTextWrapper {
+    max-width: 430px;
+  }
 }
 
-.benefitTextWrapper {
-  max-width: 430px;
-
-}
+@media (min-width: 1550px) {
+  .benefitsWrapper {
+    margin-top: 100px;
+    padding-bottom: 100px;
+  }
+  .benefitsTitle {
+    font-size: 96px;
+  }
 }
