@@ -9,7 +9,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "en",
-    react: { useSuspense: false },
+
     ns: ["translation", "formTranslation"],
     defaultNS: "translation",
     interpolation: { escapeValue: false },
