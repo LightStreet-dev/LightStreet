@@ -9,7 +9,7 @@ interface socialProps {
 
 const SocialIcons: React.FC<socialProps> = ({ isOpen, footerStyle, footerStyleList }) => {
 const openTelegramBot = () =>{
-  window.open("https://t.me/LS_contact_Bot?hello=from_site", "_blank");
+  window.open("https://t.me/LS_contact_Bot?start=from_site", "_blank");
 }
 
   return (
