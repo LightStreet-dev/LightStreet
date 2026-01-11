@@ -28,7 +28,7 @@ const openTelegramBot = () =>{
         </a>
       </li>
        <li>
-        <a onClick={openTelegramBot} href="" target="blank">
+        <a onClick={openTelegramBot} href="#" target="blank">
         <svg className ={clsx(s.svg, isOpen && s.svgModal, footerStyle)} >
           <use href="/svg/symbol-defs.svg#icon-telegram"></use>
         </svg>
