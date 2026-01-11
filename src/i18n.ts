@@ -1,26 +1,58 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import Backend from "i18next-http-backend";
-import LanguageDetector from "i18next-browser-languagedetector";
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
+import LanguageDetector from 'i18next-browser-languagedetector'
+
+// EN
+import enTranslation from './locales/en/translation.json'
+import enForm from './locales/en/formTranslation.json'
+
+// UK
+import ukTranslation from './locales/uk/translation.json'
+import ukForm from './locales/uk/formTranslation.json'
+
+// PL
+import plTranslation from './locales/pl/translation.json'
+import plForm from './locales/pl/formTranslation.json'
 
 i18n
-  .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: "en",
-
-    ns: ["translation", "formTranslation"],
-    defaultNS: "translation",
-    interpolation: { escapeValue: false },
-    keySeparator: ".",
-    load: "languageOnly",
-    detection: {
-      order: ["querystring", "localStorage", "cookie", "navigator", "htmlTag"],
-      caches: ["localStorage", "cookie"],
-      lookupQuerystring: "lng",
-      lookupFromPathIndex: 0,
+    resources: {
+      en: {
+        translation: enTranslation,
+        formTranslation: enForm,
+      },
+      uk: {
+        translation: ukTranslation,
+        formTranslation: ukForm,
+      },
+      pl: {
+        translation: plTranslation,
+        formTranslation: plForm,
+      },
     },
-  });
 
-export default i18n;
+    fallbackLng: 'en',
+    supportedLngs: ['en', 'uk', 'pl'],
+    load: 'languageOnly',
+
+    ns: ['translation', 'formTranslation'],
+    defaultNS: 'translation',
+
+    detection: {
+      order: ['localStorage', 'querystring', 'navigator'],
+      caches: ['localStorage'],
+      lookupQuerystring: 'lng',
+    },
+
+    interpolation: {
+      escapeValue: false,
+    },
+
+    react: {
+      useSuspense: false, // ✅ стабільно для iPhone
+    },
+  })
+
+export default i18n
