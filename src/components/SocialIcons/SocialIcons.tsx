@@ -14,14 +14,14 @@ const openTelegramBot = () =>{
 
   return (
     <ul className={clsx(s.socIconsList, isOpen && s.socIconsListModal, footerStyleList)}>
-      <li><a href="https://www.instagram.com/dimonchikseagull/" target="blank">
+      <li><a href="https://www.instagram.com/lightstreetprod/" target="blank">
         <svg className ={clsx(s.svg, isOpen && s.svgModal, footerStyle)} >
           <use href="/svg/symbol-defs.svg#icon-insta"></use>
         </svg>
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/seagull-dmytro/" target="blank">
+        <a href="https://www.linkedin.com/company/light-street-production/" target="blank">
         <svg className ={clsx(s.svg, isOpen && s.svgModal, footerStyle)} >
           <use href="/svg/symbol-defs.svg#icon-typcn_social-linkedin"></use>
         </svg>
