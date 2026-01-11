@@ -81,7 +81,7 @@ const customStyles: StylesConfig<OptionType, false> = {
 const LanguageChanger: React.FC = () => {
   const { i18n } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState<string>(
-    i18n.language || 'en'
+    i18n.language 
   );
   useEffect(() => {
   setSelectedLanguage(i18n.language);

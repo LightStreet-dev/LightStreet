@@ -34,6 +34,7 @@ export const i18nReady = new Promise<void>((resolve) => {
         react: {
           useSuspense: false, // 🔴 важливо
         },
+         initImmediate: false,
       },
       () => {
         // 👇 тут мова ВЖЕ визначена і JSON завантажені
