@@ -27,13 +27,13 @@ const openTelegramBot = () =>{
         </svg>
         </a>
       </li>
-       <li>
+       {/* <li>
         <a onClick={openTelegramBot} href="#" target="blank">
         <svg className ={clsx(s.svg, isOpen && s.svgModal, footerStyle)} >
           <use href="/svg/symbol-defs.svg#icon-telegram"></use>
         </svg>
         </a>
-      </li>
+      </li> */}
     </ul>
   );
 };
