@@ -23,17 +23,6 @@
   display: flex;
   flex-direction: column;
 }
-.scrollUpBtn{
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .headerHerroWrapper {
-    width: 100vw;
-  }
-  .container {
-    padding: 0 30px;
-  }
 .scrollUpBtn {
   display: block;
   position: fixed;
@@ -47,12 +36,23 @@
     transform 0.4s ease,
     opacity 0.4s ease;
 }
-
 .scrollUpBtnActive {
   transform: translateY(0);     /* виїжджає вгору */
   opacity: 1;
   pointer-events: auto;
 }
+
+
+@media (min-width: 768px) {
+  .headerHerroWrapper {
+    width: 100vw;
+  }
+  .container {
+    padding: 0 30px;
+  }
+
+
+
   
 }
 
