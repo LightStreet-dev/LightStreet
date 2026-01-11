@@ -21,22 +21,22 @@ const portfolio: Portfolio = [
   {
     img: "/img/portfolio/1x/cherep.jpg",
     retina: "/img/portfolio/2x/cherep2x.jpg",
-    link:"#"
+    link:"https://nocturn-studioo.webflow.io/?fbclid=PAdGRleAPNx49leHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaedjfGlSRwq7ymzKswMMMwqY4BfOgfba8qKmwoT_toTPdLOtJO9xdcSj-XhuA_aem_UuAhxzuJyNvLDvvZmrSZsg"
   },
   {
     img: "/img/portfolio/1x/Behance.jpg",
     retina: "/img/portfolio/2x/Behance2x.jpg",
-        link:"#"
+        link:"https://www.behance.net/gallery/221560901/Mobile-Fitness-App-Sport-Buddy"
   },
   {
     img: "/img/portfolio/1x/nft.jpg",
     retina: "/img/portfolio/2x/nft2x.jpg",
-        link:"#"
+        link:"https://cybermuse.webflow.io/?fbclid=PAdGRleAPNx2dleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAad79VqAT_0SIC5sUWEfbZa26T0nZ6Yt531SXLdvaiWGL4vOa7_b08oBEtKtGA_aem_20sOhfidztLBvplEHzR1Tg"
   },
   {
     img: "/img/portfolio/1x/WIREFRAME.jpg",
     retina: "/img/portfolio/2x/WIREFRAME2x.jpg",
-        link:"#"
+        link:"https://best-apartment.webflow.io/?fbclid=PAdGRleAPNx7hleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAae-zyLaXNnBuAidumy8isSNUcQHDChtkz6qH0vpGGoyqAasE4cxObrVZh7riA_aem_Uk99TgrvddJ0xvzT6-WzNw"
   }
 ];
 
