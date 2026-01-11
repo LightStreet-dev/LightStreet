@@ -11,7 +11,7 @@ export const i18nReady = new Promise<void>((resolve) => {
     .init(
       {
         fallbackLng: 'en',
-        lng:'en',
+        
         load: 'languageOnly',
 
         ns: ['translation', 'formTranslation'],
