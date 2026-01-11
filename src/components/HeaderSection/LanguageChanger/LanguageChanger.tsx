@@ -88,7 +88,7 @@ const LanguageChanger: React.FC = () => {
   ];
 
   const [selectedLanguage, setSelectedLanguage] = useState<string>(
-    i18n.language || 'en'
+    i18n.language
   );
 
   useEffect(() => {
