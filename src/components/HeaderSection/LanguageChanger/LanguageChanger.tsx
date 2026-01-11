@@ -80,40 +80,43 @@ const customStyles: StylesConfig<OptionType, false> = {
 
 const LanguageChanger: React.FC = () => {
   const { i18n } = useTranslation();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>(
-    i18n.language 
-  );
-  useEffect(() => {
-  setSelectedLanguage(i18n.language);
-}, [i18n.language]);
-
-const handleLanguageChange = (
-  selectedOption: OptionProps<OptionType, false>["data"]
-) => {
-  setSelectedLanguage(selectedOption.value);
-  i18n.changeLanguage(selectedOption.value);
-
-  const url = new URL(window.location.href);
-  url.searchParams.set("lng", selectedOption.value);
-  window.history.replaceState({}, '', url.toString());
-};
 
   const languageOptions: OptionType[] = [
-    { value: "en", label: "EN" },
-    { value: "uk", label: "UA" },
-    { value: "pl", label: "PL" },
+    { value: 'en', label: 'EN' },
+    { value: 'uk', label: 'UA' },
+    { value: 'pl', label: 'PL' },
   ];
+
+  const [selectedLanguage, setSelectedLanguage] = useState<string>(
+    i18n.language || 'en'
+  );
+
+  useEffect(() => {
+    if (i18n.language) {
+      setSelectedLanguage(i18n.language);
+    }
+  }, [i18n.language]);
+
+  const handleLanguageChange = (opt: OptionType) => {
+    setSelectedLanguage(opt.value);
+    i18n.changeLanguage(opt.value);
+
+    const url = new URL(window.location.href);
+    url.searchParams.set('lng', opt.value);
+    window.history.replaceState({}, '', url.toString());
+  };
+
+  const currentOption =
+    languageOptions.find(opt => opt.value === selectedLanguage)
+    || languageOptions[0];
 
   return (
     <div className={s.lngSwitcher}>
-      <Select<OptionType, false>
-        
+      <Select
         styles={customStyles}
-        value={languageOptions.find((opt) => opt.value === selectedLanguage) || languageOptions.find((opt) => opt.value === i18n.language)}
+        value={currentOption}
         onChange={(opt) => opt && handleLanguageChange(opt)}
         options={languageOptions}
-        className={s.select}
-        classNamePrefix="select"
         isSearchable={false}
       />
     </div>
