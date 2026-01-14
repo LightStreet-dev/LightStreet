@@ -14,7 +14,7 @@ const getTeamInfo = (t: TFunction): teamText[] => [
   {
     id: 2,
     text: t("hero.team.dmytro"),
-    photo: "/img/reviews/ja.jpg",
+    photo: "/img/reviews/chaika.jpg",
   },
   {
     id: 3,
