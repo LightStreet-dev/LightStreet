@@ -34,8 +34,8 @@ const portfolio: Portfolio = [
         link:"https://cybermuse.webflow.io/?fbclid=PAdGRleAPNx2dleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAad79VqAT_0SIC5sUWEfbZa26T0nZ6Yt531SXLdvaiWGL4vOa7_b08oBEtKtGA_aem_20sOhfidztLBvplEHzR1Tg"
   },
   {
-    img: "/img/portfolio/1x/WIREFRAME.jpg",
-    retina: "/img/portfolio/2x/WIREFRAME2x.jpg",
+    img: "/img/portfolio/1x/sakura.jpg",
+    retina: "/img/portfolio/2x/sakura2x.jpg",
         link:"https://best-apartment.webflow.io/?fbclid=PAdGRleAPNx7hleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAae-zyLaXNnBuAidumy8isSNUcQHDChtkz6qH0vpGGoyqAasE4cxObrVZh7riA_aem_Uk99TgrvddJ0xvzT6-WzNw"
   }
 ];
