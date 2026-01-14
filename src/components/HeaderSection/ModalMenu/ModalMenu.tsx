@@ -28,6 +28,11 @@ const ModalMenu: React.FC<modalProps> = ({ toggleForm, setOpenForm }) => {
       document.body.classList.remove("no-scroll");
     };
   }, [isOpen]);
+const HandleClickBtn = (id:string) =>{
+   document.body.classList.remove("no-scroll");
+                    setOpen(false);
+                    scrollToId(id);
+}
 
   return (
     <div>
@@ -45,8 +50,7 @@ const ModalMenu: React.FC<modalProps> = ({ toggleForm, setOpenForm }) => {
               <li>
                 <button
                   onClick={() => {
-                    setOpen(false);
-                    scrollToId("about");
+                  HandleClickBtn("about")
                   }}
                 >
                   {t("header.about")}
@@ -55,8 +59,8 @@ const ModalMenu: React.FC<modalProps> = ({ toggleForm, setOpenForm }) => {
               <li>
                 <button
                   onClick={() => {
-                    setOpen(false);
-                    scrollToId("services");
+                     HandleClickBtn("services")
+                 
                   }}
                 >
                   {t("header.services")}
@@ -65,8 +69,8 @@ const ModalMenu: React.FC<modalProps> = ({ toggleForm, setOpenForm }) => {
               <li>
                 <button
                   onClick={() => {
-                    setOpen(false);
-                    scrollToId("contact");
+                     
+                    HandleClickBtn("contact");
                   }}
                 >
                   {t("header.contact")}

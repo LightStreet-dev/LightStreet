@@ -32,7 +32,7 @@ html{
   overflow-x: hidden;
 }
 body {
-  overflow: hidden; 
+
   background: var(--mainBackground);
   font-family: var(--mainFontFamily);
   font-weight: var(--mainFontHeight);
@@ -90,8 +90,12 @@ textarea,
 select {
   font-size: 16px;
 }
+
+
 .no-scroll {
-  overflow-y: hidden;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
 }
 
 .loader{
