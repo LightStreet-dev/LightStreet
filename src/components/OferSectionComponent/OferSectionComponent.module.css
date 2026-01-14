@@ -24,7 +24,7 @@
 
 .oferButton {
   color: var(--secondContentColor);
-  border: 1px solid var(--secondContentColor);
+  border: 1px solid #006fba;
   width: 100%;
 
   overflow: hidden;
@@ -98,7 +98,7 @@
 
   .oferButton {
     color: var(--secondContentColor);
-    border: 1px solid var(--secondContentColor);
+
     width: 100%;
     max-width: 220px;
     padding: 21px 55px;

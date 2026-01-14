@@ -8,13 +8,13 @@ type ConsentToastProps = {
 const ConsentToast = ({ closeToast, sendEmail,onDecline }: ConsentToastProps) => {
    const { t } = useTranslation( "formTranslation");
   const handleAccept = () => {
-    console.log('Користувач погодився');
+    
     sendEmail?.()
     closeToast();
   };
 
   const handleDecline = () => {
-    console.log('Користувач відмовився');
+    
     closeToast();
     onDecline?.();
   };

@@ -22,7 +22,7 @@ const HeroFeatures: React.FC = () => {
         <p className={s.featurtext}>{t("hero.features.rating.text")}</p>
       </li>
       <li className={s.featurIteam}>
-        <p className={s.featurCount}>50+</p>
+        <p className={s.featurCount}>50 +</p>
        
         <p className={s.featurtext}>{t("hero.features.pages")}</p>
       </li>
