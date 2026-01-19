@@ -32,9 +32,10 @@
   opacity: 0;
   pointer-events: none;
   transition:
-  
+  z
     transform 0.4s ease,
     opacity 0.4s ease;
+    z-index: 99999;
 }
 .scrollUpBtnActive {
   transform: translateY(0);     /* виїжджає вгору */
