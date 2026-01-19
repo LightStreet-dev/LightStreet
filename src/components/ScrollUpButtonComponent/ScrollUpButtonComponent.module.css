@@ -1,8 +1,9 @@
 .sctollBtnWrapper{
     position: fixed;
     bottom: 40px;
-    right: 20px;
+    right: 10px;
     cursor: pointer;
+    z-index: 1000;
     
 }
 
