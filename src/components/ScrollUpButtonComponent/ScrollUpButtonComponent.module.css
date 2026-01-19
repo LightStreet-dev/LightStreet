@@ -1,6 +1,6 @@
 .sctollBtnWrapper{
     position: fixed;
-    bottom: 20px;
+    bottom: 40px;
     right: 20px;
     cursor: pointer;
     
@@ -22,7 +22,7 @@
 @media (min-width: 768px) {
     .sctollBtnWrapper{
     position: fixed;
-    bottom: 40px;
+
     right: 40px;
     cursor: pointer;
     
