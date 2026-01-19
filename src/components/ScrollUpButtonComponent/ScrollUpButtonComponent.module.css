@@ -1,7 +1,7 @@
 .sctollBtnWrapper{
     position: fixed;
-    bottom: 40px;
-    right: 40px;
+    bottom: 20px;
+    right: 20px;
     cursor: pointer;
     
 }
@@ -17,4 +17,15 @@
 }
 .scrollBtn:active{
     bottom: 50px;
+}
+
+@media (min-width: 768px) {
+    .sctollBtnWrapper{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    
+}
+
 }
