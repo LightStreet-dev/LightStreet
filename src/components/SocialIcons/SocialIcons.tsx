@@ -8,9 +8,9 @@ interface socialProps {
 }
 
 const SocialIcons: React.FC<socialProps> = ({ isOpen, footerStyle, footerStyleList }) => {
-// const openTelegramBot = () =>{
-//   window.open("https://t.me/LS_contact_Bot?start=from_site", "_blank");
-// }
+const openTelegramBot = () =>{
+  window.open("https://t.me/LS_contact_Bot?start=from_site", "_blank");
+}
 
   return (
     <ul className={clsx(s.socIconsList, isOpen && s.socIconsListModal, footerStyleList)}>
@@ -27,13 +27,13 @@ const SocialIcons: React.FC<socialProps> = ({ isOpen, footerStyle, footerStyleLi
         </svg>
         </a>
       </li>
-       {/* <li>
+        <li>
         <a onClick={openTelegramBot} href="#" target="blank">
         <svg className ={clsx(s.svg, isOpen && s.svgModal, footerStyle)} >
           <use href="/svg/symbol-defs.svg#icon-telegram"></use>
         </svg>
         </a>
-      </li> */}
+      </li> 
     </ul>
   );
 };
