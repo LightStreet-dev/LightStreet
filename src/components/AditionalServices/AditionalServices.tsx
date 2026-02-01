@@ -4,7 +4,7 @@ import ASComponent from "./ASComponent";
 import { useState } from "react";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import AdditionalServiceAnimation from "../animation/additionalServicesAnimation";
+import AdditionalServiceAnimation from "../../animation/additionalServicesAnimation";
 
 const AditionalServices: React.FC = () => {
   const { t } = useTranslation();

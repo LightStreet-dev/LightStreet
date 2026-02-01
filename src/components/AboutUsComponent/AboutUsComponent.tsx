@@ -4,7 +4,7 @@ import HeroTemList from "../HeroSection/HeroTemList/HeroTemList";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import aboutAnimation from "../animation/aboutAnimation";
+import aboutAnimation from "../../animation/aboutAnimation";
 
 const AboutUsComponent: React.FC = () => {
   const teamVisible = useMediaQuery({ maxWidth: 768 });

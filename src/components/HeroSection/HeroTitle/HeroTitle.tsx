@@ -2,7 +2,7 @@ import s from "./HeroTitle.module.css";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import { heroTitleAnimation } from "../../animation/heroAnimation.ts";
+import { heroTitleAnimation } from "../../../animation/heroAnimation.ts";
 const HeroTitle: React.FC = () => {
   const { t } = useTranslation();
 

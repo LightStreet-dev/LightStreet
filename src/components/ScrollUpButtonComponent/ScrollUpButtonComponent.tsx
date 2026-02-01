@@ -1,4 +1,4 @@
-import scrollToId from "../animation/scroll";
+import scrollToId from "../../animation/scroll";
 import s from "./ScrollUpButtonComponent.module.css"
 
 const ScrollUpButtonComponent = () => {

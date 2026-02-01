@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import s from "./NavLinks.module.css";
 import { useTranslation } from "react-i18next";
-import scrollToId from "../../animation/scroll";
+import scrollToId from "../../../animation/scroll";
 
 interface navProps {
   footerNavigation?: string;

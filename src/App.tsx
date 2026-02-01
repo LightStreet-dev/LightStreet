@@ -15,6 +15,7 @@ import PrivateData from "./components/FooterComponent/PrivateDataComponent/Priva
 import { useInView  } from "react-intersection-observer";
 import ScrollUpButtonComponent from "./components/ScrollUpButtonComponent/ScrollUpButtonComponent";
 import clsx from "clsx";
+import usePageViews from "./hooks/usePageViews";
 
 const App: React.FC = () => {
   const [openForm, setOpenForm] = useState<boolean>(false);
@@ -29,7 +30,7 @@ const App: React.FC = () => {
   ) => {
     setter((prev) => !prev);
   };
-
+usePageViews()
   return (
     <div className="bodyWrapper">
       <div className="headerHerroWrapper">

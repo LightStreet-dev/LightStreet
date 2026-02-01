@@ -7,7 +7,7 @@ import LanguageChanger from "../LanguageChanger/LanguageChanger";
 import ModalMenu from "../ModalMenu/ModalMenu";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import headerAnimation from "../../animation/headerAnimation";
+import headerAnimation from "../../../animation/headerAnimation";
 
 interface HeaderProps {
   mobMediaQuery: boolean;

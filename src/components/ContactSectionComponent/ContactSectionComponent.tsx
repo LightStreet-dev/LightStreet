@@ -3,7 +3,7 @@ import ShortFormComponent from "./ShortFormComponent";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import contactAnimation from "../animation/contactAnimation";
+import contactAnimation from "../../animation/contactAnimation";
 
 const ContactSectionComponent = () => {
   const { t } = useTranslation();

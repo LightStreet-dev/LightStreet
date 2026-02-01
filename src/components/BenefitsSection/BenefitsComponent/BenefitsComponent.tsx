@@ -2,7 +2,7 @@ import s from "./BenefitsComponent.module.css";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import benefotsAnimation from "../../animation/benefitsAnimation";
+import benefotsAnimation from "../../../animation/benefitsAnimation";
 const BenefitsComponent = () => {
   const { t } = useTranslation();
   const benefitsTrigger = useRef<HTMLDivElement | null>(null);
