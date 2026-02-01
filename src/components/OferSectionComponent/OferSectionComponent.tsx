@@ -4,7 +4,7 @@ import OfersListComponent from "./OfersListComponent/OfersListComponent";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import OfferAnimation from "../animation/oferAnimation";
+import OfferAnimation from "../../animation/oferAnimation";
 
 interface modalProps {
   toggleForm: (setter: React.Dispatch<React.SetStateAction<boolean>>) => void;

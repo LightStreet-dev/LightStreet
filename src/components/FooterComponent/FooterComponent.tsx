@@ -5,7 +5,7 @@ import s from "./FooterComponent.module.css";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import footerAnimation from "../animation/footerAnimation";
+import footerAnimation from "../../animation/footerAnimation";
 
 interface PrivatModalProps {
   toggleModal: (setter: React.Dispatch<React.SetStateAction<boolean>>) => void;

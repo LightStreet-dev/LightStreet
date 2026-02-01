@@ -1,10 +1,10 @@
 
 import s from "./HeroButton.module.css"
 import { useTranslation } from "react-i18next";
-import scrollToId from "../../../animation/scroll"
+import scrollToId from "../../../../animation/scroll"
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import { heroBtnAnimation } from "../../../animation/heroAnimation";
+import { heroBtnAnimation } from "../../../../animation/heroAnimation";
 
 
 const HeroButton = () => {

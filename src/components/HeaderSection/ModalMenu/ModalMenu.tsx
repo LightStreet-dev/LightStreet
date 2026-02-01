@@ -5,7 +5,7 @@ import s from "./ModalMenu.module.css";
 import SocialIcons from "../../SocialIcons/SocialIcons";
 import ContactButton from "../../ContactButton/ContactButton";
 import { useTranslation } from "react-i18next";
-import scrollToId from "../../animation/scroll";
+import scrollToId from "../../../animation/scroll";
 interface modalProps {
   toggleForm: (setter: React.Dispatch<React.SetStateAction<boolean>>) => void;
   setOpenForm: React.Dispatch<React.SetStateAction<boolean>>;

@@ -10,7 +10,7 @@ import { EffectCoverflow, Pagination, Keyboard } from "swiper/modules";
 import SwiperNavigationComponent from "../OferSectionComponent/OfersListComponent/SwiperNavigationComponent";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import portfolioAnimation from "../animation/portfolioAnimation";
+import portfolioAnimation from "../../animation/portfolioAnimation";
 
 const PortfolioSectionCompopnent: React.FC = () => {
   const paginationPortfolioRef = useRef<HTMLDivElement | null>(null);

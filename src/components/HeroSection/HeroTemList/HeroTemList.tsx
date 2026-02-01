@@ -6,7 +6,7 @@ import clsx from "clsx";
 import HeroTeamComponent from "../HeroTeamComponent/HeroTeamComponent.tsx";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import { teamAnimation } from "../../animation/teamAnimation.ts";
+import { teamAnimation } from "../../../animation/teamAnimation.ts";
 
 const HeroTemList: React.FC = () => {
   const { t } = useTranslation();

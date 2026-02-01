@@ -2,7 +2,7 @@ import s from "./HeroFeatures.module.css";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import { featuresAnimation } from "../../../animation/heroAnimation";
+import { featuresAnimation } from "../../../../animation/heroAnimation";
 
 const HeroFeatures: React.FC = () => {
   const { t } = useTranslation();
